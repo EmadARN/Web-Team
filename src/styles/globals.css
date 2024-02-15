@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Yekan", sans-serif !important;
+}
+a {
+  text-decoration: none;
+}
+@font-face {
+  font-family: "Yekan";
+  src: url("../../public/fonts/Yekan.ttf");
+}
+@font-face {
+  font-family: "Lalezar";
+  src: url("../../public/fonts/Lalezar-Regular.ttf");
+}
+
+@media screen and (min-width: 800px) {
+  body::-webkit-scrollbar {
+    width: 0.6em;
+  }
+
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #001a40;
+    border-radius: 1px;
+  }
+}
