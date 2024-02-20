@@ -9,6 +9,7 @@ export const BoxStyle2 = {
   py: 2,
   whiteSpace: { xs: "wrap", sm: "nowrap" },
   borderRadius: 1,
+  zIndex: 1,
 };
 export const TypographyStyle1 = {
   px: { xs: 1, sm: 2, md: 3 },

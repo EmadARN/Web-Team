@@ -1,14 +1,14 @@
 import ParallaxHeader from "@/components/parallaxHeader/Main";
 import MainPersonSkils from "@/components/pesonSkils/main";
-import MainFooter from "@/container/footer/main";
-import Main from "@/container/navBar/main";
+import Container from "@/container/main";
 import React from "react";
 
 const index = () => {
   return (
-    <>
+    <Container>
+      <ParallaxHeader />
       <MainPersonSkils />
-    </>
+    </Container>
   );
 };
 

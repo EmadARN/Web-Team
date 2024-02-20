@@ -2,7 +2,7 @@ import React from "react";
 import MainNav from "./navBar/main";
 import MainFooter from "./footer/main";
 
-const main = ({ children }) => {
+const Container = ({ children }) => {
   return (
     <>
       <MainNav />
@@ -12,4 +12,4 @@ const main = ({ children }) => {
   );
 };
 
-export default main;
+export default Container;
