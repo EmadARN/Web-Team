@@ -8,10 +8,11 @@ const Right_part = () => {
     <Atropos style={{width: "420px",
   height: "220px"}}
       activeOffset={40}
-      shadowScale={3.05}
+      shadowScale={1.05}
       onEnter={() => console.log('Enter')}
       onLeave={() => console.log('Leave')}
       onRotate={(x, y) => console.log('Rotate', x, y)}
+      shadowOffset ={50}
      
     >
       <img style={{backgroundSize:"contain",backgroundPosition:'center',width:"100%"}} src="https://www.uxdesigninstitute.com/blog/wp-content/uploads/2022/06/34_Builtin-1.png" data-atropos-offset="5" alt="" />
