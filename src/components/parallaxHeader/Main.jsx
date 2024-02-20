@@ -11,6 +11,7 @@ import {
   ballon,
   boatStyle,
   moonStyle,
+  undermoon,
 } from "./style";
 
 const ParallaxHeader = () => {
@@ -108,6 +109,17 @@ const ParallaxHeader = () => {
   return (
     <setion style={allStyle}>
       <Box ref={parallaxRef} sx={BoxStyle(background)}>
+        {/* {imgData1.map((item) => {
+          return (
+            <img
+              ref={item.ref}
+              style={item.style}
+              className={item.class}
+              src={`/images/${item.img}`}
+            />
+          );
+        })} */}
+
         <img
           ref={night_sea}
           style={imgStyle1}

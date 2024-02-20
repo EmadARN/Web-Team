@@ -18,4 +18,5 @@ export const TypographyStyle1 = {
   WebkitUserSelect: "none" /* Safari */,
   MsUserSelect: "none" /* IE 10 and IE 11 */,
   userSelect: "none" /* Standard syntax */,
+  cursor: "pointer",
 };

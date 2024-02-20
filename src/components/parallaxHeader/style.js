@@ -17,7 +17,7 @@ export const BoxStyle = (background) => {
       left: 0,
       width: "100%",
       height: "100px",
-      background: `linear-gradient(to top, #fff, transparent)`,
+      background: `linear-gradient(to top, #111, transparent)`,
       zIndex: 1000,
     },
   };
