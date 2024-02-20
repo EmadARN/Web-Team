@@ -19,17 +19,27 @@ a {
 
 @media screen and (min-width: 800px) {
   body::-webkit-scrollbar {
-    width: 0.6em;
+    width: 0.4em;
   }
 
   body::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(
+      274deg,
+      rgba(0, 10, 30, 1) 71%,
+      rgba(1, 60, 165, 1) 100%
+    );
   }
 
   body::-webkit-scrollbar-thumb {
-    background-color: #001a40;
+    background-color: #9999;
     border-radius: 1px;
   }
+  /* @supports (scrollbar-color: red blue) {
+    * {
+      scrollbar-color: rgba(0, 0, 0, 1) #001a40;
+    }
+  } */
 }
 
 body {

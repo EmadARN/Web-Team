@@ -25,7 +25,7 @@
 //   {
 //     id: 3,
 //     img: "moon.png",
-//     ref: night_sea,
+//     ref: moon,
 //     style: moonStyle,
 //     class: "imges moon",
 //   },
