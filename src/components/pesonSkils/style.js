@@ -1,6 +1,6 @@
 //Main
 export const GridMainStyle = {
-  bgcolor: "#222",
+  bgcolor: "#1116",
   position: "relative",
   overflow: "hidden",
   height: "100vh",

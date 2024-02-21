@@ -9,7 +9,11 @@ import React from "react";
 
 const index = () => {
   return (
-    <Grid sx={{ bgcolor: "#111" }}>
+    <Grid
+      sx={{
+        backgroundColor: "#1b1b1b",
+      }}
+    >
       <Container>
         <ParallaxHeader />
         <Grid my={15}>
