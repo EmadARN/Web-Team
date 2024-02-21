@@ -2,7 +2,7 @@ import Slidermain from "@/components/Project_slider/Main";
 import About_Main from "@/components/about/Main";
 import ParallaxHeader from "@/components/parallaxHeader/Main";
 import MainPersonSkils from "@/components/pesonSkils/main";
-import Container from "@/container/Main";
+import Container from "@/container/main";
 import { Grid } from "@mui/material";
 
 import React from "react";
