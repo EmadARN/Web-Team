@@ -2,14 +2,13 @@ import { Avatar, Box } from "@mui/material";
 import { avatars } from "../data";
 import { BoxDrawerStyle, avatarStyle, imgDrawerStyle } from "../style";
 
-const Drawer = ({ handleAvatarClick, avatar }) => {
+const Drawer = ({ handleAvatarClick, avatar, selectedAvatar }) => {
   return (
     <>
       {avatars.map((item) => (
-        <Box sx={BoxDrawerStyle}>
+        <Box sx={BoxDrawerStyle} key={item.id}>
           <Avatar
-            key={item.id}
-            sx={avatarStyle(avatar)}
+            sx={avatarStyle(avatar, selectedAvatar, item.id)}
             variant="rounded"
             onClick={() => handleAvatarClick(item.id)}
           >

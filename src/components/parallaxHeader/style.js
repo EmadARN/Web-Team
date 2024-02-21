@@ -1,7 +1,7 @@
 export const allStyle = {
   overflow: " hidden !important",
 };
-export const BoxStyle = (background) => {
+export const BoxStyle = (background, theme) => {
   const style = {
     background: `linear-gradient(#0F2B9C, #673D7D ${background}%, #0F2B9C, #EDFC54 )`,
     position: "relative",
@@ -17,7 +17,10 @@ export const BoxStyle = (background) => {
       left: 0,
       width: "100%",
       height: "100px",
-      background: `linear-gradient(to top, #111, transparent)`,
+      background:
+        theme == "dark"
+          ? `linear-gradient(to top, #1b1b1b, transparent)`
+          : `linear-gradient(to top, #f0fffd, transparent)`,
       zIndex: 1000,
     },
   };
@@ -31,9 +34,19 @@ export const abovemoonStyle = {
   zIndex: 3,
 };
 
-export const undermoon = {
+export const undermoonStyle = {
   zIndex: 1,
 };
+// export const imagesStyle = {
+//   position: "absolute",
+//   top: "0",
+//   left: "0",
+//   width: "100%",
+//   height: " 100%",
+//   backgroundSize: "contain",
+//   backgroundPosition: "center",
+//   pointerEvents: "none",
+// };
 // export const ballon = {
 //   top: "15%",
 //   left: "0%",

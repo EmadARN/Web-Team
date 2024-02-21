@@ -1,12 +1,13 @@
 export const BoxStyle1 = { display: "flex", justifyContent: "center" };
-export const BoxStyle2 = (loadCount) => {
+export const BoxStyle2 = (loadCount, theme) => {
   const style = {
     position: "fixed",
     display: loadCount ? "flex" : "none",
     top: 0,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(255,255,255,0.08)",
+    backgroundColor:
+      theme === "dark" ? "rgba(255,255,255,0.08)" : "rgba(84,84,84,0.1)",
     WebkitBackdropFilter: "blur(8px) !important",
     backdropFilter: {
       xs: "blur(8px)",
@@ -20,12 +21,16 @@ export const BoxStyle2 = (loadCount) => {
   };
   return style;
 };
-export const TypographyStyle1 = {
-  px: { xs: 1, sm: 2, md: 3 },
-  fontSize: { xs: "12px", md: "16px" },
-  color: "#ddd",
-  WebkitUserSelect: "none" /* Safari */,
-  MsUserSelect: "none" /* IE 10 and IE 11 */,
-  userSelect: "none" /* Standard syntax */,
-  cursor: "pointer",
+export const TypographyStyle1 = (theme) => {
+  const style = {
+    px: { xs: 1, sm: 2, md: 3 },
+    fontSize: { xs: "12px", md: "16px" },
+    color: theme === "dark" ? "#ddd" : "#1119",
+    WebkitUserSelect: "none" /* Safari */,
+    MsUserSelect: "none" /* IE 10 and IE 11 */,
+    userSelect: "none" /* Standard syntax */,
+    cursor: "pointer",
+  };
+
+  return style;
 };
