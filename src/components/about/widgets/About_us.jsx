@@ -1,18 +1,15 @@
 import React from "react";
-import { Grid, Box, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import Left_part from "./Left_part";
 import Right_part from "./Right_part";
 
 const About_us = () => {
   return (
-    <Grid container width="80%" sx={{ py: 4, px: 3, borderRadius: "20px" }}>
-      <Grid item width="50%">
-        <Box>
-          <Right_part />
-        </Box>
+    <Grid container maxWidth={{ xs: "80%", md: "lg" }}>
+      <Grid item xs={12} md={6}>
+        <Right_part />
       </Grid>
-
-      <Grid display="flex" flexDirection="column" width="50%">
+      <Grid item xs={12} md={6}>
         <Left_part />
       </Grid>
     </Grid>

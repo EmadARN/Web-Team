@@ -1,3 +1,4 @@
+import BackToUp from "@/common/backToUp/BackToUp";
 import Slidermain from "@/components/Project_slider/Main";
 import About_Main from "@/components/about/Main";
 import ParallaxHeader from "@/components/parallaxHeader/Main";
@@ -23,6 +24,7 @@ const index = () => {
         <Grid my={15}>
           <Slidermain />
         </Grid>
+        <BackToUp />
       </Container>
     </Grid>
   );

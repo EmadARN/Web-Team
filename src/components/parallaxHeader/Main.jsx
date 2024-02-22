@@ -1,18 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Box } from "@mui/material";
-import {
-  BoxStyle,
-  abovemoonStyle,
-  allStyle,
-  imgStyle1,
-  ballon,
-  boatStyle,
-  moonStyle,
-  undermoon,
-} from "./style";
+import { BoxStyle, allStyle } from "./style";
+import { imgData } from "./data";
+import { ThemeContext } from "@/context/ThemeContext";
 
 const ParallaxHeader = () => {
   const [background, setBackground] = useState(20);
@@ -23,7 +16,7 @@ const ParallaxHeader = () => {
   const undermoon = useRef(null);
   const moon = useRef(null);
   const boat = useRef(null);
-
+  const { theme, switchDark, switchLight } = useContext(ThemeContext);
   useEffect(() => {
     let responsive = gsap.matchMedia();
     let ctx = gsap.context(() => {
@@ -108,60 +101,19 @@ const ParallaxHeader = () => {
 
   return (
     <setion style={allStyle}>
-      <Box ref={parallaxRef} sx={BoxStyle(background)}>
-        {/* {imgData1.map((item) => {
-          return (
-            <img
-              ref={item.ref}
-              style={item.style}
-              className={item.class}
-              src={`/images/${item.img}`}
-            />
-          );
-        })} */}
-
-        <img
-          ref={night_sea}
-          style={imgStyle1}
-          className="imges"
-          src="/images/night-sea.png"
-          alt=""
-        />
-        <img
-          ref={balloon}
-          style={ballon}
-          className="imges ballon"
-          src="/images/balloon.png"
-          alt=""
-        />
-        <img
-          ref={moon}
-          style={moonStyle}
-          className="imges moon"
-          src="/images/moon.png"
-          alt=""
-        />
-        <img
-          ref={abovemoon}
-          style={abovemoonStyle}
-          className="imges"
-          src="/images/above-moon.png"
-          alt=""
-        />
-        <img
-          ref={undermoon}
-          style={undermoon}
-          className="imges"
-          src="/images/under-moon.png"
-          alt=""
-        />
-        <img
-          ref={boat}
-          style={boatStyle}
-          className="imges boat"
-          src="/images/boat.png"
-          alt=""
-        />
+      <Box ref={parallaxRef} sx={BoxStyle(background, theme)}>
+        {imgData(night_sea, balloon, moon, abovemoon, undermoon, boat).map(
+          (item) => {
+            return (
+              <img
+                ref={item.ref}
+                style={item.style}
+                className={item.class}
+                src={`/images/${item.img}`}
+              />
+            );
+          }
+        )}
       </Box>
     </setion>
   );

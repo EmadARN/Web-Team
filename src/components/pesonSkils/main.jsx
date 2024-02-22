@@ -1,22 +1,26 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Grid, Typography } from "@mui/material";
 import { avatars } from "./data";
 import Drawer from "./widgets/drawer";
 import MainCv from "./widgets/mainCv";
 import { GridDrawerStyle, GridMainStyle, TypographyStyle } from "./style";
+import { ThemeContext } from "@/context/ThemeContext";
 
 const Avatars = () => {
   const [selectedAvatar, setSelectedAvatar] = useState(null);
   const [avatar, setAvatars] = useState(false);
-
+  const { theme } = useContext(ThemeContext);
   const handleAvatarClick = (id) => {
     setAvatars(true);
     setSelectedAvatar(id);
+    console.log(selectedAvatar);
   };
 
   return (
-    <Grid container sx={GridMainStyle}>
-      <Typography sx={TypographyStyle(avatar)}>مهارت و روزمه ما</Typography>
+    <Grid container sx={GridMainStyle(theme)}>
+      <Typography sx={TypographyStyle(avatar, theme)}>
+        مهارت و روزمه ما
+      </Typography>
       <Grid xs={2} sm={1} sx={GridDrawerStyle}>
         <Drawer
           handleAvatarClick={handleAvatarClick}

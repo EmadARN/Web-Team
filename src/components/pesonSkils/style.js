@@ -1,18 +1,22 @@
 //Main
-export const GridMainStyle = {
-  bgcolor: "#1116",
-  position: "relative",
-  overflow: "hidden",
-  height: "100vh",
+export const GridMainStyle = (theme) => {
+  const style = {
+    bgcolor: theme == "dark" ? "#1116" : "#f5fffe",
+    position: "relative",
+    overflow: "hidden",
+    height: "100vh",
+  };
+
+  return style;
 };
 //Drawer
-export const TypographyStyle = (avatar) => {
+export const TypographyStyle = (avatar, theme) => {
   const style = {
     display: "flex",
     filter: avatar ? "blur(2px)" : null,
     justifyContent: "center",
     alignItems: "center",
-    color: "white",
+    color: theme === "dark" ? "#f5fffe" : "#1116",
     width: "100%",
     height: "100vh",
     position: "absolute",
@@ -29,10 +33,11 @@ export const BoxDrawerStyle = {
   justifyContent: "center",
   alignItems: "center",
 };
-export const avatarStyle = (avatar) => {
+export const avatarStyle = (avatar, selectedAvatar, item) => {
   const style = {
     borderRadius: "50%",
     cursor: "pointer",
+    border: item === selectedAvatar ? "2px solid #a10000" : null,
     mb: !avatar ? 4 : 4.7,
     mt: 1,
     transition: "all .6s ease",

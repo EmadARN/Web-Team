@@ -1,26 +1,21 @@
-import React from 'react'
-import { createContext,useState } from 'react'
-export const ThemeContext =createContext();
+import React from "react";
+import { createContext, useState } from "react";
+export const ThemeContext = createContext();
 
+export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState("dark");
 
+  const switchDark = () => {
+    setTheme("dark");
+  };
 
-export const ThemeProvider =({children}) =>{
-    const [theme,setTheme] =useState('dark')
+  const switchLight = () => {
+    setTheme("light");
+  };
 
-    const swithDark =()=>{
-        setTheme("dark")
-    }
-
-    const switchLight =()=>{
-        setTheme("light")
-    }
-
-    return(
-        <ThemeContext.Provider value={{switchLight,swithDark,theme}}>
-            <div className={`${theme}`}>{children}</div>
-        </ThemeContext.Provider>
-    )
-}
-
-
-
+  return (
+    <ThemeContext.Provider value={{ switchLight, switchDark, theme }}>
+      <div className={`${theme}`}>{children}</div>
+    </ThemeContext.Provider>
+  );
+};
