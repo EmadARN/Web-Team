@@ -154,3 +154,7 @@ body {
   background-color: black;
   color:white
 }
+
+.large {
+  scale: 1.1;
+}

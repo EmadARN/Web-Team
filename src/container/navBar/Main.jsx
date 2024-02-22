@@ -23,7 +23,7 @@ const MainNav = () => {
       <Box sx={BoxStyle2(loadCount)}>
         {["درباره ما", "مهارت های ما", "پروژه ها", "ارتباط با ما "].map(
           (item) => {
-            return <Typography sx={TypographyStyle1}>{item}</Typography>;
+            return <Button sx={TypographyStyle1}>{item}</Button>;
           }
         )}
       </Box>
