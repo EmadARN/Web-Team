@@ -7,9 +7,6 @@ const Right_part = () => {
     <Grid sx={{ display: "flex", justifyContent: "center" }}>
       <Atropos
         style={{ width: "390px", height: "220px" }}
-        onEnter={() => console.log("Enter")}
-        onLeave={() => console.log("Leave")}
-        onRotate={(x, y) => console.log("Rotate", x, y)}
         shadow={false}
         scaleClassName="large"
       >
