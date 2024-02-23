@@ -23,11 +23,7 @@ const MainNav = () => {
       <Box sx={BoxStyle2(loadCount, theme)}>
         {["درباره ما", "مهارت های ما", "پروژه ها", "ارتباط با ما "].map(
           (item) => {
-<<<<<<< HEAD
             return <Button sx={TypographyStyle1}>{item}</Button>;
-=======
-            return <Typography sx={TypographyStyle1(theme)}>{item}</Typography>;
->>>>>>> 08ae9aab9f710dffe6ce373399a725d4c95f5fd8
           }
         )}
         <Button onClick={theme === "dark" ? switchLight : switchDark}>
