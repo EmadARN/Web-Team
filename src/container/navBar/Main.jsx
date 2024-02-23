@@ -77,11 +77,7 @@ const MainNav = () => {
       <Box sx={BoxStyle2(loadCount, theme)}>
         {["درباره ما", "مهارت های ما", "پروژه ها", "ارتباط با ما "].map(
           (item) => {
-<<<<<<< HEAD
             return <Button sx={TypographyStyle1(theme)}>{item}</Button>;
-=======
-            return <Button sx={TypographyStyle1}>{item}</Button>;
->>>>>>> ab044556177d758128359e3884d234e16e07f207
           }
         )}
         <FormControlLabel
