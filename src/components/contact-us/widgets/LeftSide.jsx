@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, TextField, Button } from "@mui/material";
+import { Grid,Box, Typography, TextField, Button } from "@mui/material";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
@@ -13,7 +13,7 @@ const LeftSide = () => {
         <Typography sx={ContactUsTypography}>راه های ارتباطی با ما</Typography>
       </Box>
 
-      <Box
+      <Grid
         display="flex"
         flexDirection="column"
         alignItems="flex-end"
@@ -78,7 +78,7 @@ const LeftSide = () => {
             <LinkedInIcon sx={{ color: "#126BC4", cursor: "pointer" }} />
           </Box>
         </Box>
-      </Box>
+      </Grid>
     </>
   );
 };

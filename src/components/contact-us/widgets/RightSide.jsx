@@ -6,6 +6,9 @@ import {
   T1,
   sendticketButton,
 } from "../Style";
+
+import animationData from '../../../assets/Animation - 1708606536024.json'
+import Lottie from 'lottie-react'
 const RightSide = () => {
   return (
     <>
@@ -16,20 +19,26 @@ const RightSide = () => {
         </Typography>
       </Box>
 
-      <Box display="flex" flexDirection="column" width="100%">
+<Grid display="flex" justifyContent="space-evenly" alignItems="center" width="100%" >
+
+
+<Box width="50%">
+        <Lottie animationData={animationData}/>
+      </Box>
+
+
+      <Box display="flex" flexDirection="column" width="50%"  >
         <Box
           display="flex"
-          justifyContent="space-between"
+          justifyContent="flex-end"
           alignItems="center"
           mb={4}
         >
-          <Box>
-            <Typography sx={T1}>نام و نام خانوادگی</Typography>
-          </Box>
           <Box width="50%">
             <TextField
               size="small"
               sx={InputStyle}
+              label="نام و نام خانوادگی"
               id="outlined-basic"
               variant="outlined"
               fullWidth
@@ -39,17 +48,15 @@ const RightSide = () => {
 
         <Box
           display="flex"
-          justifyContent="space-between"
+          justifyContent="flex-end"
           alignItems="center"
           mb={2}
         >
-          <Box>
-            <Typography sx={T1}> ایمیل </Typography>
-          </Box>
           <Box width="50%">
             <TextField
               size="small"
               sx={InputStyle}
+              label="ایمیل"
               id="outlined-basic"
               variant="outlined"
               fullWidth
@@ -57,13 +64,11 @@ const RightSide = () => {
           </Box>
         </Box>
 
-        <Box display="flex" justifyContent="space-between" alignItems="center">
-          <Box>
-            <Typography sx={T1}> پیام خود را وارد کنیم </Typography>
-          </Box>
+        <Box display="flex" justifyContent="flex-end" alignItems="center">
           <Box width="50%">
             {" "}
             <TextField
+              label="پیام خود را وارد کنید"
               fullWidth
               sx={InputStyle}
               id="outlined-multiline-static"
@@ -73,10 +78,19 @@ const RightSide = () => {
           </Box>
         </Box>
 
-        <Box>
+        <Box
+          display="flex"
+          justifyContent="flex-end"
+          alignItems="center"
+          mt={2}
+        >
           <Button sx={sendticketButton}>ارسال تیکت</Button>
         </Box>
       </Box>
+
+
+   
+      </Grid>
     </>
   );
 };
