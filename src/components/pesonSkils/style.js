@@ -4,7 +4,7 @@ export const GridMainStyle = (theme) => {
     bgcolor: theme == "dark" ? "#1116" : "#f5fffe",
     position: "relative",
     overflow: "hidden",
-    height: "100vh",
+    height: { xs: "80vh", sm: "90vh", md: "115vh", lg: "100vh" },
   };
 
   return style;
@@ -59,7 +59,7 @@ export const BoxMainCvStyle = {
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
   backgroundPosition: "center",
-  height: "100vh !important",
+  height: { xs: "80vh", sm: "90vh", md: "115vh", lg: "100vh" },
   width: { xs: "90%", sm: "100%" },
   position: "absolute",
   left: 0,

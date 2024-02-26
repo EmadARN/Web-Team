@@ -2,14 +2,13 @@ import React, { useContext, useState } from "react";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { Box } from "@mui/material";
-import { BoxStyle, ImgStyle, allStyle } from "./style";
+import { Box, Typography } from "@mui/material";
+import { BoxStyle, ImgStyle, allStyle, iconStyle } from "./style";
 import { imgData } from "./data";
 import { ThemeContext } from "@/context/ThemeContext";
-
+import KeyboardDoubleArrowDownOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowDownOutlined";
 const ParallaxHeader = () => {
   const [background, setBackground] = useState(20);
-
   const parallaxRef = useRef(null);
   const night_sea = useRef(null);
   const balloon = useRef(null);
@@ -17,7 +16,9 @@ const ParallaxHeader = () => {
   const undermoon = useRef(null);
   const moon = useRef(null);
   const boat = useRef(null);
+  const textRef = useRef(null);
   const { theme } = useContext(ThemeContext);
+
   useEffect(() => {
     let responsive = gsap.matchMedia();
     let ctx = gsap.context(() => {
@@ -27,7 +28,7 @@ const ParallaxHeader = () => {
         scrollTrigger: {
           trigger: parallaxRef.current,
           start: "top top",
-          end: "3000 bottom",
+          end: "4000 bottom",
           scrub: true,
           pin: true,
           onUpdate: (self) => {
@@ -82,7 +83,7 @@ const ParallaxHeader = () => {
                   return -300;
                 }
               },
-              scale: 2,
+              scale: 1.9,
               transition: "3s ease-out",
             },
             0
@@ -91,6 +92,15 @@ const ParallaxHeader = () => {
             moon.current,
             {
               y: "-=60",
+            },
+            0
+          );
+          tl.to(
+            textRef.current,
+            {
+              transition: "all 1s ease ",
+              opacity: 1,
+              fontSize: "20px",
             },
             0
           );
@@ -115,6 +125,11 @@ const ParallaxHeader = () => {
             );
           }
         )}
+
+        <Typography ref={textRef} sx={{ opacity: 0, fontSize: "5px" }}>
+          شرکت برنامه نویسی آدلی کارا
+        </Typography>
+        <KeyboardDoubleArrowDownOutlinedIcon sx={iconStyle} />
       </Box>
     </setion>
   );

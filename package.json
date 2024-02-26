@@ -13,6 +13,8 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.7",
     "@mui/material": "^5.15.7",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^1.0.54",
     "atropos": "^2.0.2",
     "axios": "^1.6.7",
     "formik": "^2.4.5",

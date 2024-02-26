@@ -50,51 +50,95 @@ export const ImgStyle = styled("img")(({ theme }) => ({
   pointerEvents: "none",
 }));
 
-export const ballonStyle = (isSmallScreen, isMediumScreen, islargeScreen) => {
+export const ballonStyle = (
+  isSmallScreen,
+  isMediumScreen,
+  islargeScreen,
+  isXlargeScreen,
+  isXXlargeScreen,
+  isXXXlargeScreen
+) => {
   const style = {
     top: isSmallScreen
-      ? "30%"
+      ? "40%"
       : isMediumScreen
-      ? "30%"
+      ? "40%"
       : islargeScreen
+      ? "40%"
+      : isXlargeScreen
+      ? "40%"
+      : isXXlargeScreen
       ? "30%"
-      : "15%",
+      : isXXXlargeScreen
+      ? "30%"
+      : "35%",
     left: "0%",
     zIndex: 4,
     width: isSmallScreen
-      ? "25%"
+      ? "18%"
       : isMediumScreen
-      ? "25%"
+      ? "17%"
       : islargeScreen
-      ? "10%"
-      : "22%",
+      ? "16%"
+      : isXlargeScreen
+      ? "16%"
+      : isXXlargeScreen
+      ? "14%"
+      : isXXXlargeScreen
+      ? "18%"
+      : "16%",
     maxHeight: isSmallScreen
-      ? "150px"
+      ? "15%"
       : isMediumScreen
-      ? "150px"
+      ? "22%"
       : islargeScreen
-      ? "150px"
-      : "300px",
+      ? "20%"
+      : isXlargeScreen
+      ? "20%"
+      : isXXlargeScreen
+      ? "30%"
+      : isXXXlargeScreen
+      ? "40%"
+      : "30%",
   };
 
   return style;
 };
 
-export const moonStyle = (isSmallScreen, isMediumScreen, islargeScreen) => {
+export const moonStyle = (
+  isSmallScreen,
+  isMediumScreen,
+  islargeScreen,
+  isXlargeScreen,
+  isXXlargeScreen,
+  isXXXlargeScreen
+) => {
   const style = {
     width: isSmallScreen
       ? "15%"
       : isMediumScreen
-      ? "9%"
+      ? "16%"
       : islargeScreen
-      ? "7%"
+      ? "14%"
+      : isXlargeScreen
+      ? "12%"
+      : isXXlargeScreen
+      ? "10%"
+      : isXXXlargeScreen
+      ? "8%"
       : "8%",
     maxHeight: isSmallScreen
-      ? "60px"
+      ? "50px"
       : isMediumScreen
       ? "80px"
       : islargeScreen
       ? "80px"
+      : isXlargeScreen
+      ? "90px"
+      : isXXlargeScreen
+      ? "90px"
+      : isXXXlargeScreen
+      ? "95px"
       : "80px",
     top: "30%",
     right: "28%",
@@ -102,25 +146,59 @@ export const moonStyle = (isSmallScreen, isMediumScreen, islargeScreen) => {
   };
   return style;
 };
-export const boatStyle = (isSmallScreen, isMediumScreen, islargeScreen) => {
+export const boatStyle = (
+  isSmallScreen,
+  isMediumScreen,
+  islargeScreen,
+  isXlargeScreen,
+  isXXlargeScreen,
+  isXXXlargeScreen
+) => {
   const style = {
     width: isSmallScreen
-      ? "55%"
-      : isMediumScreen
       ? "50%"
-      : islargeScreen
-      ? "30%"
-      : "30%",
-    maxHeight: "200px",
-    right: "0%",
-    top: isSmallScreen
-      ? "59%"
       : isMediumScreen
-      ? "59%"
+      ? "70%"
       : islargeScreen
       ? "60%"
+      : isXlargeScreen
+      ? "50%"
+      : isXXlargeScreen
+      ? "40%"
+      : isXXXlargeScreen
+      ? "30%"
+      : "30%",
+    maxHeight: isSmallScreen ? "130px" : isXXXlargeScreen ? "250px" : "200px",
+    right: "0%",
+    top: isSmallScreen
+      ? "65%"
+      : isMediumScreen
+      ? "55%"
+      : islargeScreen
+      ? "50%"
+      : isXlargeScreen
+      ? "66%"
+      : isXXlargeScreen
+      ? "52%"
+      : isXXXlargeScreen
+      ? "59%"
       : "50%",
     zIndex: 1,
   };
   return style;
+};
+export const iconStyle = {
+  fontSize: { xs: "22px", md: "30px" },
+  position: "absolute",
+  bottom: "10%",
+  animation: " arrow 1.2s cubic-bezier(0,.78,1,.99) infinite",
+  "@keyframes arrow": {
+    "0%": {
+      transform: "translateY(4px)",
+    },
+
+    "100%": {
+      transform: "translateY(-4px)",
+    },
+  },
 };

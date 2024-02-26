@@ -18,12 +18,21 @@ export const imgData = (
   boat
 ) => {
   const isSmallScreen = useMediaQuery(
-    "(min-width: 200px) and (max-width: 698px)"
+    "(min-width: 200px) and (max-width: 500px)"
   );
   const isMediumScreen = useMediaQuery(
-    "(min-width: 699px) and (max-width: 1024px)"
+    "(min-width: 501px) and (max-width: 600px)"
   );
-  const islargeScreen = useMediaQuery("(min-width: 1250px) ");
+  const islargeScreen = useMediaQuery(
+    "(min-width: 601px) and (max-width:700px)"
+  );
+  const isXlargeScreen = useMediaQuery(
+    "(min-width: 701px) and (max-width:950px)"
+  );
+  const isXXlargeScreen = useMediaQuery(
+    "(min-width: 951px) and (max-width:1100px)"
+  );
+  const isXXXlargeScreen = useMediaQuery("(min-width: 1250px) ");
   const imgData1 = [
     {
       id: 1,
@@ -36,14 +45,28 @@ export const imgData = (
       id: 2,
       img: "balloon.png",
       ref: balloon,
-      style: ballonStyle(isSmallScreen, isMediumScreen, islargeScreen),
+      style: ballonStyle(
+        isSmallScreen,
+        isMediumScreen,
+        islargeScreen,
+        isXlargeScreen,
+        isXXlargeScreen,
+        isXXXlargeScreen
+      ),
       class: "",
     },
     {
       id: 3,
       img: "moon.png",
       ref: moon,
-      style: moonStyle(isSmallScreen, isMediumScreen, islargeScreen),
+      style: moonStyle(
+        isSmallScreen,
+        isMediumScreen,
+        islargeScreen,
+        isXlargeScreen,
+        isXXlargeScreen,
+        isXXXlargeScreen
+      ),
       class: "",
     },
     {
@@ -64,7 +87,14 @@ export const imgData = (
       id: 6,
       img: "boat.png",
       ref: boat,
-      style: boatStyle(isSmallScreen, isMediumScreen, islargeScreen),
+      style: boatStyle(
+        isSmallScreen,
+        isMediumScreen,
+        islargeScreen,
+        isXlargeScreen,
+        isXXlargeScreen,
+        isXXXlargeScreen
+      ),
       class: "",
     },
   ];
