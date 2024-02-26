@@ -3,12 +3,13 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Box } from "@mui/material";
-import { BoxStyle, allStyle } from "./style";
+import { BoxStyle, ImgStyle, allStyle } from "./style";
 import { imgData } from "./data";
 import { ThemeContext } from "@/context/ThemeContext";
 
 const ParallaxHeader = () => {
   const [background, setBackground] = useState(20);
+
   const parallaxRef = useRef(null);
   const night_sea = useRef(null);
   const balloon = useRef(null);
@@ -16,7 +17,7 @@ const ParallaxHeader = () => {
   const undermoon = useRef(null);
   const moon = useRef(null);
   const boat = useRef(null);
-  const { theme, switchDark, switchLight } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   useEffect(() => {
     let responsive = gsap.matchMedia();
     let ctx = gsap.context(() => {
@@ -105,12 +106,12 @@ const ParallaxHeader = () => {
         {imgData(night_sea, balloon, moon, abovemoon, undermoon, boat).map(
           (item) => {
             return (
-              <img
+              <ImgStyle
                 ref={item.ref}
                 style={item.style}
                 className={item.class}
                 src={`/images/${item.img}`}
-              />
+              ></ImgStyle>
             );
           }
         )}
