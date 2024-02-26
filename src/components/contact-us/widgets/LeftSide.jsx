@@ -9,6 +9,8 @@ import { ContactUsTypography, T1, iconStyle } from "../Style";
 const LeftSide = () => {
   return (
     <>
+
+    
       <Box mb={4}>
         <Typography sx={ContactUsTypography}>راه های ارتباطی با ما</Typography>
       </Box>

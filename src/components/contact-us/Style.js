@@ -43,7 +43,8 @@ export const LeftGrid = {
   p: 3,
   width: {md:"40%",lg:"30%"},
   display: { xs: "none", md: "block" },
-  borderRadius:"20px 0 0 20px"
+  borderRadius:"20px 0 0 20px",
+  
 };
 
 export const ContactUsTypography = {
