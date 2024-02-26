@@ -43,6 +43,8 @@ const index = () => {
           <ContactMain />
         </Grid>
 
+
+        <ContactMain />
         <BackToUp />
       </Layout>
     </Grid>
