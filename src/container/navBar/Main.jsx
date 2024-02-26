@@ -2,9 +2,6 @@ import { Box, Button } from "@mui/material";
 import React, { useContext, useEffect } from "react";
 import { BoxStyle1, BoxStyle2, TypographyStyle1 } from "./style";
 import { ThemeContext } from "@/context/ThemeContext";
-<<<<<<< HEAD
-import { Link } from "react-scroll";
-=======
 import { styled } from "@mui/material/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
@@ -56,7 +53,6 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     borderRadius: 20 / 2,
   },
 }));
->>>>>>> 1dfd26d0a2b3a3f12843df39c490fd9bad249ab0
 
 const MainNav = () => {
   const [loadCount, setLoadCount] = React.useState(false);
@@ -73,34 +69,14 @@ const MainNav = () => {
     window.addEventListener("scroll", scrol);
   }, []);
 
-<<<<<<< HEAD
-
-
-=======
   const darkModeHandler = (e, val) => {
     val ? switchDark() : switchLight();
   };
->>>>>>> 1dfd26d0a2b3a3f12843df39c490fd9bad249ab0
   return (
     <Box sx={BoxStyle1}>
       <Box sx={BoxStyle2(loadCount, theme)}>
-         {["درباره ما", "مهارت های ما", "پروژه ها", "ارتباط با ما "].map(
+        {["درباره ما", "مهارت های ما", "پروژه ها", "ارتباط با ما "].map(
           (item) => {
-<<<<<<< HEAD
-            return (
-              <Button
-              
-                sx={TypographyStyle1(theme)}
-              >
-              {item}
-              </Button>
-             );
-          }
-        )} 
-        <Button  onClick={theme === "dark" ? switchLight : switchDark}>
-          {theme === "dark" ? "روز" : "شب"}
-        </Button>
-=======
             return <Button sx={TypographyStyle1(theme)}>{item}</Button>;
           }
         )}
@@ -113,7 +89,6 @@ const MainNav = () => {
             />
           }
         />
->>>>>>> 1dfd26d0a2b3a3f12843df39c490fd9bad249ab0
       </Box>
     </Box>
   );

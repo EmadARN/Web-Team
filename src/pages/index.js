@@ -36,15 +36,12 @@ const index = () => {
         <Grid my={20}>
           <Slidermain />
         </Grid>
-<<<<<<< HEAD
         <Grid my={15}>
           <MainPersonSkils />
         </Grid>
 
-=======
 
         <ContactMain />
->>>>>>> e10aef508bb58c013c36a2b1a676e5763f70ef7f
         <BackToUp />
       </Layout>
     </Grid>
