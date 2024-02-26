@@ -9,6 +9,7 @@ import {
 
 import animationData from '../../../assets/Animation - 1708606536024.json'
 import Lottie from 'lottie-react'
+import Textarea from "@/components/Textarea/Textarea";
 const RightSide = () => {
   return (
     <>
@@ -27,14 +28,15 @@ const RightSide = () => {
       </Box>
 
 
-      <Box display="flex" flexDirection="column" width="50%"  >
+      <Box display="flex" flexDirection="column" width="60%"  >
         <Box
           display="flex"
           justifyContent="flex-end"
           alignItems="center"
-          mb={4}
+          mb={2}
+          
         >
-          <Box width="50%">
+          <Box width="80%">
             <TextField
               size="small"
               sx={InputStyle}
@@ -52,7 +54,25 @@ const RightSide = () => {
           alignItems="center"
           mb={2}
         >
-          <Box width="50%">
+          <Box width="80%">
+            <TextField
+              size="small"
+              sx={InputStyle}
+              label="نوع کسب و کار"
+              id="outlined-basic"
+              variant="outlined"
+              fullWidth
+            />
+          </Box>
+        </Box>
+
+        <Box
+          display="flex"
+          justifyContent="flex-end"
+          alignItems="center"
+          mb={2}
+        >
+          <Box width="80%">
             <TextField
               size="small"
               sx={InputStyle}
@@ -64,17 +84,29 @@ const RightSide = () => {
           </Box>
         </Box>
 
-        <Box display="flex" justifyContent="flex-end" alignItems="center">
-          <Box width="50%">
-            {" "}
+
+        <Box
+          display="flex"
+          justifyContent="flex-end"
+          alignItems="center"
+          mb={2}
+        >
+          <Box width="80%">
             <TextField
-              label="پیام خود را وارد کنید"
-              fullWidth
+              size="small"
               sx={InputStyle}
-              id="outlined-multiline-static"
-              multiline
-              rows={4}
+              label="شماره همراه"
+              id="outlined-basic"
+              variant="outlined"
+              fullWidth
             />
+          </Box>
+        </Box>
+
+        <Box display="flex" justifyContent="flex-end" alignItems="center">
+          <Box width="80%">
+            {" "}
+           <Textarea/>
           </Box>
         </Box>
 
