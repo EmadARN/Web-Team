@@ -42,9 +42,6 @@ const index = () => {
         <Grid id="contactus">
           <ContactMain />
         </Grid>
-
-
-        <ContactMain />
         <BackToUp />
       </Layout>
     </Grid>
