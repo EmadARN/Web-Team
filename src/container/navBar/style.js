@@ -30,6 +30,7 @@ export const TypographyStyle1 = (theme) => {
     MsUserSelect: "none" /* IE 10 and IE 11 */,
     userSelect: "none" /* Standard syntax */,
     cursor: "pointer",
+
   };
 
   return style;

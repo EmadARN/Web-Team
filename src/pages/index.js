@@ -1,5 +1,5 @@
 import BackToUp from "@/common/backToUp/BackToUp";
-import Slidermain from "@/components/Project_slider/Main";
+import Slider_project from "@/components/Project_slider/Main";
 import About_Main from "@/components/about/Main";
 import ContactMain from "@/components/contact-us/ContactMain";
 import ParallaxHeader from "@/components/parallaxHeader/Main";
@@ -30,21 +30,19 @@ const index = () => {
           </Grid>
         </Container>
 
-        <Grid my={5}>
+        <Grid id="aboutUs" py={5}>
           <About_Main />
         </Grid>
-        <Grid my={20}>
-          <Slidermain />
+        <Grid id="projects" py={10}>
+          <Slider_project />
         </Grid>
-<<<<<<< HEAD
-        <Grid my={15}>
+        <Grid id="skills" py={10}>
           <MainPersonSkils />
         </Grid>
+        <Grid id="contactus">
+          <ContactMain />
+        </Grid>
 
-=======
-
-        <ContactMain />
->>>>>>> e10aef508bb58c013c36a2b1a676e5763f70ef7f
         <BackToUp />
       </Layout>
     </Grid>
