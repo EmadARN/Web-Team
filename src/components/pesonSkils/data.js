@@ -1,10 +1,10 @@
 export const avatars = [
   { id: 1, pic: "bhr", name: "RezaBhm" },
-  { id: 2, pic: "mac", name: "mac" },
+  { id: 2, pic: "emad", name: " EmadAraban" },
   { id: 3, pic: "farzi", name: "RezaFrz" },
   { id: 4, pic: "mamad", name: "mohammadvlt" },
   { id: 5, pic: "amir", name: " AmirHbb" },
-  { id: 6, pic: "emad", name: " EmadAraban" },
+  { id: 6, pic: "mac", name: "mac" },
 ];
 
 export const initialCv1 = [
@@ -20,14 +20,15 @@ export const initialCv1 = [
     email: "",
     phoneNumber: "",
   },
+
   {
     id: 2,
-    job: "سئو,دیجیتال مارکیتنگ",
-    name: "مهدی خضری",
+    job: "فول استک",
+    name: " عماد عربان",
     telegram: "",
     linkdien: "",
     github: "",
-    year: "2 سال",
+    year: "3 سال",
     location: "",
     email: "",
     phoneNumber: "",
@@ -70,12 +71,12 @@ export const initialCv1 = [
   },
   {
     id: 6,
-    job: "فول استک",
-    name: " عماد عربان",
+    job: "سئو,دیجیتال مارکیتنگ",
+    name: "مهدی خضری",
     telegram: "",
     linkdien: "",
     github: "",
-    year: "1378 15 ,مرداد",
+    year: "2 سال",
     location: "",
     email: "",
     phoneNumber: "",

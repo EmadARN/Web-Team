@@ -7,14 +7,12 @@ const Cursor = (props) => {
       sx={{
         left: props.x,
         top: props.y,
-      
         backgroundColor: "red !important",
         position: "fixed",
         borderRadius: " 100%",
         mixBlendMode: "difference",
         width: "25px",
         height: "25px",
-        transform: "translate(-50%, -50%)",
       }}
     ></Box>
   );
