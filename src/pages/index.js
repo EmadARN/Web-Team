@@ -19,7 +19,7 @@ const index = () => {
     const fakeDataFetch = () => {
       setTimeout(() => {
         setIsLoading(false);
-      }, 2000);
+      },7000);
     };
     fakeDataFetch();
   }, []);
@@ -42,9 +42,9 @@ const index = () => {
             <Grid xs={12} md={4}>
               <Content />
             </Grid>
-            <Grid xs={12} md={8}>
+            {/* <Grid xs={12} md={8}>
               <MainSpline />
-            </Grid>
+            </Grid> */}
           </Grid>
         </Container>
         <Grid id="aboutUs" py={5}>
