@@ -12,7 +12,7 @@ import Textarea from "@/components/Textarea/Textarea";
 const RightSide = () => {
   return (
     <>
-      <Box display="flex" flexDirection="column" mb={2}>
+      <Box display="flex" flexDirection="column" mb={3}>
         <Typography sx={ContactUsTypography}>ارتباط با ما</Typography>
         <Typography sx={T1}>
           نیاز به مشاوره دارید؟همین الان با ما در ارتباط باشید
@@ -27,9 +27,9 @@ const RightSide = () => {
       <Box display="flex" flexDirection="column" width="100%"  >
         <Box
           display="flex"
-          justifyContent="flex-end"
+          justifyContent="center"
           alignItems="center"
-          mb={2}
+          mb={4}
           
         >
           <Box width="80%">
@@ -46,9 +46,9 @@ const RightSide = () => {
 
         <Box
           display="flex"
-          justifyContent="flex-end"
+          justifyContent="center"
           alignItems="center"
-          mb={2}
+          mb={4}
         >
           <Box width="80%">
             <TextField
@@ -64,9 +64,9 @@ const RightSide = () => {
 
         <Box
           display="flex"
-          justifyContent="flex-end"
+          justifyContent="center"
           alignItems="center"
-          mb={2}
+          mb={4}
         >
           <Box width="80%">
             <TextField
@@ -83,9 +83,9 @@ const RightSide = () => {
 
         <Box
           display="flex"
-          justifyContent="flex-end"
+          justifyContent="center"
           alignItems="center"
-          mb={2}
+          mb={4}
         >
           <Box width="80%">
             <TextField
@@ -99,7 +99,7 @@ const RightSide = () => {
           </Box>
         </Box>
 
-        <Box display="flex" justifyContent="flex-end" alignItems="center">
+        <Box display="flex" justifyContent="center" alignItems="center">
           <Box width="80%">
             {" "}
            <Textarea/>
@@ -108,7 +108,7 @@ const RightSide = () => {
 
         <Box
           display="flex"
-          justifyContent="flex-end"
+          justifyContent="center"
           alignItems="center"
           mt={2}
         >

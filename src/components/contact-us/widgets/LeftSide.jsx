@@ -13,12 +13,12 @@ const LeftSide = () => {
     <>
 
     
-      <Box mb={4}>
+      <Box mb={2}>
         <Typography sx={ContactUsTypography}>راه های ارتباطی با ما</Typography>
       </Box>
 
       
-<Box width="100%">
+<Box width="100%" mb={2}>
         <Lottie animationData={animationData}/>
       </Box> 
 
@@ -31,11 +31,12 @@ const LeftSide = () => {
         <Box
           display="flex"
           alignItems="center"
-          justifyContent="space-between"
-          width="60%"
+          justifyContent="flex-end"
+          width="100%"
           mb={5}
+         
         >
-          <Box>
+          <Box ml={2} >
             <Typography sx={T1}>0919111111</Typography>
           </Box>
           <Box>
@@ -46,11 +47,11 @@ const LeftSide = () => {
         <Box
           display="flex"
           alignItems="center"
-          justifyContent="space-between"
-          width="90%"
+          justifyContent="flex-end"
+          width="100%"
           mb={5}
         >
-          <Box>
+          <Box ml={2}>
             <Typography sx={T1}>adlikara659@gmail.com</Typography>
           </Box>
           <Box>
@@ -61,11 +62,11 @@ const LeftSide = () => {
         <Box
           display="flex"
           alignItems="center"
-          justifyContent="space-between"
-          width="80%"
+          justifyContent="flex-end"
+          width="100%"
           mb={5}
         >
-          <Box>
+          <Box ml={2}>
             <Typography sx={T1}>زنجان.دانشگاه اعتمادیه</Typography>
           </Box>
           <Box>

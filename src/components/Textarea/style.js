@@ -34,7 +34,8 @@ export const Textarea = styled(BaseTextareaAutosize)(
     font-weight: 400;
     line-height: 1.5;
     padding: 8px 12px;
-    border-radius: 2px;
+   
+    border-radius: 4px;
     color: ${theme.palette.mode === "dark" ? grey[300] : grey[600]};
     background: ${theme.palette.mode === "dark" ? grey[900] : "#F0F0F0"};
     border: 1px solid ${theme.palette.mode === "dark" ? grey[700] : grey[200]};
