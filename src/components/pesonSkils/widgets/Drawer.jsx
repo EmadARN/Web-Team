@@ -14,7 +14,7 @@ const Drawer = ({ handleAvatarClick, avatar, selectedAvatar }) => {
           >
             <img
               style={imgDrawerStyle}
-              src="https://learning.xdezo.com/ygeehipi/2023/03/Guide-to-becoming-a-great-computer-programmer.jpg"
+              src={`/images/${item.pic}.png`}
               alt=""
             />
           </Avatar>

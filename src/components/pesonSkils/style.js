@@ -47,9 +47,13 @@ export const avatarStyle = (avatar, selectedAvatar, item) => {
   return style;
 };
 export const imgDrawerStyle = {
+  backgroundColor: " transparent",
   display: "block",
   width: "100%",
   height: "100%",
+  backgroundPosition: "center !important",
+  backgroundSize: "contain",
+  transform: "scale(1.3)",
 };
 
 //MainCv
