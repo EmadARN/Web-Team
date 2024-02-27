@@ -6,6 +6,8 @@ import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { ContactUsTypography, T1, iconStyle } from "../Style";
+import animationData from '../../../assets/Animation - 1708606536024.json'
+import Lottie from 'lottie-react'
 const LeftSide = () => {
   return (
     <>
@@ -14,6 +16,11 @@ const LeftSide = () => {
       <Box mb={4}>
         <Typography sx={ContactUsTypography}>راه های ارتباطی با ما</Typography>
       </Box>
+
+      
+<Box width="100%">
+        <Lottie animationData={animationData}/>
+      </Box> 
 
       <Grid
         display="flex"

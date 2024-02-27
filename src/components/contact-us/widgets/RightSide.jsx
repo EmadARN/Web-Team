@@ -7,8 +7,7 @@ import {
   sendticketButton,
 } from "../Style";
 
-import animationData from '../../../assets/Animation - 1708606536024.json'
-import Lottie from 'lottie-react'
+
 import Textarea from "@/components/Textarea/Textarea";
 const RightSide = () => {
   return (
@@ -23,12 +22,9 @@ const RightSide = () => {
 <Grid display="flex" justifyContent="space-evenly" alignItems="center" width="100%" >
 
 
-<Box width="50%">
-        <Lottie animationData={animationData}/>
-      </Box>
 
 
-      <Box display="flex" flexDirection="column" width="60%"  >
+      <Box display="flex" flexDirection="column" width="100%"  >
         <Box
           display="flex"
           justifyContent="flex-end"

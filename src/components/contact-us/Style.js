@@ -11,7 +11,7 @@ export const InputStyle = {
   },
   label: { color: "#111", fontSize: "12px" },
   "& label.Mui-focused": {
-    color: "#9fc4fc",
+    color: "#111",
     fontWeight: "bold",
   },
   "& .MuiInput-underline:after": {
@@ -19,14 +19,14 @@ export const InputStyle = {
   },
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
-      borderColor: "#9fc4fc",
+      borderColor: "#101c60",
       borderRadius: "10px",
     },
     "&:hover fieldset": {
       borderColor: "#fff",
     },
     "&.Mui-focused fieldset": {
-      borderColor: "#9fc4fc",
+      borderColor: "#101c60",
     },
   },
 };
@@ -54,7 +54,7 @@ export const ContactUsTypography = {
 };
 
 export const T1 = {
-  fontSize: { xs: "12px", md: "17px" },
+  fontSize: { xs: "8px", md: "17px" },
   color: "#fff",
   marginLeft: { xs: 1, md: 0 },
   whitespace: "nowrap",
@@ -70,6 +70,6 @@ export const sendticketButton = {
 };
 
 export const iconStyle = {
-  fontSize: {xs:"15px",md:"20px"},
+  fontSize: {xs:"10px",md:"20px"},
   color: "#81d8db",
 };
