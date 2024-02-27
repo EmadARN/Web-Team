@@ -6,7 +6,7 @@ import { SplineBoxStyle } from "./style";
 const MainSpline = () => {
   return (
     <Box sx={SplineBoxStyle}>
-      <Spline scene="https://prod.spline.design/kozqLVHfQTNKR47N/scene.splinecode"></Spline>
+      <Spline scene="https://prod.spline.design/9bU5avMbo6CbKN3r/scene.splinecode"></Spline>
     </Box>
   );
 };
