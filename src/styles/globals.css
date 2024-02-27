@@ -45,7 +45,10 @@ a {
 body {
   overflow-x: hidden !important;
 }
-
+.active {
+  border-bottom: 2px solid rgba(250, 0, 0, 0.267) !important;
+  transition: all 1s ease;
+}
 .light {
   background-color: #f0fffd;
   color: #1b1b1b;

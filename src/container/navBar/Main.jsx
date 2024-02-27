@@ -5,7 +5,8 @@ import { ThemeContext } from "@/context/ThemeContext";
 import { styled } from "@mui/material/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-
+import { navData } from "./data";
+import { Link, animateScroll as scroll } from "react-scroll";
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 52,
   height: 26,
@@ -72,14 +73,25 @@ const MainNav = () => {
   const darkModeHandler = (e, val) => {
     val ? switchDark() : switchLight();
   };
+
   return (
     <Box sx={BoxStyle1}>
       <Box sx={BoxStyle2(loadCount, theme)}>
-        {["درباره ما", "مهارت های ما", "پروژه ها", "ارتباط با ما "].map(
-          (item) => {
-            return <Button sx={TypographyStyle1(theme)}>{item}</Button>;
-          }
-        )}
+        {navData.map((item) => {
+          return (
+            <Link
+              key={item.id}
+              to={item.to}
+              smooth={true}
+              duration={500}
+              offset={-45}
+              activeClass="active"
+              spy={true}
+            >
+              <Box sx={TypographyStyle1(theme)}>{item.section}</Box>
+            </Link>
+          );
+        })}
         <FormControlLabel
           control={
             <MaterialUISwitch
