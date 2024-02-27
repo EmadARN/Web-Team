@@ -16,6 +16,7 @@ export const TypographyStyle2 = {
 };
 //Spline
 export const SplineBoxStyle = {
+   zIndex:1,
   height: {
     xs: "600px !important",
     md: "600px !important",
