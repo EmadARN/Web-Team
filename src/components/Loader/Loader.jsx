@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Box } from "@mui/material";
-
+import animationData from "../../assets/Animation - 1709040953350.json";
+import Lottie from "lottie-react";
 const Loader = () => {
   return (
     <Grid
@@ -17,18 +18,20 @@ const Loader = () => {
         alignItems: "center",
       }}
     >
-      <Grid className="svg-wrapper">
+      <Grid width="100%" flexDirection="column" className="svg-wrapper" display="flex" justifyContent="center" alignItems="center">
         {/* copy svg image and past it here */}
-       
+        <Box width="20%" >
+          <Lottie animationData={animationData} />
+        </Box>
         <Box
           style={{
-            width: "100%",
+            
             fontWeight: "bold",
             color: "#fff",
             transform: "translate(.4rem)",
-            marginTop: "1rem",
+      
           }}
-          className="loading-text"
+         
         >
           در حال بارگذاری
         </Box>
