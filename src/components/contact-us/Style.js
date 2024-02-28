@@ -6,15 +6,27 @@ export const InputStyle = {
     direction: "rtl",
     pr: 2,
     background: "#fff",
-    borderRadius: "4px",
-    fontSize: "12px",
+    borderRadius: "9px",
+    fontSize:"12px"
   },
   label: { color: "#111", fontSize: "12px" },
   "& label.Mui-focused": {
     color: "#fff",
   },
   "& .MuiInput-underline:after": {
-    borderBottomColor: "#9fc4fc",
+    borderBottomColor: "#fff",
+  },
+  "& .MuiOutlinedInput-root": {
+    "& fieldset": {
+      borderColor: "#101c60",
+      borderRadius: "10px",
+    },
+    "&:hover fieldset": {
+      borderColor: "#fff",
+    },
+    "&.Mui-focused fieldset": {
+      borderColor: "#fff",
+    },
   },
 };
 
@@ -22,13 +34,13 @@ export const RightGrid = {
   bgcolor: "#393E46",
   p: 3,
   width: { xs: "100%", md: "50%" },
-  borderRadius: "0 20px 20px 0",
+  borderRadius:"0 20px 20px 0"
 };
 
 export const LeftGrid = {
   bgcolor: "#2E2E38",
   p: 3,
-  width: { md: "40%", lg: "30%" },
+  width: {md:"40%",lg:"40%"},
   display: { xs: "none", md: "block" },
   borderRadius: "20px 0 0 20px",
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid,Box,Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import { RightGrid, LeftGrid } from "../Style";
 import RightSide from "./RightSide";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -7,7 +7,7 @@ import LeftSide from "./LeftSide";
 import Left_side_mobile from "./contact-mobile/Left_side_mobile";
 const Contact_us = () => {
   return (
-    <Grid container sx={{ width: { xs: "100%", md: "80%" } }}  >
+    <Grid container sx={{ width: { xs: "100%", md: "80%" },justifyContent:"center" }}  >
 
       <Grid item sx={RightGrid}>
         <RightSide />
