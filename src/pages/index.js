@@ -19,11 +19,10 @@ const index = () => {
     const fakeDataFetch = () => {
       setTimeout(() => {
         setIsLoading(false);
-      },7000);
+      }, 5000);
     };
     fakeDataFetch();
   }, []);
-
 
   return isLoading ? (
     <Loader />
@@ -33,8 +32,6 @@ const index = () => {
         backgroundColor: "#1b1b1b",
       }}
     >
-     
-
       <Layout>
         <ParallaxHeader />
         <Container maxWidth="lg">

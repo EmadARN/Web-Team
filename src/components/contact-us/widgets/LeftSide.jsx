@@ -1,26 +1,23 @@
 import React from "react";
-import { Grid,Box, Typography, TextField, Button } from "@mui/material";
+import { Grid, Box, Typography } from "@mui/material";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { ContactUsTypography, T1, iconStyle } from "../Style";
-import animationData from '../../../assets/Animation - 1708606536024.json'
-import Lottie from 'lottie-react'
+import animationData from "../../../assets/Animation - 1708606536024.json";
+import Lottie from "lottie-react";
 const LeftSide = () => {
   return (
     <>
-
-    
       <Box mb={4}>
         <Typography sx={ContactUsTypography}>راه های ارتباطی با ما</Typography>
       </Box>
 
-      
-<Box width="100%">
-        <Lottie animationData={animationData}/>
-      </Box> 
+      <Box width="100%">
+        <Lottie animationData={animationData} />
+      </Box>
 
       <Grid
         display="flex"

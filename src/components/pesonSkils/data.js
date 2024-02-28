@@ -1,13 +1,13 @@
-export const avatars = [
-  { id: 1, pic: "bhr", name: "RezaBhm" },
-  { id: 2, pic: "emad", name: " EmadAraban" },
-  { id: 3, pic: "farzi", name: "RezaFrz" },
-  { id: 4, pic: "mamad", name: "mohammadvlt" },
-  { id: 5, pic: "amir", name: " AmirHbb" },
-  { id: 6, pic: "mac", name: "mac" },
-];
+// export const avatars = [
+//   { id: 1, pic: "bhr", name: "RezaBhm" },
+//   { id: 2, pic: "emad", name: " EmadAraban" },
+//   { id: 3, pic: "farzi", name: "RezaFrz" },
+//   { id: 4, pic: "mamad", name: "mohammadvlt" },
+//   { id: 5, pic: "amir", name: " AmirHbb" },
+//   { id: 6, pic: "mac", name: "mac" },
+// ];
 
-export const initialCv1 = [
+export const avatars = [
   {
     id: 1,
     job: "فول استک",
@@ -18,7 +18,7 @@ export const initialCv1 = [
     year: "6 سال",
     location: "",
     email: "",
-    phoneNumber: "",
+    pic: "bhr",
   },
 
   {
@@ -30,8 +30,8 @@ export const initialCv1 = [
     github: "",
     year: "3 سال",
     location: "",
-    email: "",
-    phoneNumber: "",
+    email: "arabanemad@gmail.com",
+    pic: "emad",
   },
   {
     id: 3,
@@ -42,8 +42,8 @@ export const initialCv1 = [
     github: "",
     year: "3 سال",
     location: "",
-    email: "",
-    phoneNumber: "",
+    email: "farzipour_reza@yahoo.com",
+    pic: "farzi",
   },
   {
     id: 4,
@@ -54,8 +54,8 @@ export const initialCv1 = [
     github: "",
     year: "1.5 سال",
     location: "",
-    email: "",
-    phoneNumber: "",
+    email: "mohammadrv2003@gmail.com",
+    pic: "mamad",
   },
   {
     id: 5,
@@ -66,8 +66,8 @@ export const initialCv1 = [
     github: "",
     year: "3 سال",
     location: "",
-    email: "",
-    phoneNumber: "",
+    email: "ahossein960@gmail.com",
+    pic: "amir",
   },
   {
     id: 6,
@@ -79,7 +79,7 @@ export const initialCv1 = [
     year: "2 سال",
     location: "",
     email: "",
-    phoneNumber: "",
+    pic: "mac",
   },
 ];
 export const initialCv2 = [
