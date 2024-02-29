@@ -11,6 +11,7 @@ import { Container, Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Loader from "@/components/Loader/Loader";
 import Cursor from "@/components/Cursor/Cursor";
+import ScrollBar from "@/components/SmoothScroll/ScrollBar";
 
 const index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +20,7 @@ const index = () => {
     const fakeDataFetch = () => {
       setTimeout(() => {
         setIsLoading(false);
-      },7000);
+      },2000);
     };
     fakeDataFetch();
   }, []);
@@ -34,8 +35,9 @@ const index = () => {
       }}
     >
      
-
+{/* <ScrollBar/> */}
       <Layout>
+       
         <ParallaxHeader />
         <Container maxWidth="lg">
           <Grid container>
