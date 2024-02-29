@@ -11,8 +11,7 @@ export const InputStyle = {
   },
   label: { color: "#111", fontSize: "12px" },
   "& label.Mui-focused": {
-    color: "#111",
-    fontWeight: "bold",
+    color: "#fff",
   },
   "& .MuiInput-underline:after": {
     borderBottomColor: "#fff",
@@ -43,8 +42,7 @@ export const LeftGrid = {
   p: 3,
   width: {md:"40%",lg:"40%"},
   display: { xs: "none", md: "block" },
-  borderRadius:"20px 0 0 20px",
-  
+  borderRadius: "20px 0 0 20px",
 };
 
 export const ContactUsTypography = {
@@ -70,6 +68,6 @@ export const sendticketButton = {
 };
 
 export const iconStyle = {
-  fontSize: {xs:"10px",md:"20px"},
+  fontSize: { xs: "10px", md: "20px" },
   color: "#81d8db",
 };

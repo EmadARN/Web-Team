@@ -25,7 +25,6 @@ const index = () => {
     fakeDataFetch();
   }, []);
 
-
   return isLoading ? (
     <Loader />
   ) : (
