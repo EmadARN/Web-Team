@@ -12,6 +12,7 @@ import React, { useEffect, useState } from "react";
 import Loader from "@/components/Loader/Loader";
 import Cursor from "@/components/Cursor/Cursor";
 import ScrollBar from "@/components/SmoothScroll/ScrollBar";
+import Services_titile from "@/components/services/ServiceTitle/widgets/Services_titile";
 
 const index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,7 +21,7 @@ const index = () => {
     const fakeDataFetch = () => {
       setTimeout(() => {
         setIsLoading(false);
-      },2000);
+      }, 2000);
     };
     fakeDataFetch();
   }, []);
@@ -33,19 +34,12 @@ const index = () => {
         backgroundColor: "#1b1b1b",
       }}
     >
-     
-{/* <ScrollBar/> */}
+      {/* <ScrollBar/> */}
       <Layout>
-       
         <ParallaxHeader />
         <Container maxWidth="lg">
-          <Grid container>
-            <Grid xs={12} md={4}>
-              <Content />
-            </Grid>
-            {/* <Grid xs={12} md={8}>
-              <MainSpline />
-            </Grid> */}
+          <Grid mb={10} mt={10}>
+            <Services_titile />
           </Grid>
         </Container>
         <Grid id="aboutUs" py={5}>
