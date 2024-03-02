@@ -1,0 +1,64 @@
+export const Mobile_Box ={
+    width:"100%",
+    
+    flexDirection:"column-reverse",
+    alignItems:"space-evanly",
+    
+    display:{xs:"flex",md:"none"}
+}
+
+
+export const SteperMobileStyle ={
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+ 
+    width:"100%"
+}
+
+export const StepMobileStyle = {
+    width: "100%", display: "flex", justifyContent: "center" 
+}
+
+
+export const TitleBox =(activeStep,index)=>{
+    const S1 ={
+        display: "flex",
+        justifyContent: "space-evenly",
+        width: "70%",
+        cursor: "pointer",
+        alignItems: "center",
+        "&:hover": {
+          backgroundColor: activeStep !== index ? "#ddd" : "#fff",
+          opacity: activeStep !== index ? "0.1" : "none",
+        },
+        backgroundColor:
+          activeStep === index ? "#fff" : "transparent",
+        p: 2,
+    }
+
+    return S1
+}
+
+
+export const TitleMobiletypo =(activeStep,index)=>{
+    const S2 ={
+        cursor: "pointer",
+        whiteSpace: "nowrap",
+        color: activeStep == index ? "#111" : "#8E96A0",
+        fontSize: "15px",
+    }
+
+    return S2
+    
+}
+
+export const DescTypo ={
+    fontSize: "13px",
+    fontWeight: "bold",
+    m: 2,
+}
+
+export const mobileIcon ={
+    fontSize: "8px", ml: 1 
+}
