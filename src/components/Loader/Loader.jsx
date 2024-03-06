@@ -23,7 +23,7 @@ const Loader = () => {
         <Box width="20%" >
           <Lottie animationData={animationData} />
         </Box>
-        <Box
+        {/* <Box
           style={{
             
             fontWeight: "bold",
@@ -34,7 +34,7 @@ const Loader = () => {
          
         >
           در حال بارگذاری
-        </Box>
+        </Box> */}
       </Grid>
     </Grid>
   );
