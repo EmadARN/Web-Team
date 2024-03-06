@@ -1,9 +1,21 @@
 import React from "react";
 import Contact_us from "./widgets/Contact_us";
-import { Grid } from "@mui/material";
+import { Grid, Box, Typography } from "@mui/material";
 const ContactMain = () => {
   return (
-    <Grid width="100%" display="flex" justifyContent="center" mt={4}>
+    <Grid
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      flexDirection="column"
+      width="100%"
+    >
+      <Box mb={6}>
+        <Typography variant="h4" fontWeight="bold">
+          {" "}
+          ارتباط با ما
+        </Typography>
+      </Box>
       <Contact_us />
     </Grid>
   );
