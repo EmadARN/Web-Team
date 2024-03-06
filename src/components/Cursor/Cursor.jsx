@@ -1,39 +1,53 @@
-import React from "react";
-import { Box } from "@mui/material";
+// import React from "react";
+// import { Box } from "@mui/material";
 
-const Cursor = (props) => {
+// const Cursor = (props) => {
+//   return (
+//     <Box
+//       sx={{
+//         left: props.x,
+//         top: props.y,
+//         backgroundColor: "#d444 !important",
+//         position: "fixed",
+//         borderRadius: " 100%",
+//         mixBlendMode: "difference",
+//         width: "15px",
+//         height: "15px",
+//         transform: "translate(40%, 50%)",
+//       }}
+//     ></Box>
+//   );
+// };
+
+// export default Cursor;
+import React from 'react'
+import AnimatedCursor from 'react-animated-cursor'
+const Cursor = () => {
   return (
-    <Box
-      sx={{
-        left: props.x,
-        top: props.y,
-        backgroundColor: "#d444 !important",
-        position: "fixed",
-        borderRadius: " 100%",
-        mixBlendMode: "difference",
-        width: "15px",
-        height: "15px",
-        transform: "translate(40%, 50%)",
-      }}
-    ></Box>
-  );
-};
+   <AnimatedCursor
+   innerSize={11}
+   outerSize={14}
+   color='193 ,11,111'
+   outerAlpha={0.2}
+   innerScale={0.7}
+   outerScale={5}
 
-export default Cursor;
-// const CursorPointer = styled.div.attrs((props) => ({
-//   style: {
-//     left: props.x,
-//     top: props.y,
-//   },
-// }))`
-//   z-index: 999;
-//   background-color: white;
-//   position: absolute;
-//   border-radius: 100%;
-//   mix-blend-mode: difference;
-//   width: 32px;
-//   height: 32px;
-//   transform: translate(-50%, -50%);
-// `;
+   clickables={[
+    'a',
+    'p',
+    'input[type="text"]',
+    'input[type="email"]',
+    'input[type="number"]',
+    'input[type="submit"]',
+    'input[type="image"]',
+    'label[for]',
+    'select',
+    'textarea',
+    'button',
+    '.link'
+  ]}
+   />
+  )
+}
 
-// export default CursorPointer;
+export default Cursor
