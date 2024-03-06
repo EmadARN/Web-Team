@@ -12,6 +12,9 @@ export const SteperStyle = {
   alignItems: "start",
   justifyContent: "center",
 
+height:"100%",
+
+
   width: "50%",
 };
 
