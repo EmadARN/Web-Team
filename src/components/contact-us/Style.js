@@ -30,19 +30,30 @@ export const InputStyle = {
   },
 };
 
-export const RightGrid = {
-  bgcolor: "#393E46",
-  p: 3,
-  width: { xs: "100%", md: "50%" },
-  borderRadius:"0 20px 20px 0"
+export const RightGrid = (theme) => {
+
+  const S3 ={
+    backgroundColor: theme ==="dark" ? "#393E46"  : "#587299",
+    p: 3,
+    width: { xs: "100%", md: "50%" },
+    borderRadius:"0 20px 20px 0"
+  }
+
+  return S3
+  
 };
 
-export const LeftGrid = {
-  bgcolor: "#2E2E38",
+export const LeftGrid = (theme) => {
+
+const S4 ={
+  bgcolor: theme === "dark" ? "#2E2E38" : "#2e5066",
   p: 3,
   width: {md:"40%",lg:"40%"},
   display: { xs: "none", md: "block" },
   borderRadius: "20px 0 0 20px",
+}
+
+  return S4
 };
 
 export const ContactUsTypography = {
