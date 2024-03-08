@@ -12,7 +12,6 @@ const ContactMain = () => {
     >
       <Box mb={6}>
         <Typography variant="h4" fontWeight="bold">
-          {" "}
           ارتباط با ما
         </Typography>
       </Box>

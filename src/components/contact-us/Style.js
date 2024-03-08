@@ -7,7 +7,7 @@ export const InputStyle = {
     pr: 2,
     background: "#fff",
     borderRadius: "9px",
-    fontSize:"12px"
+    fontSize: "12px",
   },
   label: { color: "#111", fontSize: "12px" },
   "& label.Mui-focused": {
@@ -31,29 +31,26 @@ export const InputStyle = {
 };
 
 export const RightGrid = (theme) => {
-
-  const S3 ={
-    backgroundColor: theme ==="dark" ? "#393E46"  : "#587299",
+  const S3 = {
+    backgroundColor: theme === "dark" ? "#393E46" : "#587299",
     p: 3,
     width: { xs: "100%", md: "50%" },
-    borderRadius:"0 20px 20px 0"
-  }
+    borderRadius: "0 20px 20px 0",
+  };
 
-  return S3
-  
+  return S3;
 };
 
 export const LeftGrid = (theme) => {
+  const S4 = {
+    bgcolor: theme === "dark" ? "#2E2E38" : "#2e5066",
+    p: 3,
+    width: { md: "40%", lg: "40%" },
+    display: { xs: "none", md: "block" },
+    borderRadius: "20px 0 0 20px",
+  };
 
-const S4 ={
-  bgcolor: theme === "dark" ? "#2E2E38" : "#2e5066",
-  p: 3,
-  width: {md:"40%",lg:"40%"},
-  display: { xs: "none", md: "block" },
-  borderRadius: "20px 0 0 20px",
-}
-
-  return S4
+  return S4;
 };
 
 export const ContactUsTypography = {
