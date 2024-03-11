@@ -11,9 +11,8 @@ const Avatars = () => {
   const [avatar, setAvatars] = useState(false);
   const { theme } = useContext(ThemeContext);
   const handleAvatarClick = (id) => {
-    setAvatars(true);
     setSelectedAvatar(id);
-    console.log(selectedAvatar);
+    setAvatars(true);
   };
 
   return (
@@ -31,7 +30,7 @@ const Avatars = () => {
       {avatars.map((item) => {
         return item.id === selectedAvatar ? (
           <Grid xs={10} sm={11} key={item.id} sx={{ zIndex: 1 }}>
-            <MainCv avatar={avatar} />
+            <MainCv data={item} avatar={avatar} />
           </Grid>
         ) : null;
       })}

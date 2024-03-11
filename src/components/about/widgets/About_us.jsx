@@ -5,7 +5,10 @@ import Right_part from "./Right_part";
 
 const About_us = () => {
   return (
+    <>
+    
     <Grid container maxWidth={{ xs: "80%", md: "lg" }}>
+   
       <Grid item xs={12} md={6}>
         <Right_part />
       </Grid>
@@ -13,6 +16,7 @@ const About_us = () => {
         <Left_part />
       </Grid>
     </Grid>
+    </>
   );
 };
 

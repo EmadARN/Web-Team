@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "@mui/material";
+import { Container,Grid,Box,Typography } from "@mui/material";
 import { SwiperSlide } from "swiper/react";
 
 import Swiper from "@/common/Swiper/Swiper";
@@ -8,6 +8,14 @@ import { imgStyle, sliderslide } from "./Style";
 
 const Slider_project = () => {
   return (
+    <Grid
+    display="flex"
+    justifyContent="center"
+    alignItems="center"
+    flexDirection="column"
+    width="100%"
+    >
+        <Box mb={6}><Typography sx={{fontSize:{xs:"20px",md:'27px'}}} fontWeight="bold"> نمونه کارهای ما</Typography></Box>
     <Container maxWidth={{ xs: "md", md: "lg" }}>
       <Swiper>
         {slider_data.map((item) => {
@@ -19,6 +27,7 @@ const Slider_project = () => {
         })}
       </Swiper>
     </Container>
+    </Grid>
   );
 };
 

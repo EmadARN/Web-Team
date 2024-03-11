@@ -1,24 +1,24 @@
 import React from "react";
-import { Grid,Box, Typography, TextField, Button } from "@mui/material";
+import { Grid, Box, Typography } from "@mui/material";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { ContactUsTypography, T1, iconStyle } from "../Style";
-import animationData from '../../../assets/Animation - 1708606536024.json'
-import Lottie from 'lottie-react'
+import animationData from "../../../assets/Animation - 1708606536024.json";
+import Lottie from "lottie-react";
 const LeftSide = () => {
   return (
     <>
 
     
-      <Box mb={4}>
+      <Box mb={2}>
         <Typography sx={ContactUsTypography}>راه های ارتباطی با ما</Typography>
       </Box>
 
       
-<Box width="100%">
+<Box width="100%" mb={2}>
         <Lottie animationData={animationData}/>
       </Box> 
 
@@ -31,11 +31,12 @@ const LeftSide = () => {
         <Box
           display="flex"
           alignItems="center"
-          justifyContent="space-between"
-          width="60%"
+          justifyContent="flex-end"
+          width="100%"
           mb={5}
+         
         >
-          <Box>
+          <Box ml={2} >
             <Typography sx={T1}>0919111111</Typography>
           </Box>
           <Box>
@@ -46,11 +47,11 @@ const LeftSide = () => {
         <Box
           display="flex"
           alignItems="center"
-          justifyContent="space-between"
-          width="90%"
+          justifyContent="flex-end"
+          width="100%"
           mb={5}
         >
-          <Box>
+          <Box ml={2}>
             <Typography sx={T1}>adlikara659@gmail.com</Typography>
           </Box>
           <Box>
@@ -61,11 +62,11 @@ const LeftSide = () => {
         <Box
           display="flex"
           alignItems="center"
-          justifyContent="space-between"
-          width="80%"
+          justifyContent="flex-end"
+          width="100%"
           mb={5}
         >
-          <Box>
+          <Box ml={2}>
             <Typography sx={T1}>زنجان.دانشگاه اعتمادیه</Typography>
           </Box>
           <Box>

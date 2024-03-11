@@ -18,12 +18,13 @@ export const BoxStyle = (background, theme) => {
       bottom: 0,
       left: 0,
       width: "100%",
-      height: "100px",
+      height: "80px",
       background:
         theme == "dark"
           ? `linear-gradient(to top, #1b1b1b, transparent)`
           : `linear-gradient(to top, #f0fffd, transparent)`,
       zIndex: 1000,
+  
     },
   };
   return style;
@@ -166,7 +167,7 @@ export const boatStyle = (
       : isXXlargeScreen
       ? "40%"
       : isXXXlargeScreen
-      ? "30%"
+      ? "35%"
       : "30%",
     maxHeight: isSmallScreen ? "130px" : isXXXlargeScreen ? "250px" : "200px",
     right: "0%",

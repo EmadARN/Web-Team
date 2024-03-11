@@ -3,9 +3,7 @@ import { Box, Typography } from "@mui/material";
 const Left_part = () => {
   return (
     <>
-    <Box>
-          <Typography sx={{color:"#1895D2" ,fontSize:"20px"}}>درباره ما</Typography>
-        </Box>
+
 
         <Box>
           <Typography sx={{color:"#808080",textAlign:"justify",fontSize:"15px"}}>

@@ -126,7 +126,10 @@ const ParallaxHeader = () => {
           }
         )}
 
-        <Typography ref={textRef} sx={{ opacity: 0, fontSize: "5px" }}>
+        <Typography
+          ref={textRef}
+          sx={{ opacity: 0, fontSize: "5px", fontWeight: "bold" }}
+        >
           شرکت برنامه نویسی آدلی کارا
         </Typography>
         <KeyboardDoubleArrowDownOutlinedIcon sx={iconStyle} />
