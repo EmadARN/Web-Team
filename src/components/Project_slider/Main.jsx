@@ -15,7 +15,7 @@ const Slider_project = () => {
     flexDirection="column"
     width="100%"
     >
-        <Box mb={6}><Typography variant="h4" fontWeight="bold"> نمونه کارهای ما</Typography></Box>
+        <Box mb={6}><Typography sx={{fontSize:{xs:"20px",md:'27px'}}} fontWeight="bold"> نمونه کارهای ما</Typography></Box>
     <Container maxWidth={{ xs: "md", md: "lg" }}>
       <Swiper>
         {slider_data.map((item) => {

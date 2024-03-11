@@ -7,6 +7,38 @@ export const FirstBox = {
   m: 2,
 };
 
+
+export const steper_box = (theme,index,activeStep) =>{
+  const MyS ={
+    display: "flex",
+    justifyContent: "space-evenly",
+    width: "70%",
+    cursor: "pointer",
+
+    alignItems: "center",
+    "&:hover": {
+      backgroundColor:
+        (activeStep !== index && theme === "dark" && "#ddd") ||
+        (activeStep !== index && theme !== "dark" && "#1116"),
+      opacity:
+        (activeStep !== index && theme === "dark" && "0.1") ||
+        (activeStep !== index && theme !== "dark" && "none"),
+    },
+    backgroundColor:
+      (activeStep === index && theme === "dark" && "#fff") ||
+      (activeStep === index && theme !== "dark" && "#111"),
+    p: 1,
+  }
+
+  return MyS
+}
+
+
+export var desc_typo ={
+  fontSize: { xs: "13px", md: "20px", fontWeight: "bold" },
+  mb: 2,
+}
+
 export const SteperStyle = {
   display: "flex",
   alignItems: "start",
@@ -20,7 +52,10 @@ height:"100%",
 
 
 export const subcontentTypo =(theme)=>{
-  color:theme ==="dark" ? "#dddd":"#1116" 
+  const S6 ={
+    color:theme ==="dark" ? "#dddd":"#1119"
+  }
+   return S6
 }
 
 export const Btn6 = styled("button")(({ theme }) => ({

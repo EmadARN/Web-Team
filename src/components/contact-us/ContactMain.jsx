@@ -11,7 +11,8 @@ const ContactMain = () => {
       width="100%"
     >
       <Box mb={6}>
-        <Typography variant="h4" fontWeight="bold">
+        <Typography sx={{fontSize:{xs:"20px",md:'27px'}}} fontWeight="bold">
+          {" "}
           ارتباط با ما
         </Typography>
       </Box>
