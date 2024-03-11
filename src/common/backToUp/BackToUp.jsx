@@ -1,13 +1,15 @@
 import backToUp from "@/utils/BackToUp";
 import { AiOutlineArrowUp } from "react-icons/ai";
-import React from "react";
+import React, { useContext } from "react";
 
-import { Btn } from "./style";
+import { Btn, BtnStyle } from "./style";
+import { ThemeContext } from "@/context/ThemeContext";
 
 const BackToUp = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div>
-      <Btn sx={{ color: "#ddd" }} onClick={() => backToUp()}>
+      <Btn sx={BtnStyle(theme)} onClick={() => backToUp()}>
         <AiOutlineArrowUp /> بازگشت به بالا
       </Btn>
     </div>

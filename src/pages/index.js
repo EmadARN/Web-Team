@@ -38,8 +38,8 @@ const index = () => {
         <ParallaxHeader />
 
         <Grid id="aboutUs" py={10}>
-          <Container maxWidth ="lg">
-          <About_Main />
+          <Container maxWidth="lg">
+            <About_Main />
           </Container>
         </Grid>
         <Container maxWidth="lg">
@@ -58,7 +58,16 @@ const index = () => {
         <Grid id="contactus">
           <ContactMain />
         </Grid>
-        <BackToUp />
+        <Grid
+          sx={{
+            display: "flex",
+            justifyContent: { xs: "center", md: "start" },
+            mt: 4,
+            mb: 1,
+          }}
+        >
+          <BackToUp />
+        </Grid>
       </Layout>
     </Grid>
   );
