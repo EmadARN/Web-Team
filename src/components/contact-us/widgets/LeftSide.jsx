@@ -7,20 +7,18 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { ContactUsTypography, T1, iconStyle } from "../Style";
 import animationData from "../../../assets/Animation - 1708606536024.json";
+import Link from "next/link";
 import Lottie from "lottie-react";
 const LeftSide = () => {
   return (
     <>
-
-    
       <Box mb={2}>
         <Typography sx={ContactUsTypography}>راه های ارتباطی با ما</Typography>
       </Box>
 
-      
-<Box width="100%" mb={2}>
-        <Lottie animationData={animationData}/>
-      </Box> 
+      <Box width="100%" mb={2}>
+        <Lottie animationData={animationData} />
+      </Box>
 
       <Grid
         display="flex"
@@ -34,9 +32,8 @@ const LeftSide = () => {
           justifyContent="flex-end"
           width="100%"
           mb={5}
-         
         >
-          <Box ml={2} >
+          <Box ml={2}>
             <Typography sx={T1}>0919111111</Typography>
           </Box>
           <Box>
@@ -85,7 +82,13 @@ const LeftSide = () => {
           </Box>
 
           <Box>
-            <LinkedInIcon sx={{ color: "#126BC4", cursor: "pointer" }} />
+            <Link
+              target="_blank"
+              href="https://www.linkedin.com/company/adli-kara/"
+            >
+              {" "}
+              <LinkedInIcon sx={{ color: "#126BC4", cursor: "pointer" }} />
+            </Link>
           </Box>
         </Box>
       </Grid>

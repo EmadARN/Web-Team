@@ -1,5 +1,15 @@
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Container } from "@mui/material";
+import Swiper_Slider from "@/common/Swiper/Swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Skill, SkillData } from "@/components/pesonSkils/data";
+import SkillBox from "@/components/pesonSkils/widgets/Skill";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
+import "swiper/css/autoplay";
 const InitialCv2 = () => {
   return (
     <>
@@ -44,16 +54,41 @@ const InitialCv2 = () => {
         </Typography>
         <Box
           sx={{
-            height: { xs: "30%", sm: "33%", md: "40%" },
+            width:"100%",
+            height: { xs: "30%", sm: "33%", md: "30%" },
             color: "#2228",
             backgroundColor: "rgba(255,255,255,0.1)",
             WebkitBackdropFilter: "blur(7px) !important",
+            display:"flex",
+            justifyContent:'center',
+            alignItems:"center",
             backdropFilter: {
               xs: "blur(7px)",
               md: "blur(10px)",
             },
           }}
         >
+          <Swiper
+          
+            style={{display:"flex",justifyContent:'center',alignItems:"center",width:"100%" }}
+            spaceBetween={40}
+            slidesPerView={3}
+            modules={[Navigation, Autoplay]}
+            autoplay={{ delay: 2000 }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+          >
+            {SkillData.map((item) => {
+              return (
+               
+                  <SwiperSlide >
+                    <SkillBox item={item} />
+                  </SwiperSlide>
+             
+              );
+            })}
+          </Swiper>
+
           <Typography sx={{ textAlign: "justify", p: 1 }}></Typography>
         </Box>
       </Box>
