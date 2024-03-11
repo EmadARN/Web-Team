@@ -5,7 +5,10 @@ export const allStyle = {
 };
 export const BoxStyle = (background, theme) => {
   const style = {
-    background: `linear-gradient(#0F2B9C, #673D7D ${background}%, #0F2B9C, #EDFC54 )`,
+    background:
+      theme == "dark"
+        ? `linear-gradient(#0F2B9C, #673D7D ${background}%, #0F2B9C, #EDFC54 )`
+        : `linear-gradient( skyblue, #efefef ${background}%,  skyblue,  #c7e3ff)`,
     position: "relative",
     width: "100%",
     height: "110vh",
@@ -24,7 +27,6 @@ export const BoxStyle = (background, theme) => {
           ? `linear-gradient(to top, #1b1b1b, transparent)`
           : `linear-gradient(to top, #f0fffd, transparent)`,
       zIndex: 1000,
-  
     },
   };
   return style;

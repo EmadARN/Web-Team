@@ -120,7 +120,7 @@ const ParallaxHeader = () => {
                 ref={item.ref}
                 style={item.style}
                 className={item.class}
-                src={`/images/${item.img}`}
+                src={`/images/${theme == "dark" ? item.img : item.imgLight}`}
               ></ImgStyle>
             );
           }

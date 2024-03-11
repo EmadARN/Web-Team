@@ -37,6 +37,7 @@ export const imgData = (
     {
       id: 1,
       img: "night-sea.png",
+      imgLight: "sea.png",
       ref: night_sea,
       style: imgStyle1,
       class: "",
@@ -44,6 +45,7 @@ export const imgData = (
     {
       id: 2,
       img: "balloon.png",
+      imgLight: "ballonLight.png",
       ref: balloon,
       style: ballonStyle(
         isSmallScreen,
@@ -58,6 +60,7 @@ export const imgData = (
     {
       id: 3,
       img: "moon.png",
+      imgLight: "sun.png",
       ref: moon,
       style: moonStyle(
         isSmallScreen,
@@ -72,6 +75,7 @@ export const imgData = (
     {
       id: 4,
       img: "above-moon.png",
+      imgLight: "above_sun.png",
       ref: abovemoon,
       style: abovemoonStyle,
       class: "",
@@ -79,6 +83,7 @@ export const imgData = (
     {
       id: 5,
       img: "under-moon.png",
+      imgLight: "under_sun.png",
       ref: undermoon,
       style: undermoonStyle,
       class: "",
@@ -86,6 +91,7 @@ export const imgData = (
     {
       id: 6,
       img: "boat.png",
+      imgLight: "boatLight.png",
       ref: boat,
       style: boatStyle(
         isSmallScreen,
