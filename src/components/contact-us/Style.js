@@ -60,7 +60,7 @@ export const ContactUsTypography = {
 };
 
 export const T1 = {
-  fontSize: { xs: "8px", md: "17px" },
+  fontSize: { xs: "8px",sm:"13px", md: "17px" },
   color: "#fff",
   marginLeft: { xs: 1, md: 0 },
   whitespace: "nowrap",
@@ -76,6 +76,6 @@ export const sendticketButton = {
 };
 
 export const iconStyle = {
-  fontSize: { xs: "10px", md: "20px" },
+  fontSize: { xs: "10px", sm:"16px", md: "20px" },
   color: "#81d8db",
 };
