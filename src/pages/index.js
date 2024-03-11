@@ -12,6 +12,7 @@ import Loader from "@/components/Loader/Loader";
 
 import ServicesMain from "@/components/services/ServiceComputer/Main";
 import Services_mobile_Main from "@/components/services/Servicemobile/Main";
+// import ScrollBar from "@/components/SmoothScroll/ScrollBar";
 
 const index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,7 +21,7 @@ const index = () => {
     const fakeDataFetch = () => {
       setTimeout(() => {
         setIsLoading(false);
-      }, 5000);
+      }, 2000);
     };
     fakeDataFetch();
   }, []);
@@ -33,7 +34,7 @@ const index = () => {
         backgroundColor: "#1b1b1b",
       }}
     >
-      {/* <ScrollBar/> */}
+       {/* <ScrollBar/>  */}
       <Layout>
         <ParallaxHeader />
 
@@ -43,8 +44,8 @@ const index = () => {
           </Container>
         </Grid>
         <Container maxWidth="lg">
-          <Grid sx={{ mb: { xs: 5, md: 10 } }} mt={10}>
-            <ServicesMain />
+          <Grid id="services" sx={{ mb: { xs: 5, md: 10 } }} mt={10}>
+            <ServicesMain  />
             <Services_mobile_Main />
           </Grid>
         </Container>
