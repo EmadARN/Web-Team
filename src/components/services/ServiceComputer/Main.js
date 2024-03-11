@@ -12,7 +12,7 @@ const ServicesMain = () => {
   
     >
 
-<Box mb={6}><Typography variant="h4" fontWeight="bold"> خدمات ما ما</Typography></Box>
+<Box mb={6}><Typography sx={{fontSize:{xs:"20px",md:'27px'}}} fontWeight="bold"> خدمات ما </Typography></Box>
    <Services_titile/>
    </Grid>
   )

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Box, Typography, Container } from "@mui/material";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
@@ -7,14 +7,14 @@ import Brightness1Icon from "@mui/icons-material/Brightness1";
 import { services } from "../../../services/ServiceComputer/data";
 import Lottie from "lottie-react";
 import { DescTypo, Mobile_Box, StepMobileStyle, SteperMobileStyle, TitleBox, TitleMobiletypo, mobileIcon } from "../style";
-
+import { ThemeContext } from "@/context/ThemeContext";
 const Services_Mobile = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = React.useState({});
   const handleStep = (step) => {
     setActiveStep(step);
   };
-
+const {theme} = useContext(ThemeContext)
   return (
     <>
       <Box sx={Mobile_Box}>
@@ -33,7 +33,7 @@ const Services_Mobile = () => {
               <Box
                 color="inherit"
                 sx={
-                TitleBox(index,activeStep)
+                TitleBox(index,activeStep,theme)
                 }
                 onClick={() => handleStep(index)}
               >
@@ -66,7 +66,7 @@ const Services_Mobile = () => {
                    
                   >
                     {" "}
-                    <Lottie style={{ width: "70%" }} animationData={item.img} />
+                    <Lottie style={{ width: item.width }} animationData={item.img} />
                   </Box>
                   <Typography
                     sx={
@@ -86,7 +86,7 @@ const Services_Mobile = () => {
                       return (
                         <Box display="flex" alignItems="center" mb={5}>
                           <Brightness1Icon sx={mobileIcon} />
-                          <Typography sx={{ color: "#dddd" }}>
+                          <Typography sx={{  color:theme ==="dark" ? "#dddd":"#1119" }}>
                             {cont.subcontent}
                           </Typography>
                         </Box>

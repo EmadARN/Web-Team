@@ -1,7 +1,7 @@
 export const Mobile_Box ={
     width:"100%",
     
-    flexDirection:"column-reverse",
+flexDirection:"column",
     alignItems:"space-evanly",
     
     display:{xs:"flex",md:"none"}
@@ -21,7 +21,7 @@ export const StepMobileStyle = {
 }
 
 
-export const TitleBox =(activeStep,index)=>{
+export const TitleBox =(activeStep,index,theme)=>{
     const S1 ={
         display: "flex",
         justifyContent: "space-evenly",
@@ -29,11 +29,16 @@ export const TitleBox =(activeStep,index)=>{
         cursor: "pointer",
         alignItems: "center",
         "&:hover": {
-          backgroundColor: activeStep !== index ? "#ddd" : "#fff",
-          opacity: activeStep !== index ? "0.1" : "none",
-        },
-        backgroundColor:
-          activeStep === index ? "#fff" : "transparent",
+            backgroundColor:
+              (activeStep !== index && theme === "dark" && "#ddd") ||
+              (activeStep !== index && theme !== "dark" && "#1116"),
+            opacity:
+              (activeStep !== index && theme === "dark" && "0.1") ||
+              (activeStep !== index && theme !== "dark" && "none"),
+          },
+          backgroundColor:
+            (activeStep === index && theme === "dark" && "#fff") ||
+            (activeStep === index && theme !== "dark" && "#111"),
         p: 2,
     }
 
