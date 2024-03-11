@@ -4,12 +4,12 @@ function SkillBox({item}){
     return(
         <>
 
-            <Box sx={{width:"100px",height:"100px",backgroundImage: `url(${item.image})`,
+            <Box sx={{width:"80px",height:"80px",backgroundImage: `url(${item.image})`,
                 backgroundSize: "cover",
                 borderRadius:"50%",
                 backgroundPosition: "center",
-                fontSize:"10px",
-                mt:"10"
+            mr:5
+        
             }}>
 
             </Box>
