@@ -10,7 +10,7 @@ const About_Main = () => {
       flexDirection="column"
       width="100%"
     >
-      <Box mb={6}><Typography variant="h4" fontWeight="bold">درباره ی ما</Typography></Box>
+      <Box mb={6}><Typography sx={{fontSize:{xs:"20px",md:'27px'}}} fontWeight="bold">درباره ی ما</Typography></Box>
       <About_us />
     </Grid>
   );
