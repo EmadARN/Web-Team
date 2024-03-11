@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: "Yekan", sans-serif !important;
   list-style: none;
-
 }
 a {
   text-decoration: none;
@@ -45,8 +44,6 @@ a {
 
 body {
   overflow-x: hidden !important;
-
-
 }
 .active {
   border-bottom: 2px solid rgba(250, 0, 0, 0.267) !important;

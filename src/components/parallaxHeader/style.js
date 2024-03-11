@@ -166,7 +166,7 @@ export const boatStyle = (
       : isXXlargeScreen
       ? "40%"
       : isXXXlargeScreen
-      ? "30%"
+      ? "35%"
       : "30%",
     maxHeight: isSmallScreen ? "130px" : isXXXlargeScreen ? "250px" : "200px",
     right: "0%",

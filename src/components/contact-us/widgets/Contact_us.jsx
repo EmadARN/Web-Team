@@ -7,11 +7,15 @@ import LeftSide from "./LeftSide";
 import Left_side_mobile from "./contact-mobile/Left_side_mobile";
 import { ThemeContext } from "@/context/ThemeContext";
 const Contact_us = () => {
-
-  const {theme} = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext);
   return (
-    <Grid container sx={{ width: { xs: "100%", md: "80%" },justifyContent:"center" }}  >
-
+    <Grid
+      container
+      sx={{
+        width: { xs: "100%", md: "80%" },
+        justifyContent: "center",
+      }}
+    >
       <Grid item sx={RightGrid(theme)}>
         <RightSide />
       </Grid>
@@ -20,13 +24,10 @@ const Contact_us = () => {
         <LeftSide />
       </Grid>
 
-
-      <Grid sx={{display:{xs:'flex',md:"none",width:"100%"}}} >
-      <Left_side_mobile/>
+      <Grid sx={{ display: { xs: "flex", md: "none", width: "100%" } }}>
+        <Left_side_mobile />
+      </Grid>
     </Grid>
-    </Grid>
-
- 
   );
 };
 
