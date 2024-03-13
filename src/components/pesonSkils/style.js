@@ -59,10 +59,9 @@ export const imgDrawerStyle = {
 
 //MainCv
 export const BoxMainCvStyle = {
-  backgroundImage:
-    "url(https://learning.xdezo.com/ygeehipi/2023/03/Guide-to-becoming-a-great-computer-programmer.jpg)",
+  backgroundImage: ` url(images/CircuitPrimary.png)`,
   backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
+  backgroundSize: "contain",
   backgroundPosition: "center",
   height: { xs: "80vh", sm: "90vh", md: "115vh", lg: "100vh" },
   width: { xs: "90%", sm: "100%" },
