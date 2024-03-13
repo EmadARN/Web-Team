@@ -7,6 +7,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import { navData } from "./data";
 import { Link, animateScroll as scroll } from "react-scroll";
+import {Trans,useTranslation} from "react-i18next"
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 52,
   height: 26,
@@ -74,9 +75,12 @@ const MainNav = () => {
     val ? switchDark() : switchLight();
   };
 
+
+
   return (
     <Box sx={BoxStyle1}>
       <Box sx={BoxStyle2(loadCount, theme)}>
+
         {navData.map((item) => {
           return (
             <Link
@@ -88,7 +92,7 @@ const MainNav = () => {
               activeClass="active"
               spy={true}
             >
-              <Box sx={TypographyStyle1(theme)}>{item.section}</Box>
+              <Box sx={TypographyStyle1(theme)}><Trans i18nKey={item.navbarlocale}></Trans></Box>
             </Link>
           );
         })}

@@ -1,14 +1,12 @@
 import { Typography, Box } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TelegramIcon from "@mui/icons-material/Telegram";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import Link from "next/link";
-import { avatars, initialCv1Data } from "../data";
 
+import {Trans} from "react-i18next"
 const InitialCv1 = ({ item }) => {
   return (
     <>
@@ -61,7 +59,7 @@ const InitialCv1 = ({ item }) => {
                 whiteSpace: "nowrap",
               }}
             >
-              {item.name}
+             <Trans i18nKey={item.skillname}> {item.name}</Trans>
             </Typography>
             <Typography
               sx={{
@@ -73,13 +71,12 @@ const InitialCv1 = ({ item }) => {
                 whiteSpace: { xs: "wrap", sm: "nowrap" },
               }}
             >
-              {item.job}
+             <Trans i18nKey={item.Ourskiljob}> {item.job}</Trans>
             </Typography>
             <Box
               sx={{
                 display: "flex",
                 justifyContent: "center",
-
                 pt: 2,
               }}
             >
@@ -135,9 +132,10 @@ const InitialCv1 = ({ item }) => {
             <Typography
               sx={{
                 fontSize: { xs: "8px", sm: "10px", md: "14px" },
+                fontFamily:"sans-serif !important"
               }}
             >
-              {item.year}
+             <Trans i18nKey={item.Ourskillyear}>{item.year}</Trans> 
             </Typography>
           </Typography>
           <Typography
@@ -155,11 +153,14 @@ const InitialCv1 = ({ item }) => {
               }}
             />
             <Typography
+            
               sx={{
                 fontSize: { xs: "8px", sm: "10px", md: "14px" },
+                fontFamily:"sans-serif !important",
+                
               }}
             >
-              ایران, تهران
+             <Trans i18nKey={item.Ourskillplace}></Trans>
             </Typography>
           </Typography>
           <Typography

@@ -5,8 +5,9 @@ import Drawer from "./widgets/drawer";
 import MainCv from "./widgets/mainCv";
 import { GridDrawerStyle, GridMainStyle, TypographyStyle } from "./style";
 import { ThemeContext } from "@/context/ThemeContext";
-
+import { useTranslation } from "react-i18next";
 const Avatars = () => {
+  const {t} = useTranslation()
   const [selectedAvatar, setSelectedAvatar] = useState(null);
   const [avatar, setAvatars] = useState(false);
   const { theme } = useContext(ThemeContext);
@@ -18,7 +19,7 @@ const Avatars = () => {
   return (
     <Grid container sx={GridMainStyle(theme)}>
       <Typography sx={TypographyStyle(avatar, theme)}>
-        مهارت و روزمه ما
+       {t('skillTitle')}
       </Typography>
       <Grid xs={2} sm={1} sx={GridDrawerStyle}>
         <Drawer

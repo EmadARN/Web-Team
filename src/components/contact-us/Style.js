@@ -64,6 +64,7 @@ export const T1 = {
   color: "#fff",
   marginLeft: { xs: 1, md: 0 },
   whitespace: "nowrap",
+  fontFamily:"sans-serif !important"
 };
 
 export const sendticketButton = {

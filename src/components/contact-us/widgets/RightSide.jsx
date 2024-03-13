@@ -6,15 +6,18 @@ import {
   T1,
   sendticketButton,
 } from "../Style";
-
+import { useTranslation } from "react-i18next";
 import Textarea from "@/components/Textarea/Textarea";
 const RightSide = () => {
+
+const {t} = useTranslation()
+
   return (
     <Box>
       <Box display="flex" flexDirection="column" mb={3}>
         <Typography sx={ContactUsTypography}>ارتباط با ما</Typography>
         <Typography sx={T1}>
-          نیاز به مشاوره دارید؟همین الان با ما در ارتباط باشید
+          {t('contactus.RightTitle')}
         </Typography>
       </Box>
 
@@ -35,7 +38,7 @@ const RightSide = () => {
               <TextField
                 size="small"
                 sx={InputStyle}
-                label="نام و نام خانوادگی"
+                label={t('contactus.firstinput')}
                 id="outlined-basic"
                 variant="outlined"
                 fullWidth
@@ -53,7 +56,7 @@ const RightSide = () => {
               <TextField
                 size="small"
                 sx={InputStyle}
-                label="نوع کسب و کار"
+                label={t('contactus.seccondinput')}
                 id="outlined-basic"
                 variant="outlined"
                 fullWidth
@@ -71,7 +74,7 @@ const RightSide = () => {
               <TextField
                 size="small"
                 sx={InputStyle}
-                label="ایمیل"
+                label={t('contactus.thirdinput')}
                 id="outlined-basic"
                 variant="outlined"
                 fullWidth
@@ -89,7 +92,7 @@ const RightSide = () => {
               <TextField
                 size="small"
                 sx={InputStyle}
-                label="شماره همراه"
+                label={t('contactus.forthinput')}
                 id="outlined-basic"
                 placeholder="شماره همراه"
                 variant="filled"
@@ -110,7 +113,7 @@ const RightSide = () => {
             alignItems="center"
             mt={2}
           >
-            <Button sx={sendticketButton}>ارسال تیکت</Button>
+            <Button sx={sendticketButton}>{t('contactus.button')} </Button>
           </Box>
         </Box>
       </Grid>

@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Skill, SkillData } from "@/components/pesonSkils/data";
 import SkillBox from "@/components/pesonSkils/widgets/Skill";
+import { useTranslation } from "react-i18next";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -11,6 +12,9 @@ import "swiper/css/scrollbar";
 
 import "swiper/css/autoplay";
 const InitialCv2 = () => {
+
+const {t} = useTranslation()
+
   return (
     <>
       <Box
@@ -22,7 +26,7 @@ const InitialCv2 = () => {
           backdropFilter: { xs: "blur(8px)", md: "blur(10px)" },
         }}
       >
-        <Typography sx={{ p: 1, color: "#2228" }}>درباره من</Typography>
+        <Typography sx={{ p: 1, color: "#2228" }}>{t('ourskillTitle.about')}</Typography>
         <Box
           sx={{
             height: { xs: "45%", sm: "48%", md: "35%" },
@@ -50,7 +54,7 @@ const InitialCv2 = () => {
           </Typography>
         </Box>
         <Typography sx={{ pb: 2, pt: 3, pr: 1, color: "#2228" }}>
-          مهارت های من
+        {t('ourskillTitle.skill')}
         </Typography>
         <Box
           sx={{

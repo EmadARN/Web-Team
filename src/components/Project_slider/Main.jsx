@@ -5,8 +5,10 @@ import { SwiperSlide } from "swiper/react";
 import Swiper from "@/common/Swiper/Swiper";
 import { slider_data } from "./data";
 import { imgStyle, sliderslide } from "./Style";
+import { useTranslation } from "react-i18next";
 
 const Slider_project = () => {
+  const {t} = useTranslation()
   return (
     <Grid
     display="flex"
@@ -15,7 +17,7 @@ const Slider_project = () => {
     flexDirection="column"
     width="100%"
     >
-        <Box mb={6}><Typography sx={{fontSize:{xs:"20px",md:'27px'}}} fontWeight="bold"> نمونه کارهای ما</Typography></Box>
+        <Box mb={6}><Typography sx={{fontSize:{xs:"20px",md:'27px'}}} fontWeight="bold"> {t('ourProject')}</Typography></Box>
     <Container maxWidth={{ xs: "md", md: "lg" }}>
       <Swiper>
         {slider_data.map((item) => {

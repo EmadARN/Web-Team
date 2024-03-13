@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useTransition } from "react";
 import { Grid, Box, Typography } from "@mui/material";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
@@ -7,13 +7,16 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { ContactUsTypography, T1, iconStyle } from "../Style";
 import animationData from "../../../assets/Animation - 1708606536024.json";
+import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import Lottie from "lottie-react";
 const LeftSide = () => {
+
+  const {t} = useTranslation()
   return (
     <>
       <Box mb={2}>
-        <Typography sx={ContactUsTypography}>راه های ارتباطی با ما</Typography>
+        <Typography sx={ContactUsTypography}> {t('contactus.lefttitle')} </Typography>
       </Box>
 
       <Box width="100%" mb={2}>
@@ -64,7 +67,7 @@ const LeftSide = () => {
           mb={5}
         >
           <Box ml={2}>
-            <Typography sx={T1}>زنجان.دانشگاه اعتمادیه</Typography>
+            <Typography sx={T1}>{t('contactus.address')} </Typography>
           </Box>
           <Box>
             <FmdGoodIcon sx={iconStyle} />
