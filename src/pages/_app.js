@@ -1,6 +1,7 @@
+import React, { Suspense } from "react";
 import Cursor from "@/components/Cursor/Cursor";
 import "@/styles/globals.css";
-import { useEffect, useState } from "react";
+import '../i18n'
 
 export default function App({ Component, pageProps }) {
   // const [x, setX] = useState(0);
@@ -19,9 +20,11 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+    <Suspense fallback={<div>loading...</div>}>
       <Component {...pageProps} />
-      {/* <Cursor x={x} y={y}></Cursor> */}
+  
       <Cursor/>
+      </Suspense>
     </>
   );
 }
