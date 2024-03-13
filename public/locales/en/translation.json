@@ -1,0 +1,107 @@
+{
+   "paralaxHeader":"AdliKara Programming Company",
+    "aboutTitle":"About Us",
+   "ourServices":"Our Services",
+    "ourProject":"Our Project",
+    "skillTitle":"Skills ",
+       "servicesFirst":"Development and programming",
+        "servicesSeccond":"Ceo your website",
+        "servicesThird":"Website support",
+        "servicesForth":"Content production",
+        "servicesFifth":"Free Consultation",
+        "servicesTitle1":"Programming your desired idea using the latest available technologies",
+        "servicesTitle2":"SEO or raising your website link in search engines has a significant impact on the visibility of your business",
+        "servicesTitle3":"According to the agreement made in the contract, our team provides support for the relevant product for the specified period of time",
+        "servicesTitle4":"Content production in line with your business to align with the market",
+        "servicesTitle5":"Before starting the work, a full and comprehensive consultation is provided to the employer so that he can choose the product he needs with full confidence",
+        "ServicesContentPart":{
+            "part1":"Warehousing and financial systems",
+            "part2":"Development of all kinds of software and programs on the web",
+            "part3":"Online store design",
+            "part4":"Upload the website link",
+            "part5":"Learning the latest Google algorithms",
+            "part6":"Fix any errors and bugs",
+            "part7":"Complete training on the use and management of the relevant application to the employer",
+            "part8":"Professional and expert content production team",
+            "part9":"Creating content specific to your business",
+            "part10":"Providing all the necessary tips for product selection",
+            "part11":"Employer guidance along the way"
+        },
+
+        "OurskilsName":{
+            "rezabahrami":"Reza Bahrami",
+            "emadaraban":"Emad Araban",
+            "rezafarzipour":"Reza Farzipour",
+            "mohammadvelayati":"Mohammad Reza Velayati",
+            "amirhabibi":"Amir Habibi",
+            "mehdikhezri":"Mehdi Khezri"
+        },
+        "Ourskiljob":{
+            "bahrami":"Full Stack Developer",
+            "araban":"Full Stack Developer",
+             "farzipour":"Full Stack Developer",
+             "velayati":"Backend Developer",
+             "habibi":"Front End Developer",
+             "khezri":"Ceo,Digital Marketing"
+        },
+        "Ourskillyearandplace":{
+            "bahrami":{
+                "year":"Years 6",
+                "place":"Iran-Tehran"
+            },
+           "araban": {
+                "year":"3 Years",
+                "place":"Iran-Tehran"
+            },
+            "farzipour":{
+                "year":"3 Years",
+                "place":"Iran-Tehran"
+            },
+            "velayati":{
+                "year":"1.5 years",
+                "place":"Iran-Tehran"
+            },
+            "habibi":{
+                "year":"3 Years",
+                "place":"Iran-Tehran"
+            },
+            "khezri":{
+                "year":"2 Years",
+                "place":"Iran-Tehran"
+                
+            }
+        },
+
+        "ourskillTitle":{
+            "about":"About me",
+            "skill":"My Skills"
+        },
+        "contactus":{
+            "title":"Contact Us",
+            "RightTitle":"Do you need advice? Contact us right now",
+            "firstinput":"FullName",
+            "seccondinput":"Your Business",
+            "thirdinput":"email",
+            "forthinput":"Your Number",
+            "textarea":"Write your Message",
+            "button":"send your ticket",
+            "lefttitle":"Ways of communication with us",
+            "address":"zanjan,etemadie univercity"
+
+
+
+        },
+        "backtotop":"back to top",
+        "footer":"All rights are reserved for AdliKara",
+
+        "navbar":{
+          "about":"About Us",
+          "projects":"Projects",
+          "services":"Services",
+          "contactus":"Contact Us"
+
+        }
+
+
+
+}
