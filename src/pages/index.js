@@ -15,6 +15,7 @@ import Services_mobile_Main from "@/components/services/Servicemobile/Main";
 // import ScrollBar from "@/components/SmoothScroll/ScrollBar";
 
 const index = () => {
+
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -34,7 +35,7 @@ const index = () => {
         backgroundColor: "#1b1b1b",
       }}
     >
-       {/* <ScrollBar/>  */}
+      {/* <ScrollBar/>  */}
       <Layout>
         <ParallaxHeader />
 
@@ -45,7 +46,7 @@ const index = () => {
         </Grid>
         <Container maxWidth="lg">
           <Grid id="services" sx={{ mb: { xs: 5, md: 10 } }} mt={10}>
-            <ServicesMain  />
+            <ServicesMain />
             <Services_mobile_Main />
           </Grid>
         </Container>
