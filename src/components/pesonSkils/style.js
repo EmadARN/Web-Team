@@ -5,6 +5,8 @@ export const GridMainStyle = (theme) => {
     position: "relative",
     overflow: "hidden",
     height: { xs: "80vh", sm: "90vh", md: "115vh", lg: "100vh" },
+    opacity: 0,
+    transform: "scale(0)",
   };
 
   return style;

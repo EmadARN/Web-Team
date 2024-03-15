@@ -4,20 +4,15 @@ import About_Main from "@/components/about/Main";
 import ContactMain from "@/components/contact-us/ContactMain";
 import ParallaxHeader from "@/components/parallaxHeader/Main";
 import MainPersonSkils from "@/components/pesonSkils/main";
-
 import Layout from "@/container/main";
 import { Container, Grid } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Loader from "@/components/Loader/Loader";
-
 import ServicesMain from "@/components/services/ServiceComputer/Main";
 import Services_mobile_Main from "@/components/services/Servicemobile/Main";
-// import ScrollBar from "@/components/SmoothScroll/ScrollBar";
 
 const index = () => {
-
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const fakeDataFetch = () => {
       setTimeout(() => {
@@ -35,11 +30,12 @@ const index = () => {
         backgroundColor: "#1b1b1b",
       }}
     >
-      {/* <ScrollBar/>  */}
       <Layout>
-        <ParallaxHeader />
+        <Grid sx={{ overflow: "hidden" }}>
+          <ParallaxHeader />
+        </Grid>
 
-        <Grid id="aboutUs" py={10}>
+        <Grid id="aboutUs" py={10} sx={{ overflowX: "hidden" }}>
           <Container maxWidth="lg">
             <About_Main />
           </Container>
@@ -60,6 +56,7 @@ const index = () => {
         <Grid id="contactus">
           <ContactMain />
         </Grid>
+
         <Grid
           sx={{
             display: "flex",

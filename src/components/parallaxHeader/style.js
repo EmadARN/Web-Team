@@ -9,7 +9,7 @@ export const BoxStyle = (background, theme) => {
       theme == "dark"
         ? `linear-gradient(#0F2B9C, #673D7D ${background}%, #0F2B9C, #EDFC54 )`
         : `linear-gradient( skyblue, #efefef ${background}%,  skyblue,  #c7e3ff)`,
-    position: "relative",
+    position: "rtivelae",
     width: "100%",
     height: "110vh",
     display: " flex",
@@ -78,7 +78,7 @@ export const ballonStyle = (
     left: "0%",
     zIndex: 4,
     width: isSmallScreen
-      ? "18%"
+      ? "25%"
       : isMediumScreen
       ? "17%"
       : islargeScreen

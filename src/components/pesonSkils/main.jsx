@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Grid, Typography } from "@mui/material";
 import { avatars } from "./data";
 import Drawer from "./widgets/drawer";
@@ -6,8 +6,10 @@ import MainCv from "./widgets/mainCv";
 import { GridDrawerStyle, GridMainStyle, TypographyStyle } from "./style";
 import { ThemeContext } from "@/context/ThemeContext";
 import { useTranslation } from "react-i18next";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 const Avatars = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   const [selectedAvatar, setSelectedAvatar] = useState(null);
   const [avatar, setAvatars] = useState(false);
   const { theme } = useContext(ThemeContext);
@@ -15,11 +17,37 @@ const Avatars = () => {
     setSelectedAvatar(id);
     setAvatars(true);
   };
+  const Inner = useRef(null);
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    var tl = gsap.timeline({
+      repeat: false,
+      defaults: { duration: 1, ease: "power3.inOut" },
+      scrollTrigger: {
+        trigger: Inner.current,
+        start: window.innerWidth < 768 ? "1700 center" : "2100 center",
+        end: "bottom center",
+        scrub: false,
+        // markers: true, // برای نمایش نشانگرهای بصری
+        onEnter: () => {
+          tl.play(); // شروع انیمیشن
+        },
+      },
+    });
+    tl.to(
+      Inner.current,
+      {
+        scale: 1,
+        opacity: "1",
+      },
+      0
+    );
+  });
   return (
-    <Grid container sx={GridMainStyle(theme)}>
+    <Grid ref={Inner} container sx={GridMainStyle(theme)}>
       <Typography sx={TypographyStyle(avatar, theme)}>
-       {t('skillTitle')}
+        {t("skillTitle")}
       </Typography>
       <Grid xs={2} sm={1} sx={GridDrawerStyle}>
         <Drawer

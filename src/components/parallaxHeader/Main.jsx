@@ -9,8 +9,7 @@ import { ThemeContext } from "@/context/ThemeContext";
 import { useTranslation } from "react-i18next";
 import KeyboardDoubleArrowDownOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowDownOutlined";
 const ParallaxHeader = () => {
-
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   const [background, setBackground] = useState(20);
   const parallaxRef = useRef(null);
   const night_sea = useRef(null);
@@ -133,7 +132,7 @@ const ParallaxHeader = () => {
           ref={textRef}
           sx={{ opacity: 0, fontSize: "5px", fontWeight: "bold" }}
         >
-          {t('paralaxHeader')}
+          {t("paralaxHeader")}
         </Typography>
         <KeyboardDoubleArrowDownOutlinedIcon sx={iconStyle} />
       </Box>

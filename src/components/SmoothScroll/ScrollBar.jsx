@@ -1,16 +1,15 @@
-import React, { useEffect } from 'react'
-// import Scrollbar from 'smooth-scrollbar'
+// import React, { useEffect } from "react";
+// import Scrollbar from "smooth-scrollbar";
 
-// var options ={
-//     damping :0.07
-// }
+// var options = {
+//   damping: 0.07,
+// };
 
 // const ScrollBar = () => {
-//     useEffect(()=>{
-// Scrollbar.init(document.body,options)
+//   useEffect(() => {
+//     Scrollbar.init(document.body, options);
+//   }, []);
+//   return null;
+// };
 
-//     },[])
-//   return null
-// }
-
-// export default ScrollBar
+// export default ScrollBar;
