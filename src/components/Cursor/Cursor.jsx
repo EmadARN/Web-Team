@@ -28,6 +28,7 @@ const Cursor = () => {
       outerStyle={{
         backgroundColor: "rgba(255,255,255,0.08)",
         mixBlendMode: "difference",
+        zIndex: 999,
       }}
       innerSize={5}
       outerSize={14}

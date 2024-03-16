@@ -16,15 +16,14 @@ const About_Main = () => {
       flexDirection="column"
       width="100%"
     >
-      <button onClick={() => changeLang("en")}>EN</button>
-      <button onClick={() => changeLang("fa")}>FA</button>
+
       <Box mb={6}>
         <Typography
           sx={{ fontSize: { xs: "20px", md: "27px" } }}
           fontWeight="bold"
         >
           {" "}
-          {t("aboutTitle")}{" "}
+          {t("aboutTitle")}
         </Typography>
       </Box>
       <About_us />
