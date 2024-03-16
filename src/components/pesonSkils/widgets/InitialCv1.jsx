@@ -5,187 +5,62 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "next/link";
-
-import {Trans} from "react-i18next"
-const InitialCv1 = ({ item }) => {
+import { Trans } from "react-i18next";
+import {
+  BoxStyle1_initialCv1,
+  BoxStyle2_initialCv1,
+  BoxStyle3_initialCv1,
+  BoxStyle4_initialCv1,
+  GitHubIcon_initialCv1,
+  Icon_initialCv1,
+  LinkedInIcon_initialCv1,
+  TypographyStyle1_initialCv1,
+  TypographyStyle2_initialCv1,
+  TypographyStyle3_initialCv1,
+  TypographyStyle5_initialCv1,
+  TypographyStyle7_initialCv1,
+  TypographyStyle8_initialCv1,
+  TypographyStyleBoth_initialCv1,
+} from "../style";
+const InitialCv1 = ({ item, theme }) => {
   return (
     <>
-      <Box
-        key={item.id}
-        sx={{
-          height: {
-            xs: "34vh",
-            sm: "50vh",
-            md: "60vh",
-            lg: "60vh",
-          },
-          position: "relative",
-          backgroundColor: "rgba(255,255,255,0.1)",
-          WebkitBackdropFilter: "blur(8px) !important",
-          backdropFilter: { xs: "blur(8px)", md: "blur(10px)" },
-          borderRadius: "15px",
-        }}
-      >
-        <Box
-          sx={{
-            borderRadius: "15px 15px 0 0 ",
-            display: "flex",
-            justifyContent: "center",
-            backgroundColor: "rgba(255,255,255,0.1)",
-            WebkitBackdropFilter: "blur(8px) !important",
-            backdropFilter: {
-              xs: "blur(8px)",
-              md: "blur(10px)",
-            },
-            height: {
-              xs: "45%",
-              sm: "50%",
-              md: "40%",
-              lg: "48%",
-            },
-          }}
-        >
+      <Box key={item.id} sx={BoxStyle1_initialCv1}>
+        <Box sx={BoxStyle2_initialCv1}>
           <Box>
-            <Typography
-              sx={{
-                color: "#2227",
-                textAlign: "center",
-                pt: 2,
-                fontSize: {
-                  xs: "12px",
-                  sm: "18px",
-                  md: "22px",
-                },
-                whiteSpace: "nowrap",
-              }}
-            >
-             <Trans i18nKey={item.skillname}> {item.name}</Trans>
+            <Typography sx={TypographyStyle1_initialCv1(theme)}>
+              <Trans i18nKey={item.skillname}> {item.name}</Trans>
             </Typography>
-            <Typography
-              sx={{
-                color: "#2229",
-                fontWeight: "bold",
-                textAlign: "center",
-                pt: 0.5,
-                fontSize: { xs: "7px", sm: "9px", md: "10px" },
-                whiteSpace: { xs: "wrap", sm: "nowrap" },
-              }}
-            >
-             <Trans i18nKey={item.Ourskiljob}> {item.job}</Trans>
+            <Typography sx={TypographyStyle2_initialCv1(theme)}>
+              <Trans i18nKey={item.Ourskiljob}> {item.job}</Trans>
             </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                pt: 2,
-              }}
-            >
+            <Box sx={BoxStyle3_initialCv1}>
               <Link target="_blank" href={item.linkdien}>
-                <LinkedInIcon
-                  sx={{
-                    ml: 1,
-                    fontSize: {
-                      xs: "14px",
-                      sm: "15px",
-                      md: "17px",
-                    },
-                  }}
-                />
+                <LinkedInIcon sx={LinkedInIcon_initialCv1} />
               </Link>
               <Link target="_blank" href={item.github}>
-                <GitHubIcon
-                  sx={{
-                    fontSize: {
-                      xs: "14px",
-                      sm: "14px",
-                      md: "17px",
-                    },
-                  }}
-                />
+                <GitHubIcon sx={GitHubIcon_initialCv1} />
               </Link>
             </Box>
           </Box>
         </Box>
 
-        <Box
-          sx={{
-            height: { xs: "75%", sm: "60%", md: "40%" },
-            display: "flex",
-            flexDirection: "column",
-            pt: 2,
-            pr: { xs: 0.5, sm: 2 },
-          }}
-        >
-          <Typography
-            sx={{
-              color: "#111",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <DateRangeIcon
-              sx={{
-                ml: 1,
-                fontSize: { xs: "8px", sm: "10px", md: "14px" },
-              }}
-            />
-            <Typography
-              sx={{
-                fontSize: { xs: "8px", sm: "10px", md: "14px" },
-                fontFamily:"sans-serif !important"
-              }}
-            >
-             <Trans i18nKey={item.Ourskillyear}>{item.year}</Trans> 
+        <Box sx={BoxStyle4_initialCv1}>
+          <Typography sx={TypographyStyle3_initialCv1(theme)}>
+            <DateRangeIcon sx={Icon_initialCv1} />
+            <Typography sx={TypographyStyleBoth_initialCv1}>
+              <Trans i18nKey={item.Ourskillyear}>{item.year}</Trans>
             </Typography>
           </Typography>
-          <Typography
-            sx={{
-              color: "#111",
-              display: "flex",
-              pt: 1,
-              alignItems: "center",
-            }}
-          >
-            <LocationOnIcon
-              sx={{
-                ml: 1,
-                fontSize: { xs: "8px", sm: "10px", md: "14px" },
-              }}
-            />
-            <Typography
-            
-              sx={{
-                fontSize: { xs: "8px", sm: "10px", md: "14px" },
-                fontFamily:"sans-serif !important",
-                
-              }}
-            >
-             <Trans i18nKey={item.Ourskillplace}></Trans>
+          <Typography sx={TypographyStyle5_initialCv1(theme)}>
+            <LocationOnIcon sx={Icon_initialCv1} />
+            <Typography sx={TypographyStyleBoth_initialCv1}>
+              <Trans i18nKey={item.Ourskillplace}></Trans>
             </Typography>
           </Typography>
-          <Typography
-            sx={{
-              color: "#111",
-              display: "flex",
-              py: 1,
-              alignItems: "center",
-            }}
-          >
-            <EmailIcon
-              sx={{
-                ml: 1,
-                fontSize: { xs: "8px", sm: "10px", md: "14px" },
-              }}
-            />
-            <Typography
-              sx={{
-                fontSize: {
-                  xs: "7px",
-                  sm: "10px",
-                  md: "14px",
-                },
-              }}
-            >
+          <Typography sx={TypographyStyle7_initialCv1(theme)}>
+            <EmailIcon sx={Icon_initialCv1} />
+            <Typography sx={TypographyStyle8_initialCv1}>
               {item.email}
             </Typography>
           </Typography>

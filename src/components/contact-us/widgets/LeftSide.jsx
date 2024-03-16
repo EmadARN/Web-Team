@@ -1,4 +1,4 @@
-import React, { useTransition } from "react";
+import React from "react";
 import { Grid, Box, Typography } from "@mui/material";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
@@ -11,12 +11,13 @@ import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import Lottie from "lottie-react";
 const LeftSide = () => {
-
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   return (
     <>
       <Box mb={2}>
-        <Typography sx={ContactUsTypography}> {t('contactus.lefttitle')} </Typography>
+        <Typography sx={ContactUsTypography}>
+          {t("contactus.lefttitle")}
+        </Typography>
       </Box>
 
       <Box width="100%" mb={2}>
@@ -26,7 +27,7 @@ const LeftSide = () => {
       <Grid
         display="flex"
         flexDirection="column"
-        alignItems="flex-end"
+        alignItems="center"
         width="100%"
       >
         <Box
@@ -36,12 +37,9 @@ const LeftSide = () => {
           width="100%"
           mb={5}
         >
-          <Box ml={2}>
-            <Typography sx={T1}>0919111111</Typography>
-          </Box>
-          <Box>
-            <LocalPhoneIcon sx={iconStyle} />
-          </Box>
+          <Typography sx={T1}>0919111111</Typography>
+
+          <LocalPhoneIcon sx={iconStyle} />
         </Box>
 
         <Box
@@ -51,12 +49,9 @@ const LeftSide = () => {
           width="100%"
           mb={5}
         >
-          <Box ml={2}>
-            <Typography sx={T1}>adlikara659@gmail.com</Typography>
-          </Box>
-          <Box>
-            <EmailIcon sx={iconStyle} />
-          </Box>
+          <Typography sx={T1}>adlikara659@gmail.com</Typography>
+
+          <EmailIcon sx={iconStyle} />
         </Box>
 
         <Box
@@ -66,12 +61,9 @@ const LeftSide = () => {
           width="100%"
           mb={5}
         >
-          <Box ml={2}>
-            <Typography sx={T1}>{t('contactus.address')} </Typography>
-          </Box>
-          <Box>
-            <FmdGoodIcon sx={iconStyle} />
-          </Box>
+          <Typography sx={T1}>{t("contactus.address")} </Typography>
+
+          <FmdGoodIcon sx={iconStyle} />
         </Box>
 
         <Box
@@ -89,7 +81,6 @@ const LeftSide = () => {
               target="_blank"
               href="https://www.linkedin.com/company/adli-kara/"
             >
-              {" "}
               <LinkedInIcon sx={{ color: "#126BC4", cursor: "pointer" }} />
             </Link>
           </Box>

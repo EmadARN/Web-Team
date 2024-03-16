@@ -14,9 +14,9 @@ import { services } from "../data";
 import Lottie from "lottie-react";
 import { ThemeContext } from "@/context/ThemeContext";
 import { useTranslation } from "react-i18next";
-import {Trans} from "react-i18next"
+import { Trans } from "react-i18next";
 const Services_titile = () => {
-  const {t} =useTranslation()
+  const { t } = useTranslation();
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = React.useState({});
   const { theme } = useContext(ThemeContext);
@@ -43,7 +43,7 @@ const Services_titile = () => {
                 sx={steper_box(theme, index, activeStep)}
                 onClick={() => handleStep(index)}
               >
-                 <Typography
+                <Typography
                   sx={{
                     cursor: "pointer",
                     whiteSpace: "nowrap",
@@ -54,9 +54,9 @@ const Services_titile = () => {
 
                     fontSize: { xs: "15px", md: "19px" },
                   }}
-                > 
-               <Trans i18nKey={item.servicesnumber}>{item.title}</Trans>
-                 </Typography> 
+                >
+                  <Trans i18nKey={item.servicesnumber}>{item.title}</Trans>
+                </Typography>
               </Box>
             </Step>
           ))}
@@ -68,9 +68,8 @@ const Services_titile = () => {
               return (
                 <Box display="flex" flexDirection="column">
                   <Typography sx={desc_typo}>
-                   <Trans i18nKey={item.servicesTitle}>{item.desc}</Trans> 
-                    
-                    </Typography>
+                    <Trans i18nKey={item.servicesTitle}>{item.desc}</Trans>
+                  </Typography>
 
                   <Box
                     display="flex"
@@ -82,8 +81,9 @@ const Services_titile = () => {
                         <Box display="flex" alignItems="center" mb={1}>
                           <Brightness1Icon sx={{ fontSize: "8px", ml: 1 }} />
                           <Typography sx={subcontentTypo(theme)}>
-                            <Trans i18nKey={cont.ServicesContentPart}>{cont.subcontent}</Trans>
-                            
+                            <Trans i18nKey={cont.ServicesContentPart}>
+                              {cont.subcontent}
+                            </Trans>
                           </Typography>
                         </Box>
                       );

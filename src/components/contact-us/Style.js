@@ -6,7 +6,7 @@ export const InputStyle = {
     direction: "rtl",
     pr: 2,
     background: "#fff",
-    borderRadius: "9px",
+    borderRadius: "3px",
     fontSize: "12px",
   },
   label: { color: "#111", fontSize: "12px" },
@@ -54,17 +54,18 @@ export const LeftGrid = (theme) => {
 };
 
 export const ContactUsTypography = {
-  fontSize: { xs: "15px", md: "23px" },
+  fontSize: { xs: "15px", md: "20px" },
   color: "#fff",
   fontWeight: "bold",
 };
 
 export const T1 = {
-  fontSize: { xs: "8px",sm:"13px", md: "17px" },
+  fontSize: { xs: "8px", sm: "13px", md: "17px" },
   color: "#fff",
   marginLeft: { xs: 1, md: 0 },
   whitespace: "nowrap",
-  fontFamily:"sans-serif !important"
+  fontFamily: "Times New Roman !important",
+  textAlign: "center",
 };
 
 export const sendticketButton = {
@@ -77,6 +78,7 @@ export const sendticketButton = {
 };
 
 export const iconStyle = {
-  fontSize: { xs: "10px", sm:"16px", md: "20px" },
+  fontSize: { xs: "10px", sm: "16px", md: "20px" },
   color: "#81d8db",
+  mr: 2,
 };

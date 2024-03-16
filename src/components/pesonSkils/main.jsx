@@ -18,7 +18,6 @@ const Avatars = () => {
     setAvatars(true);
   };
   const Inner = useRef(null);
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     var tl = gsap.timeline({
@@ -44,6 +43,7 @@ const Avatars = () => {
       0
     );
   });
+
   return (
     <Grid ref={Inner} container sx={GridMainStyle(theme)}>
       <Typography sx={TypographyStyle(avatar, theme)}>
@@ -59,7 +59,7 @@ const Avatars = () => {
       {avatars.map((item) => {
         return item.id === selectedAvatar ? (
           <Grid xs={10} sm={11} key={item.id} sx={{ zIndex: 1 }}>
-            <MainCv data={item} avatar={avatar} />
+            <MainCv data={item} avatar={avatar} theme={theme} />
           </Grid>
         ) : null;
       })}

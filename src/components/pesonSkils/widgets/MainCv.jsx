@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import InitialCv2 from "./InitialCv2";
 import InitialCv1 from "./InitialCv1";
 import { BoxMainCvStyle, GridMainCvStyle } from "../style";
-const MainCv = ({ data, avatar }) => {
+const MainCv = ({ data, avatar, theme }) => {
   return (
     <>
       <motion.div
@@ -32,10 +32,10 @@ const MainCv = ({ data, avatar }) => {
           >
             <Grid container sx={GridMainCvStyle}>
               <Grid xs={5} sm={3} md={3} mt={6}>
-                <InitialCv1 item={data}/>
+                <InitialCv1 item={data} theme={theme} />
               </Grid>
               <Grid xs={7} sm={7} mt={{ xs: 12, md: 6 }} pr={1}>
-                <InitialCv2 item={data}/>
+                <InitialCv2 item={data} theme={theme}/>
               </Grid>
             </Grid>
           </motion.div>

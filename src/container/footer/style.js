@@ -16,10 +16,11 @@ export const TypographyStyle1 = (theme) => {
   const style = {
     px: { xs: 1, sm: 2, md: 3 },
     fontSize: { xs: "12px", md: "16px" },
-    color: theme === "dark" ? "#ddd" : "#1119",
+    color: theme === "dark" ? "#f0fffd" : "#1119",
     WebkitUserSelect: "none" /* Safari */,
     MsUserSelect: "none" /* IE 10 and IE 11 */,
     userSelect: "none" /* Standard syntax */,
+    letterSpacing: "2px",
   };
   return style;
 };

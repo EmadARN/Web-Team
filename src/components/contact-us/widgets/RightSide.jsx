@@ -9,16 +9,12 @@ import {
 import { useTranslation } from "react-i18next";
 import Textarea from "@/components/Textarea/Textarea";
 const RightSide = () => {
-
-const {t} = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <Box>
       <Box display="flex" flexDirection="column" mb={3}>
-        <Typography sx={ContactUsTypography}>ارتباط با ما</Typography>
-        <Typography sx={T1}>
-          {t('contactus.RightTitle')}
-        </Typography>
+        <Typography sx={T1}>{t("contactus.RightTitle")}</Typography>
       </Box>
 
       <Grid
@@ -38,9 +34,9 @@ const {t} = useTranslation()
               <TextField
                 size="small"
                 sx={InputStyle}
-                label={t('contactus.firstinput')}
+                label={t("contactus.firstinput")}
                 id="outlined-basic"
-                variant="outlined"
+                variant="filled"
                 fullWidth
               />
             </Box>
@@ -56,9 +52,9 @@ const {t} = useTranslation()
               <TextField
                 size="small"
                 sx={InputStyle}
-                label={t('contactus.seccondinput')}
+                label={t("contactus.seccondinput")}
                 id="outlined-basic"
-                variant="outlined"
+                variant="filled"
                 fullWidth
               />
             </Box>
@@ -74,9 +70,9 @@ const {t} = useTranslation()
               <TextField
                 size="small"
                 sx={InputStyle}
-                label={t('contactus.thirdinput')}
+                label={t("contactus.thirdinput")}
                 id="outlined-basic"
-                variant="outlined"
+                variant="filled"
                 fullWidth
               />
             </Box>
@@ -92,9 +88,8 @@ const {t} = useTranslation()
               <TextField
                 size="small"
                 sx={InputStyle}
-                label={t('contactus.forthinput')}
+                label={t("contactus.forthinput")}
                 id="outlined-basic"
-                placeholder="شماره همراه"
                 variant="filled"
                 fullWidth
               />
@@ -113,7 +108,7 @@ const {t} = useTranslation()
             alignItems="center"
             mt={2}
           >
-            <Button sx={sendticketButton}>{t('contactus.button')} </Button>
+            <Button sx={sendticketButton}>{t("contactus.button")} </Button>
           </Box>
         </Box>
       </Grid>
