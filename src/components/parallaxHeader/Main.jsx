@@ -103,6 +103,8 @@ const ParallaxHeader = () => {
               transition: "all 1s ease ",
               opacity: 1,
               fontSize: "20px",
+              y: "-=25",
+              zIndex: 999,
             },
             0
           );
