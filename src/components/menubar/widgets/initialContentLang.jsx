@@ -16,7 +16,12 @@ const ListContentLang = ({ theme, toggleDrawer, anchor }) => {
   };
 
   return (
-    <Box m={1}>
+    <Box
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+      m={1}
+    >
       <List>
         <Typography sx={TypoSxTow(theme)}>{t("زبان ")}</Typography>
         <Divider />

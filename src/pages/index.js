@@ -30,6 +30,7 @@ const index = () => {
         backgroundColor: "#1b1b1b",
       }}
     >
+      
       <Layout>
         <Grid sx={{ overflow: "hidden" }}>
           <ParallaxHeader />

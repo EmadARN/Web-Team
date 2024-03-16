@@ -25,14 +25,19 @@ export default function MenuBar() {
     <div>
       {["⚙️"].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          <Button
+            sx={{ fontSize: "18px" }}
+            onClick={toggleDrawer(anchor, true)}
+          >
+            {anchor}
+          </Button>
           <Drawer
             PaperProps={{
               sx: {
-                bgcolor: theme == "dark" ? "#111" : "#fff",
+                bgcolor: theme == "dark" ? "#1b1b1b" : "#f0fffd",
               },
             }}
-            sx={{zIndex:{xs: 999, md : 1}}}
+            sx={{ zIndex: 999 }}
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
@@ -44,7 +49,11 @@ export default function MenuBar() {
               switchLight={switchLight}
               switchDark={switchDark}
             />
-            <ListContentLang theme={theme}  toggleDrawer={toggleDrawer} anchor={anchor} />
+            <ListContentLang
+              theme={theme}
+              toggleDrawer={toggleDrawer}
+              anchor={anchor}
+            />
           </Drawer>
         </React.Fragment>
       ))}

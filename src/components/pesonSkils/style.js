@@ -204,6 +204,7 @@ export const TypographyStyle8_initialCv1 = {
     sm: "10px",
     md: "14px",
   },
+  fontFamily: "Times New Roman !important",
 };
 //initialCv2
 export const TypographyStyle1_initialCv2 = (theme) => {

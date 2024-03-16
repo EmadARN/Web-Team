@@ -132,7 +132,12 @@ const ParallaxHeader = () => {
 
         <Typography
           ref={textRef}
-          sx={{ opacity: 0, fontSize: "5px", fontWeight: "bold" }}
+          sx={{
+            opacity: 0,
+            fontSize: "5px",
+            fontWeight: "bold",
+          
+          }}
         >
           {t("paralaxHeader")}
         </Typography>

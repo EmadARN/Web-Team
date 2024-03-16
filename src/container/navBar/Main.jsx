@@ -7,9 +7,8 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import { navData } from "./data";
 import { Link, animateScroll as scroll } from "react-scroll";
-import {Trans,useTranslation} from "react-i18next"
+import { Trans, useTranslation } from "react-i18next";
 import MenuBar from "@/components/menubar/Main";
-
 
 const MainNav = () => {
   const [loadCount, setLoadCount] = React.useState(false);
@@ -26,13 +25,9 @@ const MainNav = () => {
     window.addEventListener("scroll", scrol);
   }, []);
 
-
-
-
   return (
     <Box sx={BoxStyle1}>
       <Box sx={BoxStyle2(loadCount, theme)}>
-
         {navData.map((item) => {
           return (
             <Link
@@ -44,7 +39,9 @@ const MainNav = () => {
               activeClass="active"
               spy={true}
             >
-              <Box sx={TypographyStyle1(theme)}><Trans i18nKey={item.navbarlocale}></Trans></Box>
+              <Box sx={TypographyStyle1(theme)}>
+                <Trans i18nKey={item.navbarlocale}></Trans>
+              </Box>
             </Link>
           );
         })}
