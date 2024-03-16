@@ -2,10 +2,6 @@ import { Box, Button, Divider, Drawer, List, Typography } from "@mui/material";
 import {
   BtnFive,
   BtnFour,
-  BtnOne,
-  BtnThree,
-  BtnTwo,
-  TypoSx,
   TypoSxTow,
 } from "../style";
 import * as React from "react";

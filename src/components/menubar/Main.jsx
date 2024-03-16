@@ -40,7 +40,7 @@ export default function MenuBar() {
             <ListContent
               anchor={anchor}
               toggleDrawer={toggleDrawer}
-              theme={theme}
+              theme1={theme}
               switchLight={switchLight}
               switchDark={switchDark}
             />
