@@ -17,7 +17,7 @@ const ListContent = ({
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <Typography sx={TypoSx(theme)}>حالت :</Typography>
+        <Typography sx={TypoSx(theme)}>حالت </Typography>
         <Divider />
         <Box mt={2}>
           <Button sx={BtnOne(theme)} onClick={() => switchLight()}>
