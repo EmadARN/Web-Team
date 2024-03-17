@@ -47,8 +47,7 @@ const InitialCv2 = ({ theme }) => {
             slidesPerView={3}
             modules={[Navigation, Autoplay]}
             autoplay={{ delay: 2000 }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
+     
           >
             {SkillData.map((item) => {
               return (
