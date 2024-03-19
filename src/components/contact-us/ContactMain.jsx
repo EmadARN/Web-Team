@@ -2,7 +2,7 @@ import React from "react";
 import Contact_us from "./widgets/Contact_us";
 import { Grid, Box, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
-
+import Title from "@/common/Title/Title";
 const ContactMain = () => {
   const { t } = useTranslation();
 
@@ -15,12 +15,7 @@ const ContactMain = () => {
       width="100%"
     >
       <Box mb={6}>
-        <Typography
-          sx={{ fontSize: { xs: "20px", md: "27px" } }}
-          fontWeight="bold"
-        >
-          {t("contactus.title")}
-        </Typography>
+        <Title title={t("contactus.title")}></Title>
       </Box>
 
       <Contact_us />

@@ -2,6 +2,7 @@ import React from 'react'
 import Services_titile from './widgets/Services_titile'
 import {Box,Typography,Grid} from '@mui/material'
 import { useTranslation } from "react-i18next";
+import Title from '@/common/Title/Title';
 const ServicesMain = () => {
 
   const {t} = useTranslation()
@@ -15,7 +16,7 @@ const ServicesMain = () => {
   
     >
 
-<Box mb={6}><Typography sx={{fontSize:{xs:"20px",md:'27px'}}} fontWeight="bold">  {t('ourServices')} </Typography></Box>
+<Box mb={6}><Title title ={t('ourServices')} ></Title></Box>
    <Services_titile/>
    </Grid>
   )

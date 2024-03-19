@@ -2,6 +2,7 @@ import React from "react";
 import About_us from "./widgets/About_us";
 import { Grid, Box, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import Title from "@/common/Title/Title";
 const About_Main = () => {
   const { t, i18n } = useTranslation();
 
@@ -18,13 +19,7 @@ const About_Main = () => {
     >
 
       <Box mb={6}>
-        <Typography
-          sx={{ fontSize: { xs: "20px", md: "27px" } }}
-          fontWeight="bold"
-        >
-          {" "}
-          {t("aboutTitle")}
-        </Typography>
+       <Title title ={t("aboutTitle")}></Title>
       </Box>
       <About_us />
     </Grid>

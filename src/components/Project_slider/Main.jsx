@@ -1,7 +1,7 @@
 import React from "react";
 import { Container,Grid,Box,Typography } from "@mui/material";
 import { SwiperSlide } from "swiper/react";
-
+import Title from "@/common/Title/Title";
 import Swiper from "@/common/Swiper/Swiper";
 import { slider_data } from "./data";
 import { imgStyle, sliderslide } from "./Style";
@@ -17,7 +17,7 @@ const Slider_project = () => {
     flexDirection="column"
     width="100%"
     >
-        <Box mb={6}><Typography sx={{fontSize:{xs:"20px",md:'27px'}}} fontWeight="bold"> {t('ourProject')}</Typography></Box>
+        <Box mb={6}><Title title = {t('ourProject')}></Title></Box>
     <Container maxWidth={{ xs: "md", md: "lg" }}>
       <Swiper>
         {slider_data.map((item) => {
