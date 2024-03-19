@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Box, Typography, Container } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import {
@@ -20,6 +20,18 @@ const Services_titile = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = React.useState({});
   const { theme } = useContext(ThemeContext);
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      if (activeStep >= 4) {
+        setActiveStep(0);
+      } else {
+        setActiveStep(activeStep + 1);
+      }
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [activeStep]);
+
+
   const handleStep = (step) => {
     setActiveStep(step);
   };
