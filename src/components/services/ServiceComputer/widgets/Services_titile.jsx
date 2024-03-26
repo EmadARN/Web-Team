@@ -31,7 +31,6 @@ const Services_titile = () => {
     return () => clearInterval(interval);
   }, [activeStep]);
 
-
   const handleStep = (step) => {
     setActiveStep(step);
   };

@@ -1,42 +1,54 @@
-import React from "react";
-import { Grid, Box } from "@mui/material";
-import animationData from "../../assets/Animation - 1709040953350.json";
-import Lottie from "lottie-react";
+
+import { Box } from "@mui/material";
+import React, { useRef } from "react";
+import { Canvas, useFrame } from "react-three-fiber";
+
+const Sphere = ({ position, size, color }) => {
+  const ref = useRef();
+  useFrame((state, delta) => {
+    ref.current.rotation.x += delta * 2;
+  });
+  return (
+    <mesh position={position} ref={ref}>
+      <sphereGeometry args={size} />
+      <meshStandardMaterial color={color} wireframe />
+    </mesh>
+  );
+};
+const Torus = ({ position, size, color }) => {
+  const ref = useRef();
+  useFrame((state, delta) => {
+    ref.current.rotation.x += delta;
+    ref.current.rotation.y += delta * 2.0;
+    ref.current.position.z = Math.sin(state.clock.elapsedTime) * 4;
+  });
+  return (
+    <mesh position={position} ref={ref}>
+      <torusGeometry args={size} />
+      <meshStandardMaterial color={color} wireframe />
+    </mesh>
+  );
+};
+
 const Loader = () => {
   return (
-    <Grid
+    <Box
       sx={{
         width: "100%",
         height: "100vh",
-        zIndex: "10",
-        position: "fixed",
-        top: "0",
-        left: "0",
-        background: "#18181b",
+        background: "#000",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <Grid width="100%" flexDirection="column" className="svg-wrapper" display="flex" justifyContent="center" alignItems="center">
-        {/* copy svg image and past it here */}
-        <Box width="20%" >
-          <Lottie animationData={animationData} />
-        </Box>
-        {/* <Box
-          style={{
-            
-            fontWeight: "bold",
-            color: "#fff",
-            transform: "translate(.4rem)",
-      
-          }}
-         
-        >
-          در حال بارگذاری
-        </Box> */}
-      </Grid>
-    </Grid>
+      <Canvas>
+        <directionalLight position={[0, 0, 2]} />
+        <ambientLight />
+        <Sphere position={[0, 0, 0]} size={[0.3, 3, 30]} color={"#850154"} />
+        <Torus position={[0, 0, 0]} size={[0.5, 4, 30, 30]} color={"#63439b"} />
+      </Canvas>
+    </Box>
   );
 };
 

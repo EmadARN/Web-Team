@@ -17,7 +17,7 @@ const index = () => {
     const fakeDataFetch = () => {
       setTimeout(() => {
         setIsLoading(false);
-      }, 2000);
+      }, 5000);
     };
     fakeDataFetch();
   }, []);
@@ -30,7 +30,6 @@ const index = () => {
         backgroundColor: "#1b1b1b",
       }}
     >
-      
       <Layout>
         <Grid sx={{ overflow: "hidden" }}>
           <ParallaxHeader />
