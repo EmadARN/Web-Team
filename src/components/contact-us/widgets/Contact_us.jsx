@@ -19,7 +19,7 @@ const Contact_us = () => {
       defaults: { duration: 1, ease: "power3.inOut" },
       scrollTrigger: {
         trigger: Inner.current,
-        start: window.innerWidth < 768 ? "1700 center" : "2000 center",
+        start: window.innerWidth < 768 ? "1700 center" : "1780 center",
         end: "bottom center",
         scrub: false,
         // markers: true, // برای نمایش نشانگرهای بصری
