@@ -128,7 +128,7 @@ export const moonStyle = (
       : isXXlargeScreen
       ? "9.5%"
       : isXXXlargeScreen
-      ? "7.7%"
+      ? "7%"
       : "8%",
     maxHeight: isSmallScreen
       ? "50px"
