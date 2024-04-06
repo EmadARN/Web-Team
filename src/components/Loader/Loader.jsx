@@ -15,20 +15,20 @@ const Sphere = ({ position, size, color }) => {
     </mesh>
   );
 };
-// const Torus = ({ position, size, color }) => {
-//   const ref = useRef();
-//   useFrame((state, delta) => {
-//     ref.current.rotation.x += delta;
-//     ref.current.rotation.y += delta * 2.0;
-//     ref.current.position.z = Math.sin(state.clock.elapsedTime) * 4;
-//   });
-//   return (
-//     <mesh position={position} ref={ref}>
-//       <torusGeometry args={size} />
-//       <meshStandardMaterial color={color} wireframe />
-//     </mesh>
-//   );
-// };
+const Torus = ({ position, size, color }) => {
+  const ref = useRef();
+  useFrame((state, delta) => {
+    ref.current.rotation.x += delta;
+    ref.current.rotation.y += delta * 2.0;
+    ref.current.position.z = Math.sin(state.clock.elapsedTime) * 4;
+  });
+  return (
+    <mesh position={position} ref={ref}>
+      <torusGeometry args={size} />
+      <meshStandardMaterial color={color} wireframe />
+    </mesh>
+  );
+};
 
 const Loader = () => {
   return (
@@ -45,8 +45,8 @@ const Loader = () => {
       <Canvas>
         <directionalLight position={[0, 0, 2]} />
         <ambientLight />
-        <Sphere position={[0, 0, 0]} size={[0.3, 4, 1]} color={"#fff"} />
-        {/* <Torus position={[0, 0, 0]} size={[0.5, 4, 30, 30]} color={"#63439b"} /> */}
+        <Sphere position={[0, 0, 0]} size={[0.3, 4, 1]} color={"#efefef"} />
+        <Torus position={[0, 0, 0]} size={[1, 15, 30, 30]} color={"#63439b"} />
       </Canvas>
     </Box>
   );

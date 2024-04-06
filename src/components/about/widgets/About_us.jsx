@@ -12,11 +12,11 @@ const About_us = () => {
     gsap.registerPlugin(ScrollTrigger);
     var tl = gsap.timeline({
       repeat: false,
-      defaults: { duration: 1, ease: "power3.inOut" },
+      defaults: { duration: 0.6, ease: "power3.inOut" },
       scrollTrigger: {
         trigger: Right.current,
         trigger: Left.current,
-        start: window.innerWidth < 768 ? "2000 center" : "2450 center",
+        start: window.innerWidth < 768 ? "2000 center" : "2250 center",
         end: "bottom center",
         scrub: false,
         // markers: true, // برای نمایش نشانگرهای بصری
@@ -32,7 +32,7 @@ const About_us = () => {
         x: "0",
         opacity: "1",
       },
-      0
+      1
     );
     tl.to(
       Left.current,
@@ -41,7 +41,7 @@ const About_us = () => {
         x: "0",
         opacity: "1",
       },
-      0.5
+      1
     );
   });
 

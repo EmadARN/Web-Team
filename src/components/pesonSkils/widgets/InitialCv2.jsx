@@ -1,7 +1,6 @@
 import { Typography, Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import { SkillData } from "@/components/pesonSkils/data";
 import SkillBox from "@/components/pesonSkils/widgets/Skill";
 import { useTranslation } from "react-i18next";
 import "swiper/css";
@@ -19,7 +18,7 @@ import {
   TypographyStyle2_initialCv2,
   TypographyStyle3_initialCv2,
 } from "../style";
-const InitialCv2 = ({ theme }) => {
+const InitialCv2 = ({ theme, item }) => {
   const { t } = useTranslation();
 
   return (
@@ -30,11 +29,7 @@ const InitialCv2 = ({ theme }) => {
         </Typography>
         <Box sx={BoxStyle2_initialCv2}>
           <Typography sx={TypographyStyle2_initialCv2(theme)}>
-            ده‌روسی پاسخ داد: او یک مهاجم کاذب در خط میانی یا یک هافبک هجومی
-            کاذب در خط حمله است. ایده من این بود که به حسام عوار که یک بازیکن با
-            کیفیت دیگر است، اجازه بازی بدهد. اما بعد دیدم که آزمون خوب کار
-            می‌کند. با این حال، یافتن این هماهنگی زمان بیشتری می‌برد اما من آن
-            را دوست داشتم.
+            {item.desc}
           </Typography>
         </Box>
         <Typography sx={TypographyStyle3_initialCv2(theme)}>
@@ -47,15 +42,10 @@ const InitialCv2 = ({ theme }) => {
             slidesPerView={3}
             modules={[Navigation, Autoplay]}
             autoplay={{ delay: 2000 }}
-     
           >
-            {SkillData.map((item) => {
-              return (
-                <SwiperSlide>
-                  <SkillBox item={item} />
-                </SwiperSlide>
-              );
-            })}
+            <SwiperSlide>
+              <SkillBox item={item} />
+            </SwiperSlide>
           </Swiper>
 
           <Typography sx={BoxStyle4_initialCv2}></Typography>

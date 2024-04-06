@@ -1,21 +1,27 @@
-import {Box, Container, Grid} from "@mui/material";
+import { Box } from "@mui/material";
 
-function SkillBox({item}){
-    return(
-        <>
-
-            <Box sx={{width:"80px",height:"80px",backgroundImage: `url(${item.image})`,
+function SkillBox({ item }) {
+  return (
+    <>
+      {item.skills.map((skill) => {
+        return (
+          <>
+            <Box
+              sx={{
+                width: "80px",
+                height: "80px",
+                backgroundImage: `url(${skill.icon})`,
                 backgroundSize: "cover",
-                borderRadius:"50%",
+                borderRadius: "50%",
                 backgroundPosition: "center",
-            mr:5
-        
-            }}>
-
-            </Box>
-
-        </>
-    )
+                mr: 5,
+              }}
+            ></Box>
+          </>
+        );
+      })}
+    </>
+  );
 }
 
-export default SkillBox
+export default SkillBox;
