@@ -7,7 +7,9 @@ export const BoxStyle2 = (loadCount, theme) => {
     justifyContent: "center",
     alignItems: "center",
     backgroundColor:
-      theme === "dark" ? "rgba(255,255,255,0.08)" : "rgba(84,84,84,0.1)",
+      theme === "dark" ? "rgba(255,255,255,0.06)" : "rgba(84,84,84,0.1)",
+    mixBlendMode: "difference",
+    color: "#ddd",
     WebkitBackdropFilter: "blur(8px) !important",
     backdropFilter: {
       xs: "blur(8px)",
@@ -25,12 +27,11 @@ export const TypographyStyle1 = (theme) => {
   const style = {
     px: { xs: 1, sm: 2, md: 3 },
     fontSize: { xs: "12px", md: "16px" },
-    color: theme === "dark" ? "#ddd" : "#1119",
+
     WebkitUserSelect: "none" /* Safari */,
     MsUserSelect: "none" /* IE 10 and IE 11 */,
     userSelect: "none" /* Standard syntax */,
     cursor: "pointer",
-
   };
 
   return style;

@@ -5,7 +5,7 @@ function SkillBox({ item }) {
     <>
       {item.skills.map((skill) => {
         return (
-          <>
+          <> 
             <Box
               sx={{
                 width: "80px",

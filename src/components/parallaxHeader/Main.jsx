@@ -20,7 +20,7 @@ const ParallaxHeader = () => {
   const boat = useRef(null);
   const textRef = useRef(null);
   const { theme } = useContext(ThemeContext);
-
+  const [show, setShow] = useState(false);
   useEffect(() => {
     let responsive = gsap.matchMedia();
     let ctx = gsap.context(() => {
@@ -113,14 +113,20 @@ const ParallaxHeader = () => {
     });
     return () => ctx.revert();
   }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setShow(true);
+    }, 100);
+  }, []);
 
   return (
     <setion style={allStyle}>
-      <Box ref={parallaxRef} sx={BoxStyle(background, theme)}>
+      <Box ref={parallaxRef} sx={BoxStyle(background, theme, show)}>
         {imgData(night_sea, balloon, moon, abovemoon, undermoon, boat).map(
           (item) => {
             return (
               <ImgStyle
+                key={item.id}
                 ref={item.ref}
                 style={item.style}
                 className={item.class}
@@ -136,7 +142,6 @@ const ParallaxHeader = () => {
             opacity: 0,
             fontSize: "5px",
             fontWeight: "bold",
-          
           }}
         >
           {t("paralaxHeader")}

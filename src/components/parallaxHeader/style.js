@@ -3,13 +3,15 @@ import { styled, useMediaQuery } from "@mui/material";
 export const allStyle = {
   overflow: " hidden !important",
 };
-export const BoxStyle = (background, theme) => {
+export const BoxStyle = (background, theme, show) => {
   const style = {
     background:
-      theme == "dark"
+      theme == "dark" && show
         ? `linear-gradient(#0F2B9C, #673D7D ${background}%, #0F2B9C, #EDFC54 )`
-        : `linear-gradient( skyblue, #efefef ${background}%,  skyblue,  #c7e3ff)`,
-    position: "rtivelae",
+        : theme == "light" && show
+        ? `linear-gradient( skyblue, #efefef ${background}%,  skyblue,  #c7e3ff)`
+        : null,
+    position: "relative",
     width: "100%",
     height: "110vh",
     display: " flex",
