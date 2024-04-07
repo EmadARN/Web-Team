@@ -18,7 +18,7 @@ const index = () => {
     const fakeDataFetch = () => {
       setTimeout(() => {
         setIsLoading(false);
-      }, 5000);
+      }, 1000);
     };
     fakeDataFetch();
   }, []);
@@ -42,7 +42,7 @@ const index = () => {
           </Container>
         </Grid>
         <Container maxWidth="lg">
-          <Grid id="services" sx={{ mb: { xs: 5, md: 10 } }} mt={10}>
+          <Grid id="services" sx={{ mb: { xs: 5, md: 10 } }} mt={20}>
             <ServicesMain />
             <Services_mobile_Main />
           </Grid>
