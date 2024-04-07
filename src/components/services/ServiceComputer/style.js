@@ -4,6 +4,7 @@ export const FirstBox = {
   display: { xs: "none", md: "flex" },
   justifyContent: "space-evenly",
 
+height:"70vh",
   m: 2,
 };
 

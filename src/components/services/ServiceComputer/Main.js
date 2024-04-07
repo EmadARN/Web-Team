@@ -7,18 +7,22 @@ const ServicesMain = () => {
 
   const {t} = useTranslation()
   return (
+    <>
+
     <Grid
     display="flex"
     justifyContent="center"
     alignItems="center"
     flexDirection="column"
     width="100%"
+   
   
     >
+    <Box mb={6}><Title title ={t('ourServices')} ></Title></Box>
 
-<Box mb={6}><Title title ={t('ourServices')} ></Title></Box>
    <Services_titile/>
    </Grid>
+   </>
   )
 }
 
