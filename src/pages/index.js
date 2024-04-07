@@ -6,13 +6,14 @@ import ParallaxHeader from "@/components/parallaxHeader/Main";
 import MainPersonSkils from "@/components/pesonSkils/main";
 import Layout from "@/container/main";
 import { Container, Grid } from "@mui/material";
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Loader from "@/components/Loader/Loader";
 import ServicesMain from "@/components/services/ServiceComputer/Main";
 import Services_mobile_Main from "@/components/services/Servicemobile/Main";
 
 const index = () => {
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const fakeDataFetch = () => {
       setTimeout(() => {

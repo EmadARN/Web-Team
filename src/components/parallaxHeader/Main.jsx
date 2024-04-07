@@ -1,13 +1,14 @@
 import React, { useContext, useState } from "react";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Box, Typography } from "@mui/material";
 import { BoxStyle, ImgStyle, allStyle, iconStyle } from "./style";
 import { imgData } from "./data";
 import { ThemeContext } from "@/context/ThemeContext";
 import { useTranslation } from "react-i18next";
 import KeyboardDoubleArrowDownOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowDownOutlined";
+import { createParallaxTimeline } from "./uitls";
+
 const ParallaxHeader = () => {
   const { t } = useTranslation();
   const [background, setBackground] = useState(20);
@@ -22,95 +23,17 @@ const ParallaxHeader = () => {
   const { theme } = useContext(ThemeContext);
   const [show, setShow] = useState(false);
   useEffect(() => {
-    let responsive = gsap.matchMedia();
     let ctx = gsap.context(() => {
-      gsap.registerPlugin(ScrollTrigger);
-      var tl = gsap.timeline({
-        defaults: { duration: 1 },
-        scrollTrigger: {
-          trigger: parallaxRef.current,
-          start: "top top",
-          end: "3000 bottom",
-          scrub: true,
-          pin: true,
-          onUpdate: (self) => {
-            setBackground(Math.ceil(self.progress * 100 + 20));
-          },
-        },
-      });
-      responsive.add(
-        {
-          isMobile: "(max-width:700px)",
-          istablet: "(min-width:701px)",
-          isDesktop: "(min-width:993px)",
-        },
-
-        (context) => {
-          var { isMobile, istablet, isDesktop } = context.conditions;
-          tl.to(
-            balloon.current,
-            {
-              x: () => {
-                if (isMobile) {
-                  return +50;
-                } else if (istablet) {
-                  return +100;
-                } else if (isDesktop) {
-                  return +100;
-                }
-              },
-              y: () => {
-                if (isMobile) {
-                  return -50;
-                } else if (istablet) {
-                  return -100;
-                } else if (isDesktop) {
-                  return -100;
-                }
-              },
-              scale: 0.2,
-              transition: "2s ease-out",
-            },
-            0
-          );
-          tl.to(
-            boat.current,
-            {
-              x: () => {
-                if (isMobile) {
-                  return -70;
-                } else if (istablet) {
-                  return -300;
-                } else if (isDesktop) {
-                  return -300;
-                }
-              },
-              scale: 1.9,
-              transition: "3s ease-out",
-            },
-            0
-          );
-          tl.to(
-            moon.current,
-            {
-              y: "-=60",
-            },
-            0
-          );
-          tl.to(
-            textRef.current,
-            {
-              transition: "all 1s ease ",
-              opacity: 1,
-              fontSize: "20px",
-              y: "-=25",
-              zIndex: 999,
-            },
-            0
-          );
-        }
+      createParallaxTimeline(
+        parallaxRef,
+        balloon,
+        moon,
+        boat,
+        textRef,
+        setBackground
       );
     });
+
     return () => ctx.revert();
   }, []);
   useEffect(() => {
@@ -120,7 +43,7 @@ const ParallaxHeader = () => {
   }, []);
 
   return (
-    <setion style={allStyle}>
+    <section style={allStyle}>
       <Box ref={parallaxRef} sx={BoxStyle(background, theme, show)}>
         {imgData(night_sea, balloon, moon, abovemoon, undermoon, boat).map(
           (item) => {
@@ -135,7 +58,6 @@ const ParallaxHeader = () => {
             );
           }
         )}
-
         <Typography
           ref={textRef}
           sx={{
@@ -148,7 +70,7 @@ const ParallaxHeader = () => {
         </Typography>
         <KeyboardDoubleArrowDownOutlinedIcon sx={iconStyle} />
       </Box>
-    </setion>
+    </section>
   );
 };
 export default ParallaxHeader;
