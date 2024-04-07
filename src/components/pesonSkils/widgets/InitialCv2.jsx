@@ -43,9 +43,13 @@ const InitialCv2 = ({ theme, item }) => {
             modules={[Navigation, Autoplay]}
             autoplay={{ delay: 2000 }}
           >
-            <SwiperSlide>
-              <SkillBox item={item} />
-            </SwiperSlide>
+            {item.skills.map((skill) => {
+              return (
+                <SwiperSlide>
+                  <SkillBox item={skill} />
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
 
           <Typography sx={BoxStyle4_initialCv2}></Typography>

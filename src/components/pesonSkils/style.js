@@ -231,10 +231,11 @@ export const TypographyStyle3_initialCv2 = (theme) => {
 };
 export const BoxStyle1_initialCv2 = {
   height: { xs: "60vh", md: "88vh" },
+ 
   borderRadius: "15px",
   backgroundColor: "rgba(255,255,255,0.1)",
   WebkitBackdropFilter: "blur(8px) !important",
-  backdropFilter: { xs: "blur(8px)", md: "blur(10px)" },
+backdropFilter: { xs: "blur(8px)", md: "blur(10px)" },
 };
 
 export const BoxStyle2_initialCv2 = {
@@ -249,6 +250,7 @@ export const BoxStyle2_initialCv2 = {
 };
 
 export const BoxStyle3_initialCv2 = {
+  
   width: "100%",
   height: { xs: "30%", sm: "33%", md: "30%" },
   color: "#2228",
