@@ -1,16 +1,15 @@
-import { Box, Button } from "@mui/material";
+import { Box} from "@mui/material";
 import React, { useContext, useEffect } from "react";
 import { BoxStyle1, BoxStyle2, TypographyStyle1 } from "./style";
 import { ThemeContext } from "@/context/ThemeContext";
-import { styled } from "@mui/material/styles";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch from "@mui/material/Switch";
 import { navData } from "./data";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Trans, useTranslation } from "react-i18next";
 import MenuBar from "@/components/menubar/Main";
 
+
 const MainNav = () => {
+  const {t} = useTranslation();
   const [loadCount, setLoadCount] = React.useState(false);
 
   const { theme, switchDark, switchLight } = useContext(ThemeContext);
@@ -40,7 +39,8 @@ const MainNav = () => {
               spy={true}
             >
               <Box sx={TypographyStyle1(theme)}>
-                <Trans i18nKey={item.navbarlocale}></Trans>
+                <Trans i18nKey={item.navbarlocale}></Trans> 
+               
               </Box>
             </Link>
           );
