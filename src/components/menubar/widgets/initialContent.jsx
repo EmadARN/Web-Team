@@ -1,7 +1,7 @@
 import { Box, Button, Divider, List, Typography } from "@mui/material";
 import { BtnOne, BtnThree, BtnTwo, TypoSx, drawerSx } from "../style";
 import * as React from "react";
-
+import { useTranslation } from "react-i18next";
 const ListContent = ({
   anchor,
   toggleDrawer,
@@ -16,6 +16,8 @@ const ListContent = ({
     setAutoType(mediaQuery);
   }, []);
 
+  const {t} = useTranslation()
+
   return (
     <Box
       sx={drawerSx}
@@ -24,20 +26,20 @@ const ListContent = ({
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <Typography sx={TypoSx(theme1)}>حالت </Typography>
+        <Typography sx={TypoSx(theme1)}>{t('drawer.mode')}</Typography>
         <Divider />
         <Box mt={2}>
           <Button sx={BtnOne(theme1)} onClick={() => switchLight()}>
-            💡روشن
+           {t("drawer.day")}
           </Button>
           <Button
             sx={BtnTwo(theme1)}
             onClick={() => (autoType.matches ? switchDark() : switchLight())}
           >
-            💻سیستم
+            {t('drawer.system')}
           </Button>
           <Button sx={BtnThree(theme1)} onClick={() => switchDark()}>
-            🌙تاریک
+            {t("drawer.night")}
           </Button>
         </Box>
       </List>

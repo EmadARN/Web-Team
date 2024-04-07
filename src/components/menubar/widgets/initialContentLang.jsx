@@ -23,7 +23,7 @@ const ListContentLang = ({ theme, toggleDrawer, anchor }) => {
       m={1}
     >
       <List>
-        <Typography sx={TypoSxTow(theme)}>{t("زبان ")}</Typography>
+        <Typography sx={TypoSxTow(theme)}>{t("drawer.language")}</Typography>
         <Divider />
         <Box mt={2}>
           <Button sx={BtnFive(theme)} onClick={() => changeLang("en")}>
