@@ -100,7 +100,14 @@
           "services":"Services",
           "contactus":"Contact Us"
 
-        }
+        },
+        "drawer":{
+            "mode":"MODE",
+            "language":"Language",
+            "day":"Day💡",
+            "night":"Night🌙",
+            "system":"System💻"
+          }
 
 
 
