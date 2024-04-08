@@ -32,7 +32,7 @@ export const InputStyle = {
 
 export const RightGrid = (theme) => {
   const S3 = {
-    backgroundColor: theme === "dark" ? "#393E46" : "#587299",
+    backgroundColor: theme === "dark" ? "#393E46" : "#6d9293",
     p: 3,
     width: { xs: "100%", md: "50%" },
     borderRadius: "0 20px 20px 0",
