@@ -41,7 +41,7 @@ const InitialCv2 = ({ theme, item }) => {
             spaceBetween={40}
             slidesPerView={3}
             modules={[Navigation, Autoplay]}
-            autoplay={{ delay: 2000 }}
+            autoplay={{ delay: 970 }}
           >
             {item.skills.map((skill) => {
               return (
