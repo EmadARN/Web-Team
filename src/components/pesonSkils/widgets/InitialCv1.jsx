@@ -25,7 +25,7 @@ import {
 const InitialCv1 = ({ item, theme }) => {
   return (
     <>
-      <Box key={item.id} sx={BoxStyle1_initialCv1}>
+      <Box key={item.id} sx={BoxStyle1_initialCv1(theme)}>
         <Box sx={BoxStyle2_initialCv1}>
           <Box>
             <Typography sx={TypographyStyle1_initialCv1(theme)}>

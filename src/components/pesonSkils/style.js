@@ -75,18 +75,22 @@ export const GridMainCvStyle = {
   justifyContent: { xs: "flex-start", md: "center" },
 };
 //initialCv1
-export const BoxStyle1_initialCv1 = {
-  height: {
-    xs: "34vh",
-    sm: "50vh",
-    md: "60vh",
-    lg: "60vh",
-  },
-  position: "relative",
-  backgroundColor: "rgba(255,255,255,0.1)",
-  WebkitBackdropFilter: "blur(8px) !important",
-  backdropFilter: { xs: "blur(8px)", md: "blur(10px)" },
-  borderRadius: "15px",
+export const BoxStyle1_initialCv1 = (theme) => {
+  const style = {
+    height: {
+      xs: "34vh",
+      sm: "50vh",
+      md: "60vh",
+      lg: "60vh",
+    },
+    position: "relative",
+    backgroundColor:
+      theme == "dark" ? "rgba(255,255,255,0.1)" : "rgba(255,255,255,0.5)",
+    WebkitBackdropFilter: "blur(8px) !important",
+    backdropFilter: { xs: "blur(8px)", md: "blur(10px)" },
+    borderRadius: "15px",
+  };
+  return style;
 };
 export const BoxStyle2_initialCv1 = {
   borderRadius: "15px 15px 0 0 ",
@@ -229,13 +233,16 @@ export const TypographyStyle3_initialCv2 = (theme) => {
   };
   return style;
 };
-export const BoxStyle1_initialCv2 = {
-  height: { xs: "60vh", md: "88vh" },
- 
-  borderRadius: "15px",
-  backgroundColor: "rgba(255,255,255,0.1)",
-  WebkitBackdropFilter: "blur(8px) !important",
-backdropFilter: { xs: "blur(8px)", md: "blur(10px)" },
+export const BoxStyle1_initialCv2 = (theme) => {
+  const style = {
+    height: { xs: "60vh", md: "88vh" },
+    borderRadius: "15px",
+    backgroundColor:
+      theme == "dark" ? "rgba(255,255,255,0.1)" : "rgba(255,255,255,0.5)",
+    WebkitBackdropFilter: "blur(8px) !important",
+    backdropFilter: { xs: "blur(8px)", md: "blur(10px)" },
+  };
+  return style;
 };
 
 export const BoxStyle2_initialCv2 = {
@@ -250,7 +257,6 @@ export const BoxStyle2_initialCv2 = {
 };
 
 export const BoxStyle3_initialCv2 = {
-  
   width: "100%",
   height: { xs: "30%", sm: "33%", md: "30%" },
   color: "#2228",
