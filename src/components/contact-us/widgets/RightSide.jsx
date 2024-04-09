@@ -9,7 +9,7 @@ import {
 import { useTranslation } from "react-i18next";
 import Textarea from "@/components/Textarea/Textarea";
 const RightSide = () => {
-  const { t } = useTranslation();
+  const { t ,i18n} = useTranslation();
 
   return (
     <Box>
@@ -32,8 +32,9 @@ const RightSide = () => {
           >
             <Box width="80%">
               <TextField
+              
                 size="small"
-                sx={InputStyle}
+                sx={InputStyle(i18n.language)}
                 label={t("contactus.firstinput")}
                 id="outlined-basic"
                 variant="filled"
@@ -51,7 +52,7 @@ const RightSide = () => {
             <Box width="80%">
               <TextField
                 size="small"
-                sx={InputStyle}
+                sx={InputStyle(i18n.language)}
                 label={t("contactus.seccondinput")}
                 id="outlined-basic"
                 variant="filled"
@@ -69,7 +70,7 @@ const RightSide = () => {
             <Box width="80%">
               <TextField
                 size="small"
-                sx={InputStyle}
+                sx={InputStyle(i18n.language)}
                 label={t("contactus.thirdinput")}
                 id="outlined-basic"
                 variant="filled"
@@ -84,10 +85,11 @@ const RightSide = () => {
             justifyContent="center"
             mb={2}
           >
-            <Box width="80%">
+            <Box  width="80%">
               <TextField
-                size="small"
-                sx={InputStyle}
+              
+                size="medium"
+                sx={InputStyle(i18n.language)}
                 label={t("contactus.forthinput")}
                 id="outlined-basic"
                 variant="filled"
