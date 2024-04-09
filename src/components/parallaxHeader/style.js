@@ -11,8 +11,9 @@ export const BoxStyle = (background, theme, show) => {
         : theme == "light" && show
         ? `linear-gradient( skyblue, #efefef ${background}%,  skyblue,  #c7e3ff)`
         : null,
+
     position: "relative",
-    width: "100%",
+    maxWidth: "100%",
     height: "110vh",
     display: " flex",
     justifyContent: "center",
@@ -120,7 +121,7 @@ export const moonStyle = (
 ) => {
   const style = {
     width: isSmallScreen
-      ? "15%"
+      ? "13%"
       : isMediumScreen
       ? "16%"
       : islargeScreen

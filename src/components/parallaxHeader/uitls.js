@@ -70,7 +70,7 @@ export const createParallaxTimeline = (
               return -300;
             }
           },
-          scale: 1.9,
+          scale: 2.2,
           transition: "3s ease-out",
         },
         0

@@ -10,6 +10,7 @@ import React, { useEffect, useState } from "react";
 import Loader from "@/components/Loader/Loader";
 import ServicesMain from "@/components/services/ServiceComputer/Main";
 import Services_mobile_Main from "@/components/services/Servicemobile/Main";
+import BtnContactUs from "@/common/btnContactUs/BtnContactUs";
 
 const index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,7 +48,7 @@ const index = () => {
             <Services_mobile_Main />
           </Grid>
         </Container>
-
+        <BtnContactUs />
         <Grid id="projects" py={10}>
           <Slider_project />
         </Grid>
