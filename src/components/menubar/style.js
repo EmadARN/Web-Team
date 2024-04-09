@@ -51,8 +51,10 @@ export const BtnFour = (theme) => {
   };
   return style;
 };
-export const BtnFive = (theme) => {
+export const BtnFive = (theme,direction) => {
   const style = {
+
+    direction:direction === "rtl" ? "ltr" : "rtl",
     width: "47%",
     border: "1px solid #000",
     color: theme === "dark" ? "#efefef" : "#222",
