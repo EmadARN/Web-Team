@@ -5,16 +5,40 @@ import Step from "@mui/material/Step";
 import { FirstBox, SteperStyle } from "../../ServiceComputer/style";
 import Brightness1Icon from "@mui/icons-material/Brightness1";
 import { services } from "../../../services/ServiceComputer/data";
+import { useTranslation } from "react-i18next";
 import Lottie from "lottie-react";
-import { DescTypo, Mobile_Box, StepMobileStyle, SteperMobileStyle, TitleBox, TitleMobiletypo, mobileIcon } from "../style";
+import {
+  DescTypo,
+  Mobile_Box,
+  StepMobileStyle,
+  SteperMobileStyle,
+  SubContentTypo,
+  TitleBox,
+  TitleMobiletypo,
+  mobileIcon,
+} from "../style";
 import { ThemeContext } from "@/context/ThemeContext";
+import { Trans } from "react-i18next";
 const Services_Mobile = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = React.useState({});
   const handleStep = (step) => {
     setActiveStep(step);
   };
-const {theme} = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext);
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      if (activeStep >= 4) {
+        setActiveStep(0);
+      } else {
+        setActiveStep(activeStep + 1);
+      }
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [activeStep]);
+
+  const { i18n } = useTranslation();
   return (
     <>
       <Box sx={Mobile_Box}>
@@ -32,17 +56,14 @@ const {theme} = useContext(ThemeContext)
             >
               <Box
                 color="inherit"
-                sx={
-                TitleBox(index,activeStep,theme)
-                }
+                sx={TitleBox(index, activeStep, theme)}
                 onClick={() => handleStep(index)}
               >
                 <Typography
-                  sx={
-                    TitleMobiletypo
-                  }
+                  className="texthovermobile"
+                  sx={TitleMobiletypo(activeStep, index)}
                 >
-                  {item.title}
+                  <Trans i18nKey={item.servicesnumber}>{item.title}</Trans>
                 </Typography>
               </Box>
             </Step>
@@ -59,21 +80,15 @@ const {theme} = useContext(ThemeContext)
             if (activeStep === index) {
               return (
                 <Box display="flex" flexDirection="column">
-                  <Box
-                    width="100%"
-                    display="flex"
-                    justifyContent="center"
-                   
-                  >
+                  <Box width="100%" display="flex" justifyContent="center">
                     {" "}
-                    <Lottie style={{ width: item.width }} animationData={item.img} />
+                    <Lottie
+                      style={{ width: item.width }}
+                      animationData={item.img}
+                    />
                   </Box>
-                  <Typography
-                    sx={
-                        DescTypo
-                    }
-                  >
-                    {item.desc}
+                  <Typography sx={DescTypo(i18n.language)}>
+                    <Trans i18nKey={item.servicesTitle}>{item.desc}</Trans>
                   </Typography>
 
                   <Box
@@ -84,10 +99,19 @@ const {theme} = useContext(ThemeContext)
                   >
                     {item.content.map((cont) => {
                       return (
-                        <Box display="flex" alignItems="center" mb={5}>
+                        <Box
+                          display="flex"
+                          alignItems="center"
+                          mb={3}
+                          sx={{
+                            direction: i18n.language === "en" ? "ltr" : null,
+                          }}
+                        >
                           <Brightness1Icon sx={mobileIcon} />
-                          <Typography sx={{  color:theme ==="dark" ? "#dddd":"#1119" }}>
-                            {cont.subcontent}
+                          <Typography sx={SubContentTypo(i18n.language, theme)}>
+                            <Trans i18nKey={cont.ServicesContentPart}>
+                              {cont.subcontent}
+                            </Trans>
                           </Typography>
                         </Box>
                       );

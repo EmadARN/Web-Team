@@ -1,18 +1,20 @@
-import React from 'react'
-import { desc_typo , subcontentTypo,} from '../style';
+import React from "react";
+import { desc_typo, subcontentTypo } from "../style";
 import Brightness1Icon from "@mui/icons-material/Brightness1";
-import { services } from '../data'
+import { services } from "../data";
 import Lottie from "lottie-react";
 import { Trans } from "react-i18next";
 import { Box, Typography } from "@mui/material";
-const Left_Part_steper = ({activeStep,theme}) => {
- return(
+import { useTranslation } from "react-i18next";
+const Left_Part_steper = ({ activeStep, theme }) => {
+  const { i18n } = useTranslation();
+  return (
     <>
-    {services.map((item, index) => {
+      {services.map((item, index) => {
         if (activeStep === index) {
           return (
             <Box display="flex" flexDirection="column">
-              <Typography sx={desc_typo}>
+              <Typography sx={desc_typo(i18n.language)}>
                 <Trans i18nKey={item.servicesTitle}>{item.desc}</Trans>
               </Typography>
 
@@ -23,9 +25,20 @@ const Left_Part_steper = ({activeStep,theme}) => {
               >
                 {item.content.map((cont) => {
                   return (
-                    <Box display="flex" alignItems="center" mb={1}>
-                      <Brightness1Icon sx={{ fontSize: "8px", ml: 1 }} />
-                      <Typography sx={subcontentTypo(theme)}>
+                    <Box
+                      display="flex"
+                      alignItems="center"
+                      mb={1}
+                      sx={{ direction: i18n.language === "en" ? "ltr" : null }}
+                    >
+                      <Brightness1Icon
+                        sx={{
+                          fontSize: "8px",
+                          ml: 1,
+                          mr: i18n.language === "en" ? 2 : null,
+                        }}
+                      />
+                      <Typography sx={subcontentTypo(theme, i18n.language)}>
                         <Trans i18nKey={cont.ServicesContentPart}>
                           {cont.subcontent}
                         </Trans>
@@ -46,8 +59,8 @@ const Left_Part_steper = ({activeStep,theme}) => {
           );
         }
       })}
-</>
- )
-    }
+    </>
+  );
+};
 
-export default Left_Part_steper
+export default Left_Part_steper;

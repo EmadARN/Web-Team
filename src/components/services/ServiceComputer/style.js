@@ -1,16 +1,16 @@
 import { styled } from "@mui/material";
+import { color } from "framer-motion";
 export const FirstBox = {
   width: "100%",
   display: { xs: "none", md: "flex" },
   justifyContent: "space-evenly",
 
-height:"70vh",
+  height: "70vh",
   m: 2,
 };
 
-
-export const steper_box = (theme,index,activeStep) =>{
-  const MyS ={
+export const steper_box = (theme, index, activeStep) => {
+  const MyS = {
     display: "flex",
     justifyContent: "space-evenly",
     width: "70%",
@@ -19,45 +19,55 @@ export const steper_box = (theme,index,activeStep) =>{
     alignItems: "center",
     "&:hover": {
       backgroundColor:
-        (activeStep !== index && theme === "dark" && "#ddd") ||
+        (activeStep !== index && theme === "dark" && "#888") ||
         (activeStep !== index && theme !== "dark" && "#1116"),
-      opacity:
-        (activeStep !== index && theme === "dark" && "0.1") ||
-        (activeStep !== index && theme !== "dark" && "none"),
+      // opacity:
+      //   (activeStep !== index && theme === "dark" && "0.1") ||
+      //   (activeStep !== index && theme !== "dark" && "none"),
+
+      "& .texthover": {
+        color:
+          (activeStep === index && theme === "dark" && "#111") ||
+          (activeStep !== index && theme === "dark" && "#fff"),
+      },
     },
     backgroundColor:
       (activeStep === index && theme === "dark" && "#fff") ||
       (activeStep === index && theme !== "dark" && "#111"),
     p: 1,
-  }
+  };
 
-  return MyS
-}
+  return MyS;
+};
 
+export const desc_typo = (i18n) => {
+  const S = {
+    direction: i18n === "en" ? "ltr" : null,
+    ml: i18n === "en" ? 2 : null,
+    fontSize: { xs: "13px", md: "20px", fontWeight: "bold" },
+    mb: 2,
+  };
 
-export var desc_typo ={
-  fontSize: { xs: "13px", md: "20px", fontWeight: "bold" },
-  mb: 2,
-}
+  return S;
+};
 
 export const SteperStyle = {
   display: "flex",
   alignItems: "start",
   justifyContent: "center",
 
-height:"100%",
-
+  height: "80%",
 
   width: "50%",
 };
 
-
-export const subcontentTypo =(theme)=>{
-  const S6 ={
-    color:theme ==="dark" ? "#dddd":"#1119"
-  }
-   return S6
-}
+export const subcontentTypo = (theme, i18n) => {
+  const S6 = {
+    direction: "ltr",
+    color: theme === "dark" ? "#dddd" : "#1119",
+  };
+  return S6;
+};
 
 export const Btn6 = styled("button")(({ theme }) => ({
   textAlign: "center",

@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useContext } from "react";
 import { Grid } from "@mui/material";
 import { RightGrid, LeftGrid } from "../Style";
 import RightSide from "./RightSide";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LeftSide from "./LeftSide";
 import Left_side_mobile from "./contact-mobile/Left_side_mobile";
 import { ThemeContext } from "@/context/ThemeContext";

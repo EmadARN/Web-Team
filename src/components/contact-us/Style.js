@@ -1,9 +1,11 @@
 import { whitespace } from "stylis";
 
-export const InputStyle = {
+export const InputStyle =(i18n) => {
+
+const Styleinput ={
   input: {
     color: "#111",
-    direction: "rtl",
+  
     pr: 2,
     background: "#fff",
     borderRadius: "3px",
@@ -12,6 +14,7 @@ export const InputStyle = {
   label: { color: "#111", fontSize: "12px" },
   "& label.Mui-focused": {
     color: "#fff",
+    
   },
   "& .MuiInput-underline:after": {
     borderBottomColor: "#fff",
@@ -28,14 +31,18 @@ export const InputStyle = {
       borderColor: "#fff",
     },
   },
+}
+
+return Styleinput
+
 };
 
 export const RightGrid = (theme) => {
   const S3 = {
-    backgroundColor: theme === "dark" ? "#393E46" : "#417482",
+    backgroundColor: theme === "dark" ? "#393E46" : "#02687c",
     p: 3,
     width: { xs: "100%", md: "50%" },
-    borderRadius: "0 20px 20px 0",
+    borderRadius: {xs:"none",md:"0 20px 20px 0"},
   };
 
   return S3;
@@ -47,7 +54,7 @@ export const LeftGrid = (theme) => {
     p: 3,
     width: { md: "40%", lg: "40%" },
     display: { xs: "none", md: "block" },
-    borderRadius: "20px 0 0 20px",
+    borderRadius: {xs:"none",md:"20px 0 0 20px"},
   };
 
   return S4;

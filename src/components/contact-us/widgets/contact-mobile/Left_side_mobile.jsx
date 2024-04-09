@@ -10,7 +10,7 @@ const Left_side_mobile = () => {
   return (
 <Grid display="flex" flexDirection="column" alignItems="center"width="100%"  >
     <Box > <Typography>راه های ارتباطی با ما</Typography></Box>
-    <Grid width="100%" sx={{ p:4,bgcolor: "#2E2E38",display:"flex" ,justifyContent:"space-evenly",alignItems:"center",borderRadius:"10px"}}>
+    <Grid width="100%" sx={{ p:4,bgcolor: "#2E2E38",display:"flex" ,justifyContent:"space-evenly",alignItems:"center",borderRadius:{xs:"none"}}}>
     <Grid
     
           display= "flex"
