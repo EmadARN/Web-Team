@@ -1,48 +1,45 @@
 import { whitespace } from "stylis";
 
-export const InputStyle =(i18n) => {
+export const InputStyle = (i18n) => {
+  const Styleinput = {
+    input: {
+      color: "#111",
 
-const Styleinput ={
-  input: {
-    color: "#111",
-  
-    pr: 2,
-    background: "#fff",
-    borderRadius: "3px",
-    fontSize: "12px",
-  },
-  label: { color: "#111", fontSize: "12px" },
-  "& label.Mui-focused": {
-    color: "#fff",
-    
-  },
-  "& .MuiInput-underline:after": {
-    borderBottomColor: "#fff",
-  },
-  "& .MuiOutlinedInput-root": {
-    "& fieldset": {
-      borderColor: "#101c60",
-      borderRadius: "10px",
+      pr: 2,
+      background: "#fff",
+      borderRadius: "3px",
+      fontSize: "12px",
     },
-    "&:hover fieldset": {
-      borderColor: "#fff",
+    label: { color: "#111", fontSize: "12px" },
+    "& label.Mui-focused": {
+      color: "#fff",
     },
-    "&.Mui-focused fieldset": {
-      borderColor: "#fff",
+    "& .MuiInput-underline:after": {
+      borderBottomColor: "#fff",
     },
-  },
-}
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "#101c60",
+        borderRadius: "10px",
+      },
+      "&:hover fieldset": {
+        borderColor: "#fff",
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "#fff",
+      },
+    },
+  };
 
-return Styleinput
-
+  return Styleinput;
 };
 
 export const RightGrid = (theme) => {
   const S3 = {
-    backgroundColor: theme === "dark" ? "#393E46" : "#02687c",
+    backgroundColor: theme === "dark" ? "#393E46" : "#417482",
     p: 3,
     width: { xs: "100%", md: "50%" },
-    borderRadius: {xs:"none",md:"0 20px 20px 0"},
+    borderRadius: { xs: "none", md: "0 20px 20px 0" },
   };
 
   return S3;
@@ -54,7 +51,7 @@ export const LeftGrid = (theme) => {
     p: 3,
     width: { md: "40%", lg: "40%" },
     display: { xs: "none", md: "block" },
-    borderRadius: {xs:"none",md:"20px 0 0 20px"},
+    borderRadius: { xs: "none", md: "20px 0 0 20px" },
   };
 
   return S4;
