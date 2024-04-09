@@ -23,7 +23,7 @@ const InitialCv2 = ({ theme, item }) => {
 
   return (
     <>
-      <Box sx={BoxStyle1_initialCv2}>
+      <Box sx={BoxStyle1_initialCv2(theme)}>
         <Typography sx={TypographyStyle1_initialCv2(theme)}>
           {t("ourskillTitle.about")}
         </Typography>
