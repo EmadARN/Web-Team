@@ -17,13 +17,15 @@ const SteperComponent = ({ activeStep, completed,theme,setActiveStep }) => {
       sx={SteperStyle}
     >
       {services.map((item, index) => (
-        <Step sx={{ width: "100%" }} key={item.id} completed={completed[index]}>
+        <Step sx={{ width: "100%", }} key={item.id} completed={completed[index]}>
           <Box
+          
             color="inherit"
             sx={steper_box(theme, index, activeStep)}
             onClick={() => handleStep(index)}
           >
             <Typography
+            className="texthover"
               sx={{
                 cursor: "pointer",
                 whiteSpace: "nowrap",
@@ -33,6 +35,7 @@ const SteperComponent = ({ activeStep, completed,theme,setActiveStep }) => {
                   (activeStep !== index && theme === "dark" && "#8E96A0"),
 
                 fontSize: { xs: "15px", md: "19px" },
+              
               }}
             >
               <Trans i18nKey={item.servicesnumber}>{item.title}</Trans>

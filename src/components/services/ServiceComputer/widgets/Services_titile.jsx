@@ -25,7 +25,6 @@ const Services_titile = () => {
   return (
     <>
       <Box sx={FirstBox}>
-        
         <SteperComponent
           activeStep={activeStep}
           completed={completed}
