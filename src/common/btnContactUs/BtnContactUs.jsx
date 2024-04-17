@@ -21,7 +21,7 @@ const BtnContactUs = () => {
   return (
     <>
       <Box sx={BoxStyle2(loadCount, theme)}>
-        <Button sx={ButtonStyle}>
+        <Button sx={ButtonStyle} href="tel:09126415284">
           تماس سریع <span style={{ fontSize: "18px" }}>⚡</span>
         </Button>
       </Box>

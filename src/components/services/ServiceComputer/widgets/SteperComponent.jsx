@@ -5,6 +5,7 @@ import { services } from "../data";
 import { SteperStyle, steper_box } from "../style";
 import { Box, Typography } from "@mui/material";
 import { Trans } from "react-i18next";
+
 const SteperComponent = ({ activeStep, completed,theme,setActiveStep }) => {
   const handleStep = (step) => {
     setActiveStep(step);

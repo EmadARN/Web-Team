@@ -89,6 +89,10 @@ export const BoxStyle1_initialCv1 = (theme) => {
     WebkitBackdropFilter: "blur(8px) !important",
     backdropFilter: { xs: "blur(8px)", md: "blur(10px)" },
     borderRadius: "15px",
+
+    "&:hover": {
+      bgcolor: "none",
+    },
   };
   return style;
 };
@@ -107,6 +111,9 @@ export const BoxStyle2_initialCv1 = {
     sm: "50%",
     md: "40%",
     lg: "48%",
+  },
+  "&:hover": {
+    bgcolor: "none",
   },
 };
 

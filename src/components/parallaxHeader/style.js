@@ -121,33 +121,46 @@ export const moonStyle = (
 ) => {
   const style = {
     width: isSmallScreen
-      ? "13%"
+      ? "50%"
       : isMediumScreen
-      ? "16%"
+      ? "28%"
       : islargeScreen
-      ? "14%"
+      ? "26%"
       : isXlargeScreen
-      ? "12%"
+      ? "25%"
       : isXXlargeScreen
-      ? "9.5%"
+      ? "23.5%"
       : isXXXlargeScreen
-      ? "7%"
-      : "8%",
+      ? "22%"
+      : "21%",
     maxHeight: isSmallScreen
-      ? "50px"
+      ? "180px"
       : isMediumScreen
-      ? "80px"
+      ? "150px"
       : islargeScreen
-      ? "80px"
+      ? "150px"
       : isXlargeScreen
-      ? "90px"
+      ? "190px"
       : isXXlargeScreen
-      ? "90px"
+      ? "250px"
       : isXXXlargeScreen
-      ? "95px"
-      : "80px",
-    top: "30%",
-    right: "28%",
+      ? "250px"
+      : "190px",
+
+    top: isSmallScreen
+      ? "200px"
+      : isMediumScreen
+      ? "160px"
+      : islargeScreen
+      ? "160px"
+      : isXlargeScreen
+      ? "150px"
+      : isXXlargeScreen
+      ? "120px"
+      : isXXXlargeScreen
+      ? "120px"
+      : "130px",
+    right: "15%",
     zIndex: 2,
   };
   return style;
@@ -181,22 +194,22 @@ export const boatStyle = (
       : isMediumScreen
       ? "55%"
       : islargeScreen
-      ? "50%"
+      ? "55%"
       : isXlargeScreen
       ? "66%"
       : isXXlargeScreen
-      ? "52%"
+      ? "55%"
       : isXXXlargeScreen
-      ? "59%"
+      ? "55%"
       : "50%",
     zIndex: 1,
   };
   return style;
 };
 export const iconStyle = {
-  fontSize: { xs: "22px", md: "30px" },
+  fontSize: { xs: "28px", md: "38px" },
   position: "absolute",
-  bottom: "10%",
+  bottom: { xs: "15%", md: "10%" },
   animation: " arrow 1.2s cubic-bezier(0,.78,1,.99) infinite",
   "@keyframes arrow": {
     "0%": {

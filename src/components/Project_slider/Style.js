@@ -1,3 +1,5 @@
+import { AspectRatio, Padding } from "@mui/icons-material";
+
 export const sliderslide = {
   width: "300px",
   height: "220px",
@@ -6,6 +8,7 @@ export const sliderslide = {
 };
 
 export const imgStyle = {
-  display: "block",
   width: "100%",
+
+  aspectRatio: "1.5",
 };

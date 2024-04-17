@@ -37,7 +37,7 @@ const LeftSide = () => {
           width="100%"
           mb={5}
         >
-          <Typography sx={T1}>0919111111</Typography>
+          <Typography sx={T1}>98-912-641-5284+</Typography>
 
           <LocalPhoneIcon sx={iconStyle} />
         </Box>

@@ -1,34 +1,43 @@
 import React from "react";
-import { Container,Grid,Box,Typography } from "@mui/material";
+import { Container, Grid, Box } from "@mui/material";
 import { SwiperSlide } from "swiper/react";
 import Title from "@/common/Title/Title";
 import Swiper from "@/common/Swiper/Swiper";
-import { slider_data } from "./data";
 import { imgStyle, sliderslide } from "./Style";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
-const Slider_project = () => {
-  const {t} = useTranslation()
+const Slider_project = ({ resumeList }) => {
+  const { t } = useTranslation();
+  const api_Url = process.env.NEXT_PUBLIC_SERVER_URL;
   return (
     <Grid
-    display="flex"
-    justifyContent="center"
-    alignItems="center"
-    flexDirection="column"
-    width="100%"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      flexDirection="column"
+      width="100%"
     >
-        <Box mb={6}><Title title = {t('ourProject')}></Title></Box>
-    <Container maxWidth={{ xs: "md", md: "lg" }}>
-      <Swiper>
-        {slider_data.map((item) => {
-          return (
-            <SwiperSlide style={sliderslide} key={item.id}>
-              <img style={imgStyle} src={item.img} alt="" />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-    </Container>
+      <Box mb={6}>
+        <Title title={t("ourProject")}></Title>
+      </Box>
+      <Container maxWidth={{ xs: "md", md: "lg" }}>
+        <Swiper>
+          {resumeList.map((item) => {
+            return (
+              <SwiperSlide style={sliderslide} key={item.id}>
+                <Link href={`/Project/${item.id}`}>
+                  <img
+                    style={imgStyle}
+                    src={`${api_Url}${item.main_image}`}
+                    alt=""
+                  />
+                </Link>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </Container>
     </Grid>
   );
 };

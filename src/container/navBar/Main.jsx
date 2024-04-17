@@ -6,21 +6,15 @@ import { navData } from "./data";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Trans, useTranslation } from "react-i18next";
 import MenuBar from "@/components/menubar/Main";
-import BtnContactUs from "@/common/btnContactUs/BtnContactUs";
 
 const MainNav = () => {
-<<<<<<< HEAD
   const { t } = useTranslation();
-=======
-
-  const {t} = useTranslation();
->>>>>>> 449be6f91eab24a894956210bc82992dbfabbaac
   const [loadCount, setLoadCount] = React.useState(false);
 
-  const { theme, switchDark, switchLight } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   useEffect(() => {
     const scrol = () => {
-      if (window.scrollY > 3000) {
+      if (window.scrollY > 2000) {
         setLoadCount(true);
       } else {
         setLoadCount(false);

@@ -7,7 +7,7 @@ import Left_side_mobile from "./contact-mobile/Left_side_mobile";
 import { ThemeContext } from "@/context/ThemeContext";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-const Contact_us = () => {
+const Contact_us = ({ setOpenSnackbar }) => {
   const { theme } = useContext(ThemeContext);
   const Inner = useRef(null);
 
@@ -18,10 +18,10 @@ const Contact_us = () => {
       defaults: { duration: 1, ease: "power3.inOut" },
       scrollTrigger: {
         trigger: Inner.current,
-        start: window.innerWidth < 768 ? "1700 center" : "1780 center",
+        start: window.innerWidth < 768 ? "600 center" : "1000 center",
         end: "bottom center",
         scrub: false,
-        // markers: true, // برای نمایش نشانگرهای بصری
+        //markers: true, // برای نمایش نشانگرهای بصری
         onEnter: () => {
           tl.play(); // شروع انیمیشن
         },
@@ -51,7 +51,7 @@ const Contact_us = () => {
       }}
     >
       <Grid item sx={RightGrid(theme)}>
-        <RightSide />
+        <RightSide setOpenSnackbar={setOpenSnackbar} />
       </Grid>
 
       <Grid item sx={LeftGrid(theme)}>

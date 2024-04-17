@@ -1,7 +1,6 @@
 import { useMediaQuery } from "@mui/material";
 import {
   imgStyle1,
-  ballon,
   moonStyle,
   abovemoonStyle,
   undermoonStyle,
@@ -30,7 +29,7 @@ export const imgData = (
     "(min-width: 701px) and (max-width:950px)"
   );
   const isXXlargeScreen = useMediaQuery(
-    "(min-width: 951px) and (max-width:1100px)"
+    "(min-width: 951px) and (max-width:1200px)"
   );
   const isXXXlargeScreen = useMediaQuery("(min-width: 1250px) ");
   const imgData1 = [

@@ -1,8 +1,7 @@
 import React, { useContext, useState } from "react";
-import { Box, Typography, Container } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
-import { FirstBox, SteperStyle } from "../../ServiceComputer/style";
 import Brightness1Icon from "@mui/icons-material/Brightness1";
 import { services } from "../../../services/ServiceComputer/data";
 import { useTranslation } from "react-i18next";

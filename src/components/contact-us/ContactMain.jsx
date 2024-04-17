@@ -1,9 +1,9 @@
 import React from "react";
 import Contact_us from "./widgets/Contact_us";
-import { Grid, Box, Typography } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import Title from "@/common/Title/Title";
-const ContactMain = () => {
+const ContactMain = ({ setOpenSnackbar }) => {
   const { t } = useTranslation();
 
   return (
@@ -18,7 +18,7 @@ const ContactMain = () => {
         <Title title={t("contactus.title")}></Title>
       </Box>
 
-      <Contact_us />
+      <Contact_us setOpenSnackbar={setOpenSnackbar} />
     </Grid>
   );
 };

@@ -1,18 +1,33 @@
-import PrjTopSectionMain from '@/components/ProjectTopSection/Main';
-import MobilePreviewMain from '@/components/WebsitePreview/Main';
-import {Grid} from '@mui/material'
-const Project_Main_Page = () => {
-    return ( 
-        <>
-      <Grid>
-        <PrjTopSectionMain/>
-      </Grid>
+import { Box } from "@mui/material";
+import Link from "next/link";
 
-      <Grid>
-        <MobilePreviewMain/>
-      </Grid>
-      </>
-     );
-}
- 
+const Project_Main_Page = ({ resumeList }) => {
+  return (
+    <Box>
+      {resumeList.map((resume) => {
+        return (
+          <div key={resume.id}>
+            <Link href={`/Project/${resume.id}`}>
+              <li>
+                Title: {resume.title} - Description:{resume.description}
+              </li>
+            </Link>
+          </div>
+        );
+      })}
+    </Box>
+  );
+};
+
 export default Project_Main_Page;
+export async function getStaticProps() {
+  const api_Url = process.env.NEXT_PUBLIC_SERVER_URL;
+  const response = await fetch(`${api_Url}/resume/resume-list`);
+  const data = await response.json();
+  return {
+    props: {
+      resumeList: data.data,
+    },
+    revalidate: 1,
+  };
+}

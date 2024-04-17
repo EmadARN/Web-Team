@@ -1,6 +1,6 @@
 import React from 'react'
 import Services_titile from './widgets/Services_titile'
-import {Box,Typography,Grid} from '@mui/material'
+import {Box,Grid} from '@mui/material'
 import { useTranslation } from "react-i18next";
 import Title from '@/common/Title/Title';
 const ServicesMain = () => {

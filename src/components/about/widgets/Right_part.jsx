@@ -1,23 +1,22 @@
 import React from "react";
 import Atropos from "atropos/react";
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import "atropos/css";
 const Right_part = () => {
   return (
     <Grid sx={{ display: "flex", justifyContent: "center" }}>
       <Atropos
-        style={{ width: "390px", height: "220px" }}
+        style={{ width: "390px", height: "180px" }}
         shadow={false}
         scaleClassName="large"
       >
         <img
           className="large"
           style={{
-            backgroundSize: "contain",
-            backgroundPosition: "center",
             width: "100%",
+            aspectRatio: "2.4",
           }}
-          src="https://www.uxdesigninstitute.com/blog/wp-content/uploads/2022/06/34_Builtin-1.png"
+          src="/images/aboutPic.jpg"
           data-atropos-offset="5%"
           alt=""
         />

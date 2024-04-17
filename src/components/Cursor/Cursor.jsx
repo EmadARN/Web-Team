@@ -1,25 +1,4 @@
-// import React from "react";
-// import { Box } from "@mui/material";
 
-// const Cursor = (props) => {
-//   return (
-//     <Box
-//       sx={{
-//         left: props.x,
-//         top: props.y,
-//         backgroundColor: "#d444 !important",
-//         position: "fixed",
-//         borderRadius: " 100%",
-//         mixBlendMode: "difference",
-//         width: "15px",
-//         height: "15px",
-//         transform: "translate(40%, 50%)",
-//       }}
-//     ></Box>
-//   );
-// };
-
-// export default Cursor;
 import React from "react";
 import AnimatedCursor from "react-animated-cursor";
 const Cursor = () => {

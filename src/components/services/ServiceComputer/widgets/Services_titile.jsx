@@ -1,12 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Box } from "@mui/material";
-
 import { FirstBox } from "../style";
-
 import { ThemeContext } from "@/context/ThemeContext";
-
 import SteperComponent from "./SteperComponent";
 import Left_Part_steper from "./Left_Part_steper";
+
 const Services_titile = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = React.useState({});

@@ -15,7 +15,7 @@ export const createParallaxTimeline = (
     scrollTrigger: {
       trigger: parallaxRef.current,
       start: "top top",
-      end: "3000 bottom",
+      end: "2000 bottom",
       scrub: true,
       pin: true,
       onUpdate: (self) => {
@@ -63,14 +63,23 @@ export const createParallaxTimeline = (
         {
           x: () => {
             if (isMobile) {
-              return -70;
+              return -150;
             } else if (istablet) {
               return -300;
             } else if (isDesktop) {
               return -300;
             }
           },
-          scale: 2.2,
+
+          scale: () => {
+            if (isMobile) {
+              return 2.5;
+            } else if (istablet) {
+              return 2.2;
+            } else if (isDesktop) {
+              return 2.2;
+            }
+          },
           transition: "3s ease-out",
         },
         0
@@ -78,7 +87,15 @@ export const createParallaxTimeline = (
       tl.to(
         moon.current,
         {
-          y: "-=60",
+          y: () => {
+            if (isMobile) {
+              return -60;
+            } else if (istablet) {
+              return -70;
+            } else if (isDesktop) {
+              return -80;
+            }
+          },
         },
         0
       );

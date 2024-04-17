@@ -15,7 +15,6 @@
     "@mui/icons-material": "^5.15.7",
     "@mui/material": "^5.15.7",
     "atropos": "^2.0.2",
-    "axios": "^1.6.7",
     "framer-motion": "^11.0.5",
     "gsap": "^3.12.5",
     "gsap-trial": "^3.12.5",

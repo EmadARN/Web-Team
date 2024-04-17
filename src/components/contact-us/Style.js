@@ -1,16 +1,22 @@
-import { whitespace } from "stylis";
+import { Directions } from "@mui/icons-material";
 
 export const InputStyle = (i18n) => {
   const Styleinput = {
     input: {
       color: "#111",
-
+      textAlign: i18n == "fa" ? "right" : "left",
       pr: 2,
       background: "#fff",
       borderRadius: "3px",
-      fontSize: "12px",
+      fontSize: "14px",
     },
-    label: { color: "#111", fontSize: "12px" },
+    label: {
+      color: "#0009",
+      fontSize: { xs: "14px", md: "16px", lg: "18px" },
+      width: "130%",
+      textAlign: i18n == "fa" ? "right" : "left",
+    },
+
     "& label.Mui-focused": {
       color: "#fff",
     },
@@ -64,12 +70,14 @@ export const ContactUsTypography = {
 };
 
 export const T1 = {
-  fontSize: { xs: "8px", sm: "13px", md: "17px" },
+  fontSize: { xs: "8px", sm: "13px", md: "18px" },
+  fontWeight: "bold",
   color: "#fff",
   marginLeft: { xs: 1, md: 0 },
   whitespace: "nowrap",
   fontFamily: "Times New Roman !important",
   textAlign: "center",
+  pt: 0.5,
 };
 
 export const sendticketButton = {
