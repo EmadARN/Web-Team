@@ -25,7 +25,7 @@ const Avatars = () => {
       defaults: { duration: 1, ease: "power3.inOut" },
       scrollTrigger: {
         trigger: Inner.current,
-        start: window.innerWidth < 768 ? "100 center" : "300 center",
+        start: window.innerWidth < 768 ? "10 center" : "30 center",
         end: "bottom center",
         scrub: false,
         // markers: true, // برای نمایش نشانگرهای بصری

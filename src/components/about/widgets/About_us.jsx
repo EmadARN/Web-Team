@@ -16,7 +16,7 @@ const About_us = () => {
       scrollTrigger: {
         trigger: Right.current,
         trigger: Left.current,
-        start: window.innerWidth < 768 ? "100 center" : "300 center",
+        start: window.innerWidth < 768 ? "1 center" : "30 center",
         end: "bottom center",
         scrub: false,
         //markers: true, // برای نمایش نشانگرهای بصری
