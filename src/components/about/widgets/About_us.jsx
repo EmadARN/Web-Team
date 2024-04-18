@@ -62,7 +62,7 @@ const About_us = () => {
           xs={12}
           md={6}
           ref={Left}
-          sx={{ opacity: 0, transform: "translate(-100% ) " }}
+          // sx={{ opacity: 0, transform: "translate(-100% ) " }}
         >
           <Left_part />
         </Grid>

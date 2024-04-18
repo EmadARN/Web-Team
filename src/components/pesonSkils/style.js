@@ -22,7 +22,7 @@ export const TypographyStyle = (avatar, theme) => {
     width: "100%",
     height: "100vh",
     position: "absolute",
-    fontSize: "30px",
+    fontSize: { xs: "22px", md: "30px" },
   };
   return style;
 };
@@ -277,6 +277,19 @@ export const BoxStyle3_initialCv2 = {
     md: "blur(10px)",
   },
 };
+export const BoxStyle5_initialCv2 = (item) => {
+  const style = {
+    width: { xs: "25px", sm: "40px", md: "80px" },
+    height: { xs: "25px", sm: "40px", md: "80px" },
+    backgroundImage: `url(${item.icon})`,
+    backgroundSize: "cover",
+    borderRadius: "50%",
+    backgroundPosition: "center",
+    mr: 3,
+  };
+  return style;
+};
+
 export const SwiperStyle3_initialCv2 = {
   display: "flex",
   justifyContent: "center",

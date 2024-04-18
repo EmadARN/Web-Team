@@ -41,14 +41,14 @@ const Contact_us = ({ setOpenSnackbar }) => {
     <Grid
       ref={Inner}
       container
-      // sx={{
-      //   width: { xs: "100%", md: "80%" },
-      //   justifyContent: "center",
+      sx={{
+        width: { xs: "100%", md: "80%" },
+        justifyContent: "center",
 
-      //   overflow: "hidden",
-      //   opacity: 0,
-      //   transform: "translateY(100% ) ",
-      // }}
+        //   overflow: "hidden",
+        //   opacity: 0,
+        //   transform: "translateY(100% ) ",
+      }}
     >
       <Grid item sx={RightGrid(theme)}>
         <RightSide setOpenSnackbar={setOpenSnackbar} />

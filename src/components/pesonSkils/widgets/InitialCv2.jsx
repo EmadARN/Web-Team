@@ -1,7 +1,6 @@
 import { Typography, Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import SkillBox from "@/components/pesonSkils/widgets/Skill";
 import { useTranslation } from "react-i18next";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,6 +12,7 @@ import {
   BoxStyle2_initialCv2,
   BoxStyle3_initialCv2,
   BoxStyle4_initialCv2,
+  BoxStyle5_initialCv2,
   SwiperStyle3_initialCv2,
   TypographyStyle1_initialCv2,
   TypographyStyle2_initialCv2,
@@ -46,7 +46,7 @@ const InitialCv2 = ({ theme, item }) => {
             {item.skills.map((skill) => {
               return (
                 <SwiperSlide key={skill.id}>
-                  <SkillBox item={skill} />
+                  <Box sx={BoxStyle5_initialCv2(skill)}></Box>
                 </SwiperSlide>
               );
             })}
