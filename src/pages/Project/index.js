@@ -23,8 +23,9 @@ const Project_Main_Page = ({ resumeList }) => {
 
 export default Project_Main_Page;
 export async function getStaticProps() {
-  const api_Url = process.env.NEXT_PUBLIC_SERVER_URL;
-  const { data } = await axios.get(`${api_Url}/resume/resume-list`);
+  const { data } = await axios.get(
+    `https://backend-adlikara.ir/resume/resume-list/`
+  );
 
   return {
     props: {
@@ -33,3 +34,4 @@ export async function getStaticProps() {
     revalidate: 1,
   };
 }
+

@@ -29,7 +29,7 @@ const Slider_project = ({ resumeList }) => {
                 <Link href={`/Project/${item.id}`}>
                   <img
                     style={imgStyle}
-                    src={`${api_Url}${item.main_image}`}
+                    src={`https://backend-adlikara.ir${item.main_image}`}
                     alt=""
                   />
                 </Link>

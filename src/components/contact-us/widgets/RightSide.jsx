@@ -24,10 +24,9 @@ const RightSide = ({ setOpenSnackbar }) => {
 
   const submit = async (e) => {
     e.preventDefault();
-    const apiUrl = process.env.NEXT_PUBLIC_SERVER_URL;
 
     await axios
-      .post(`${apiUrl}/ticket/send/`, inpInfo)
+      .post(`https://backend-adlikara.ir/ticket/send/`, inpInfo)
       .then((res) => {
         resetForm();
         setOpenSnackbar(true);

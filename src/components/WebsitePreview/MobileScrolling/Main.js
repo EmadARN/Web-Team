@@ -10,7 +10,7 @@ const Mobile_Scroll_Main = ({ resumeList }) => {
 
         <Grid sx={CpInnerGrid}>
           <img
-            src={`${api_Url}${resumeList.mobile_image}`}
+            src={`https://backend-adlikara.ir${resumeList.mobile_image}`}
             style={SiteContent}
           />
         </Grid>

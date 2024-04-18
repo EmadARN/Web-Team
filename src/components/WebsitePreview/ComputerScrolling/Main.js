@@ -10,7 +10,7 @@ const Computer_Scroll_Main = ({ resumeList }) => {
       <Grid sx={CpInnerGrid}>
         <img
           style={SiteContent}
-          src={`${api_Url}${resumeList.desktop_image}`}
+          src={`https://backend-adlikara.ir${resumeList.desktop_image}`}
           alt="تصویر از مانیتور"
         ></img>
       </Grid>

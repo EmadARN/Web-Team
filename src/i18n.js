@@ -9,13 +9,13 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "fa",
-    debug: true,
-    detection: {
-      order: ["queryString", "cookie"],
-      cache: ["cookie"],
-    },
-    interpolation: {
-      escapeValue: false,
+    locales: ["en", "fa"],
+    i18nextServer: {
+      debug: true,
+      backend: {
+        ns: ["translation"],
+        loadPath: "/locales/{{lng}}/{{ns}}.json",
+      },
     },
   });
 

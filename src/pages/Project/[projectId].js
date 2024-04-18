@@ -23,8 +23,9 @@ const projects = ({ resumeList }) => {
 export default projects;
 
 export async function getStaticPaths() {
-  const api_Url = process.env.NEXT_PUBLIC_SERVER_URL;
-  const { data } = await axios.get(`${api_Url}/resume/resume-list`);
+  const { data } = await axios.get(
+    `https://backend-adlikara.ir/resume/resume-list/`
+  );
   const paths = data.data.map((resume) => {
     return {
       params: { projectId: `${resume.id}` },
@@ -36,15 +37,15 @@ export async function getStaticPaths() {
   };
 }
 
-export function getStaticProps(ctx) {
+export async function getStaticProps(ctx) {
   const { params } = ctx;
-  const api_Url = process.env.NEXT_PUBLIC_SERVER_URL;
-  const { data } = axios.get(`${api_Url}/resume/resume/id=${params.projectId}`);
+  const { data } = await axios.get(
+    `https://backend-adlikara.ir/resume/resume/id=${params.projectId}/`
+  );
 
   return {
     props: {
       resumeList: data.data,
     },
-    revalidate: 1,
   };
 }

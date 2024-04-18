@@ -1,13 +1,12 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { Grid, Typography } from "@mui/material";
+import { Drawer, Grid, Typography } from "@mui/material";
 import { avatars } from "./data";
-import Drawer from "./widgets/drawer";
-import MainCv from "./widgets/mainCv";
 import { GridDrawerStyle, GridMainStyle, TypographyStyle } from "./style";
 import { ThemeContext } from "@/context/ThemeContext";
 import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import MainCv from "./widgets/MainCv";
 const Avatars = () => {
   const { t } = useTranslation();
   const [selectedAvatar, setSelectedAvatar] = useState(null);

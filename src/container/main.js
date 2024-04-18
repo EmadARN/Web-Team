@@ -1,7 +1,7 @@
 import React from "react";
-import MainNav from "./navBar/main";
-import MainFooter from "./footer/main";
 import { ThemeProvider } from "@/context/ThemeContext";
+import MainNav from "./navBar/Main";
+import MainFooter from "./footer/Main";
 const Layout = ({ children }) => {
   return (
     <>
