@@ -9,7 +9,7 @@ const BtnContactUs = () => {
   const { theme } = useContext(ThemeContext);
   useEffect(() => {
     const scrol = () => {
-      if (window.scrollY > 3000) {
+      if (window.scrollY > 2000) {
         setLoadCount(true);
       } else {
         setLoadCount(false);
@@ -22,7 +22,10 @@ const BtnContactUs = () => {
     <>
       <Box sx={BoxStyle2(loadCount, theme)}>
         <Button sx={ButtonStyle} href="tel:09126415284">
-          تماس سریع <span style={{ fontSize: "18px" }}>⚡</span>
+          تماس سریع{" "}
+          <span style={{ fontSize: { xs: "12px", md: "16px", xlg: "17px" } }}>
+            ⚡
+          </span>
         </Button>
       </Box>
     </>

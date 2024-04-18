@@ -15,6 +15,7 @@ export default function TextArea({ name, onChange, i18n, value }) {
       sx={{
         "&::placeholder": {
           textAlign: i18n === "fa" ? "right" : "left",
+          fontSize: { xs: "12px", md: "16px", xlg: "17px" },
         },
         textAlign: i18n === "fa" ? "right" : "left",
       }}

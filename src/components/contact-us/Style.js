@@ -12,7 +12,7 @@ export const InputStyle = (i18n) => {
     },
     label: {
       color: "#0009",
-      fontSize: { xs: "14px", md: "16px", lg: "18px" },
+      fontSize: { xs: "12px", md: "16px", xlg: "17px" },
       width: "130%",
       textAlign: i18n == "fa" ? "right" : "left",
     },
@@ -70,21 +70,24 @@ export const ContactUsTypography = {
 };
 
 export const T1 = {
-  fontSize: { xs: "8px", sm: "13px", md: "18px" },
+  fontSize: { xs: "12px", sm: "13px", md: "18px" },
   fontWeight: "bold",
   color: "#fff",
   marginLeft: { xs: 1, md: 0 },
-  whitespace: "nowrap",
+  whitespace: "nowrap ",
   fontFamily: "Times New Roman !important",
   textAlign: "center",
   pt: 0.5,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 };
 
 export const sendticketButton = {
   backgroundColor: "#00ADB5",
   color: "#fff",
   borderRadius: "7px",
-
+  fontSize: { xs: "12px", md: "16px", xlg: "17px" },
   px: 3,
   "&:hover": { backgroundColor: "#81d8db" },
 };
@@ -92,5 +95,5 @@ export const sendticketButton = {
 export const iconStyle = {
   fontSize: { xs: "10px", sm: "16px", md: "20px" },
   color: "#81d8db",
-  mr: 2,
+  mr: 1,
 };

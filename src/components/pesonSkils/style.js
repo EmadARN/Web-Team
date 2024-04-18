@@ -219,7 +219,11 @@ export const TypographyStyle8_initialCv1 = {
 };
 //initialCv2
 export const TypographyStyle1_initialCv2 = (theme) => {
-  const style = { p: 1, color: theme === "dark" ? "#f0fffd" : "#1119" };
+  const style = {
+    p: 1,
+    color: theme === "dark" ? "#f0fffd" : "#1119",
+    fontSize: { xs: "12px", md: "16px", xlg: "17px" },
+  };
   return style;
 };
 export const TypographyStyle2_initialCv2 = (theme) => {
@@ -237,6 +241,7 @@ export const TypographyStyle3_initialCv2 = (theme) => {
     pt: 3,
     pr: 1,
     color: theme === "dark" ? "#f0fffd" : "#1119",
+    fontSize: { xs: "12px", md: "16px", xlg: "17px" },
   };
   return style;
 };
@@ -279,8 +284,8 @@ export const BoxStyle3_initialCv2 = {
 };
 export const BoxStyle5_initialCv2 = (item) => {
   const style = {
-    width: { xs: "25px", sm: "40px", md: "80px" },
-    height: { xs: "25px", sm: "40px", md: "80px" },
+    width: { xs: "28px", sm: "40px", md: "80px" },
+    height: { xs: "28px", sm: "40px", md: "80px" },
     backgroundImage: `url(${item.icon})`,
     backgroundSize: "cover",
     borderRadius: "50%",
