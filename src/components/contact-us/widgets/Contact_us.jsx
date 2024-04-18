@@ -11,44 +11,44 @@ const Contact_us = ({ setOpenSnackbar }) => {
   const { theme } = useContext(ThemeContext);
   const Inner = useRef(null);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    var tl = gsap.timeline({
-      repeat: false,
-      defaults: { duration: 1, ease: "power3.inOut" },
-      scrollTrigger: {
-        trigger: Inner.current,
-        start: window.innerWidth < 768 ? "1 center" : "1 center",
-        end: "bottom center",
-        scrub: false,
-        //markers: true, // برای نمایش نشانگرهای بصری
-        onEnter: () => {
-          tl.play(); // شروع انیمیشن
-        },
-      },
-    });
-    tl.to(
-      Inner.current,
-      {
-        y: "0",
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   var tl = gsap.timeline({
+  //     repeat: false,
+  //     defaults: { duration: 1, ease: "power3.inOut" },
+  //     scrollTrigger: {
+  //       trigger: Inner.current,
+  //       start: window.innerWidth < 768 ? "1 center" : "1 center",
+  //       end: "bottom center",
+  //       scrub: false,
+  //       //markers: true, // برای نمایش نشانگرهای بصری
+  //       onEnter: () => {
+  //         tl.play(); // شروع انیمیشن
+  //       },
+  //     },
+  //   });
+  //   tl.to(
+  //     Inner.current,
+  //     {
+  //       y: "0",
 
-        opacity: "1",
-      },
-      0
-    );
-  });
+  //       opacity: "1",
+  //     },
+  //     0
+  //   );
+  // });
   return (
     <Grid
       ref={Inner}
       container
-      sx={{
-        width: { xs: "100%", md: "80%" },
-        justifyContent: "center",
+      // sx={{
+      //   width: { xs: "100%", md: "80%" },
+      //   justifyContent: "center",
 
-        overflow: "hidden",
-        opacity: 0,
-        transform: "translateY(100% ) ",
-      }}
+      //   overflow: "hidden",
+      //   opacity: 0,
+      //   transform: "translateY(100% ) ",
+      // }}
     >
       <Grid item sx={RightGrid(theme)}>
         <RightSide setOpenSnackbar={setOpenSnackbar} />

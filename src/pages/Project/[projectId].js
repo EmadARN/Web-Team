@@ -47,5 +47,6 @@ export async function getStaticProps(ctx) {
     props: {
       resumeList: data.data,
     },
+    revalidate: 1,
   };
 }
