@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { Drawer, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { avatars } from "./data";
 import { GridDrawerStyle, GridMainStyle, TypographyStyle } from "./style";
 import { ThemeContext } from "@/context/ThemeContext";
@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import MainCv from "./widgets/MainCv";
+import Drawer from "./widgets/Drawer";
 const Avatars = () => {
   const { t } = useTranslation();
   const [selectedAvatar, setSelectedAvatar] = useState(null);
@@ -24,7 +25,7 @@ const Avatars = () => {
       defaults: { duration: 1, ease: "power3.inOut" },
       scrollTrigger: {
         trigger: Inner.current,
-        start: window.innerWidth < 768 ? "200 center" : "500 center",
+        start: window.innerWidth < 768 ? "100 center" : "300 center",
         end: "bottom center",
         scrub: false,
         // markers: true, // برای نمایش نشانگرهای بصری

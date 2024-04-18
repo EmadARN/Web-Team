@@ -18,7 +18,7 @@ const Contact_us = ({ setOpenSnackbar }) => {
       defaults: { duration: 1, ease: "power3.inOut" },
       scrollTrigger: {
         trigger: Inner.current,
-        start: window.innerWidth < 768 ? "200 center" : "500 center",
+        start: window.innerWidth < 768 ? "100 center" : "300 center",
         end: "bottom center",
         scrub: false,
         //markers: true, // برای نمایش نشانگرهای بصری
