@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React, { useRef } from "react";
-import { Canvas, useFrame } from "react-three-fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 
 const Sphere = ({ position, size, color }) => {
   const ref = useRef();

@@ -1,7 +1,9 @@
 import { Box } from "@mui/material";
+import axios from "axios";
 import Link from "next/link";
 
 const Project_Main_Page = ({ resumeList }) => {
+  console.log(resumeList);
   return (
     <Box>
       {resumeList.map((resume) => {
@@ -22,8 +24,8 @@ const Project_Main_Page = ({ resumeList }) => {
 export default Project_Main_Page;
 export async function getStaticProps() {
   const api_Url = process.env.NEXT_PUBLIC_SERVER_URL;
-  const response = await fetch(`${api_Url}/resume/resume-list`);
-  const data = await response.json();
+  const { data } = await axios.get(`${api_Url}/resume/resume-list`);
+
   return {
     props: {
       resumeList: data.data,

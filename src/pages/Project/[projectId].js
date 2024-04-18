@@ -2,6 +2,7 @@ import React from "react";
 import PrjTopSectionMain from "@/components/ProjectTopSection/Main";
 import PreviewMain from "@/components/WebsitePreview/Main";
 import { Grid } from "@mui/material";
+import axios from "axios";
 
 const projects = ({ resumeList }) => {
   return (
@@ -23,8 +24,7 @@ export default projects;
 
 export async function getStaticPaths() {
   const api_Url = process.env.NEXT_PUBLIC_SERVER_URL;
-  const response = await fetch(`${api_Url}/resume/resume-list`);
-  const data = await response.json();
+  const { data } = await axios.get(`${api_Url}/resume/resume-list`);
   const paths = data.data.map((resume) => {
     return {
       params: { projectId: `${resume.id}` },
@@ -36,14 +36,11 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps(ctx) {
+export function getStaticProps(ctx) {
   const { params } = ctx;
   const api_Url = process.env.NEXT_PUBLIC_SERVER_URL;
-  const response = await fetch(
-    `${api_Url}/resume/resume/id=${params.projectId}
-  `
-  );
-  const data = await response.json();
+  const { data } = axios.get(`${api_Url}/resume/resume/id=${params.projectId}`);
+
   return {
     props: {
       resumeList: data.data,

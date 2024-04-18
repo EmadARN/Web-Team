@@ -45,7 +45,7 @@ const InitialCv2 = ({ theme, item }) => {
           >
             {item.skills.map((skill) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={skill.id}>
                   <SkillBox item={skill} />
                 </SwiperSlide>
               );

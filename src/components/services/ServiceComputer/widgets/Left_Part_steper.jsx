@@ -13,7 +13,7 @@ const Left_Part_steper = ({ activeStep, theme }) => {
       {services.map((item, index) => {
         if (activeStep === index) {
           return (
-            <Box display="flex" flexDirection="column">
+            <Box key={item.id} display="flex" flexDirection="column">
               <Typography sx={desc_typo(i18n.language)}>
                 <Trans i18nKey={item.servicesTitle}>{item.desc}</Trans>
               </Typography>
@@ -26,6 +26,7 @@ const Left_Part_steper = ({ activeStep, theme }) => {
                 {item.content.map((cont) => {
                   return (
                     <Box
+                      key={cont.id}
                       display="flex"
                       alignItems="center"
                       mb={1}

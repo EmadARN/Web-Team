@@ -12,6 +12,7 @@ import ServicesMain from "@/components/services/ServiceComputer/Main";
 import Services_mobile_Main from "@/components/services/Servicemobile/Main";
 import BtnContactUs from "@/common/btnContactUs/BtnContactUs";
 import Alert from "@mui/material/Alert";
+
 const Home = ({ resumeList }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -26,11 +27,7 @@ const Home = ({ resumeList }) => {
   return isLoading ? (
     <Loader />
   ) : (
-    <Grid
-      sx={{
-        backgroundColor: "#1b1b1b",
-      }}
-    >
+    <Grid bgcolor="#1b1b1b">
       <Layout>
         <Grid sx={{ overflow: "hidden" }}>
           <ParallaxHeader />
@@ -42,7 +39,7 @@ const Home = ({ resumeList }) => {
           </Container>
         </Grid>
         <Container maxWidth="lg">
-          <Grid id="services" sx={{ mb: { xs: 5, md: 10 } }} mt={20}>
+          <Grid id="services" mb={{ xs: 5, md: 10 }} mt={20}>
             <ServicesMain />
             <Services_mobile_Main />
           </Grid>
@@ -73,12 +70,10 @@ const Home = ({ resumeList }) => {
         </Grid>
 
         <Grid
-          sx={{
-            display: "flex",
-            justifyContent: { xs: "center", md: "start" },
-            mt: 4,
-            mb: 1,
-          }}
+          display="flex"
+          justifyContent={{ xs: "center", md: "start" }}
+          mt={4}
+          mb={1}
         >
           <BackToUp />
         </Grid>

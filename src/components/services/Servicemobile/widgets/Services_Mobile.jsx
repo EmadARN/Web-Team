@@ -78,7 +78,7 @@ const Services_Mobile = () => {
           {services.map((item, index) => {
             if (activeStep === index) {
               return (
-                <Box display="flex" flexDirection="column">
+                <Box key={item.id} display="flex" flexDirection="column">
                   <Box width="100%" display="flex" justifyContent="center">
                     {" "}
                     <Lottie
@@ -99,6 +99,7 @@ const Services_Mobile = () => {
                     {item.content.map((cont) => {
                       return (
                         <Box
+                          key={cont.id}
                           display="flex"
                           alignItems="center"
                           mb={3}

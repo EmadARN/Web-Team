@@ -4,7 +4,7 @@ import { Grid } from "@mui/material";
 import "atropos/css";
 const Right_part = () => {
   return (
-    <Grid sx={{ display: "flex", justifyContent: "center" }}>
+    <Grid display="flex" justifyContent="center">
       <Atropos
         style={{ width: "390px", height: "180px" }}
         shadow={false}

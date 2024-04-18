@@ -4,7 +4,7 @@ import { InputStyle, T1, sendticketButton } from "../Style";
 import { useTranslation } from "react-i18next";
 import Textarea from "@/components/Textarea/Textarea";
 import { textFields } from "../data";
-
+import axios from "axios";
 const RightSide = ({ setOpenSnackbar }) => {
   const { t, i18n } = useTranslation();
   const [inpInfo, setInpInfo] = useState({});
@@ -14,6 +14,7 @@ const RightSide = ({ setOpenSnackbar }) => {
       business_type: "",
       email: "",
       phone_number: "",
+      message: "",
     });
   };
 
@@ -25,25 +26,17 @@ const RightSide = ({ setOpenSnackbar }) => {
     e.preventDefault();
     const apiUrl = process.env.NEXT_PUBLIC_SERVER_URL;
 
-    try {
-      const response = await fetch(`${apiUrl}/ticket/send/`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          Origin: "http://localhost:3000",
-        },
-        body: JSON.stringify(inpInfo),
-      });
+    await axios
+      .post(`${apiUrl}/ticket/send/`, inpInfo)
+      .then((res) => {
+        resetForm();
+        setOpenSnackbar(true);
 
-      await response.json();
-      resetForm();
-      setOpenSnackbar(true);
-
-      setInterval(() => {
-        setOpenSnackbar(false);
-      }, 3000);
-    } catch (error) {}
+        setInterval(() => {
+          setOpenSnackbar(false);
+        }, 3000);
+      })
+      .catch((err) => console.log(err));
   };
   return (
     <Box>
@@ -88,6 +81,7 @@ const RightSide = ({ setOpenSnackbar }) => {
           <Box display="flex" justifyContent="center" alignItems="center">
             <Box width="80%">
               <Textarea
+                value={inpInfo.message}
                 name="message"
                 onChange={(e) => InputHandler(e, "message")}
                 i18n={i18n.language}
