@@ -148,7 +148,7 @@ export const moonStyle = (
       : "190px",
 
     top: ExtraSmall
-      ? "150px"
+      ? "200px"
       : Small
       ? "160px"
       : Medium
