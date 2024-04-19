@@ -9,7 +9,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "fa",
-    locales: ["en", "fa"],
+    locales: ["fa", "en"],
     i18nextServer: {
       debug: true,
       backend: {
