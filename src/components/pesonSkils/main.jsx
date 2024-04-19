@@ -18,31 +18,31 @@ const Avatars = () => {
     setAvatars(true);
   };
   const Inner = useRef(null);
-  // useEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-  //   var tl = gsap.timeline({
-  //     repeat: false,
-  //     defaults: { duration: 1, ease: "power3.inOut" },
-  //     scrollTrigger: {
-  //       trigger: Inner.current,
-  //       start: window.innerWidth < 768 ? "1 center" : "1 center",
-  //       end: "bottom center",
-  //       scrub: false,
-  //       // markers: true, // برای نمایش نشانگرهای بصری
-  //       onEnter: () => {
-  //         tl.play(); // شروع انیمیشن
-  //       },
-  //     },
-  //   });
-  //   tl.to(
-  //     Inner.current,
-  //     {
-  //       scale: 1,
-  //       opacity: "1",
-  //     },
-  //     0
-  //   );
-  // });
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    var tl = gsap.timeline({
+      repeat: false,
+      defaults: { duration: 1, ease: "power3.inOut" },
+      scrollTrigger: {
+        trigger: Inner.current,
+        start: window.innerWidth < 768 ? "-15% center" : "-16% center",
+        end: "bottom center",
+        scrub: false,
+        //markers: true, // برای نمایش نشانگرهای بصری
+        onEnter: () => {
+          tl.play(); // شروع انیمیشن
+        },
+      },
+    });
+    tl.to(
+      Inner.current,
+      {
+        scale: 1,
+        opacity: "1",
+      },
+      0
+    );
+  });
 
   return (
     <Grid ref={Inner} container sx={GridMainStyle(theme)}>

@@ -5,8 +5,8 @@ export const GridMainStyle = (theme) => {
     position: "relative",
     overflow: "hidden",
     height: { xs: "80vh", sm: "90vh", md: "115vh", lg: "100vh" },
-    // opacity: 1,
-    // transform: "scale(0)",
+    opacity: 1,
+    transform: "scale(0)",
   };
 
   return style;
@@ -226,10 +226,10 @@ export const TypographyStyle1_initialCv2 = (theme) => {
   };
   return style;
 };
-export const TypographyStyle2_initialCv2 = (theme,i18n) => {
+export const TypographyStyle2_initialCv2 = (theme, i18n) => {
   const style = {
     textAlign: "justify",
-    direction:i18n ==="en" ? "ltr":"rtl",
+    direction: i18n === "en" ? "ltr" : "rtl",
     p: 1,
     fontSize: { xs: "10px", sm: "12px", md: "15px" },
     color: theme === "dark" ? "#f0fffd" : "#1119",
