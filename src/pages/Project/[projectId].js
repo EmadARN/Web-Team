@@ -3,19 +3,24 @@ import PrjTopSectionMain from "@/components/ProjectTopSection/Main";
 import PreviewMain from "@/components/WebsitePreview/Main";
 import { Grid } from "@mui/material";
 import axios from "axios";
+import Loader from "@/components/Loader/Loader";
 
-const projects = ({ resumeList }) => {
+const projects = ({ resumeList, isLoading }) => {
   return (
     <>
-      <Grid sx={{}}>
+      {isLoading ? (
+        <Loader /> // Display your loading component while data is fetching
+      ) : (
         <Grid>
-          <PrjTopSectionMain resumeList={resumeList} />
-        </Grid>
+          <Grid>
+            <PrjTopSectionMain resumeList={resumeList} />
+          </Grid>
 
-        <Grid>
-          <PreviewMain resumeList={resumeList} />
+          <Grid>
+            <PreviewMain resumeList={resumeList} />
+          </Grid>
         </Grid>
-      </Grid>
+      )}
     </>
   );
 };
@@ -39,14 +44,28 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(ctx) {
   const { params } = ctx;
-  const { data } = await axios.get(
-    `https://backend-adlikara.ir/resume/resume/id=${params.projectId}/`
-  );
+
+  // Set initial loading state to true
+  let isLoading = true;
+  let resumeList = null;
+
+  try {
+    const { data } = await axios.get(
+      `https://backend-adlikara.ir/resume/resume/id=${params.projectId}/`
+    );
+    resumeList = data.data;
+    isLoading = false;
+    // Set loading state to false after successful data fetch
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    // Handle errors appropriately, e.g., display an error message
+  }
 
   return {
     props: {
-      resumeList: data.data,
+      resumeList,
+      isLoading,
     },
-    revalidate: 1,
+    revalidate: 1, // Revalidate data every 1 second
   };
 }
