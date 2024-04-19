@@ -226,9 +226,10 @@ export const TypographyStyle1_initialCv2 = (theme) => {
   };
   return style;
 };
-export const TypographyStyle2_initialCv2 = (theme) => {
+export const TypographyStyle2_initialCv2 = (theme,i18n) => {
   const style = {
     textAlign: "justify",
+    direction:i18n ==="en" ? "ltr":"rtl",
     p: 1,
     fontSize: { xs: "10px", sm: "12px", md: "15px" },
     color: theme === "dark" ? "#f0fffd" : "#1119",

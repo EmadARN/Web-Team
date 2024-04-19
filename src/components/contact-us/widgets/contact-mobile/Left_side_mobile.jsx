@@ -4,7 +4,11 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import { T1, iconStyle } from "../../Style";
+import { useTranslation } from "react-i18next";
 const Left_side_mobile = () => {
+
+const{t} = useTranslation()
+
   return (
     <Grid
       display="flex"
@@ -14,7 +18,7 @@ const Left_side_mobile = () => {
       pt={2}
     >
       <Box>
-        <Typography>راه های ارتباطی با ما</Typography>
+        <Typography>{t("contactus.title")}</Typography>
       </Box>
       <Grid
         width="100%"
@@ -63,7 +67,7 @@ const Left_side_mobile = () => {
           }}
         >
           <Typography sx={T1}>
-            زنجان
+            {t("contactus.address")}
             <FmdGoodIcon sx={iconStyle} />
           </Typography>
         </Grid>
