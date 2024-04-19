@@ -8,42 +8,42 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 const About_us = () => {
   const Right = useRef(null);
   const Left = useRef(null);
-  // useEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-  //   var tl = gsap.timeline({
-  //     repeat: false,
-  //     defaults: { duration: 0.6, ease: "power3.inOut" },
-  //     scrollTrigger: {
-  //       trigger: Right.current,
-  //       trigger: Left.current,
-  //       start: window.innerWidth < 768 ? "1 center" : "1 center",
-  //       end: "bottom center",
-  //       scrub: false,
-  //       //markers: true, // برای نمایش نشانگرهای بصری
-  //       onEnter: () => {
-  //         tl.play(); // شروع انیمیشن
-  //       },
-  //     },
-  //   });
-  //   tl.to(
-  //     Right.current,
-  //     {
-  //       y: "0",
-  //       x: "0",
-  //       opacity: "1",
-  //     },
-  //     1
-  //   );
-  //   tl.to(
-  //     Left.current,
-  //     {
-  //       y: "0",
-  //       x: "0",
-  //       opacity: "1",
-  //     },
-  //     1
-  //   );
-  // });
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    var tl = gsap.timeline({
+      repeat: false,
+      defaults: { duration: 0.6, ease: "power3.inOut" },
+      scrollTrigger: {
+        trigger: Right.current,
+        trigger: Left.current,
+        start: window.innerWidth < 768 ? "500 center" : "1000 center",
+        end: "bottom center",
+        scrub: false,
+        //markers: true, // برای نمایش نشانگرهای بصری
+        onEnter: () => {
+          tl.play(); // شروع انیمیشن
+        },
+      },
+    });
+    tl.to(
+      Right.current,
+      {
+        y: "0",
+        x: "0",
+        opacity: "1",
+      },
+      1
+    );
+    tl.to(
+      Left.current,
+      {
+        y: "0",
+        x: "0",
+        opacity: "1",
+      },
+      1
+    );
+  });
 
   return (
     <>
@@ -53,7 +53,7 @@ const About_us = () => {
           xs={12}
           md={6}
           ref={Right}
-          // sx={{ opacity: 0, transform: "translate(100% ) " }}
+          sx={{ opacity: 0, transform: "translate(100% ) " }}
         >
           <Right_part />
         </Grid>
@@ -62,7 +62,7 @@ const About_us = () => {
           xs={12}
           md={6}
           ref={Left}
-          // sx={{ opacity: 0, transform: "translate(-100% ) " }}
+          sx={{ opacity: 0, transform: "translate(-100% ) " }}
         >
           <Left_part />
         </Grid>
