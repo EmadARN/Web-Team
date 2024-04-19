@@ -2,6 +2,7 @@ import { Typography, Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { useTranslation } from "react-i18next";
+import { Trans } from "react-i18next";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -19,7 +20,7 @@ import {
   TypographyStyle3_initialCv2,
 } from "../style";
 const InitialCv2 = ({ theme, item }) => {
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
 
   return (
     <>
@@ -28,8 +29,8 @@ const InitialCv2 = ({ theme, item }) => {
           {t("ourskillTitle.about")}
         </Typography>
         <Box sx={BoxStyle2_initialCv2}>
-          <Typography sx={TypographyStyle2_initialCv2(theme)}>
-            {item.desc}
+          <Typography sx={TypographyStyle2_initialCv2(theme,i18n.language)}>
+            <Trans i18nKey={item.OurSkilDesc}></Trans>
           </Typography>
         </Box>
         <Typography sx={TypographyStyle3_initialCv2(theme)}>

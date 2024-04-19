@@ -1,19 +1,17 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { typographyStyle } from "../style";
+import { useTranslation } from "react-i18next";
+
+
 const Left_part = () => {
+const {t,i18n} =useTranslation()
+
   return (
     <>
       <Box pt={{ xs: 2.6, md: 0 }}>
-        <Typography sx={typographyStyle}>
-          ما یک تیم برنامه‌نویسی خلاق و ماهر متشکل از 6 نفر هستیم که به ارائه
-          راه‌حل‌های نوآورانه و باکیفیت برای چالش‌های برنامه‌نویسی وب شما اختصاص
-          یافته‌ایم. با استفاده از به‌روزترین فناوری‌ها و متدولوژی‌های توسعه،
-          وب‌اپلیکیشن‌ها و وب‌سایت‌های سفارشی را طراحی و توسعه می‌دهیم که
-          نیازهای منحصر به فرد شما را برآورده می‌کنند. ما به تعهد خود به ارائه
-          خدمات باکیفیت و رضایت مشتری افتخار می‌کنیم. ما با شما برای درک کامل
-          نیازهایتان همکاری می‌کنیم و راه‌حلی مقرون به صرفه و کارآمد ارائه
-          می‌دهیم.
+        <Typography sx={typographyStyle(i18n.language)}>
+        {t("aboutusdesc")}
         </Typography>
       </Box>
     </>
