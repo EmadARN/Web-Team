@@ -25,7 +25,19 @@ export const CpImage = () => {
   const style = {
     position: "absolute",
     color: "transparent",
-    width: "100%",
+    width: isSmallScreen
+      ? "100%"
+      : isMediumScreen
+      ? "100%"
+      : islargeScreen
+      ? "100%"
+      : isXlargeScreen
+      ? "100%"
+      : isXXlargeScreen
+      ? "100%"
+      : isXXXlargeScreen
+      ? "90%"
+      : "100%",
 
     pointerEvents: "none",
     zIndex: "5",
@@ -48,19 +60,49 @@ export const CpImage = () => {
   return style;
 };
 
-export const CpInnerGrid = {
-  overflowY: "scroll !important",
-
-  display: "block",
-  width: "100%",
-  margin: "24px auto",
-  minHeight: "410px",
-  height: "100%",
-  zIndex: "0",
-  position: "absolute",
-  top: "40%",
-  right: "1px",
-  transform: "scale(0.92)",
+export const CpInnerGrid = () => {
+  const isSmallScreen = useMediaQuery(
+    "(min-width: 200px) and (max-width: 500px)"
+  );
+  const isMediumScreen = useMediaQuery(
+    "(min-width: 501px) and (max-width: 600px)"
+  );
+  const islargeScreen = useMediaQuery(
+    "(min-width: 601px) and (max-width:700px)"
+  );
+  const isXlargeScreen = useMediaQuery(
+    "(min-width: 701px) and (max-width:951px)"
+  );
+  const isXXlargeScreen = useMediaQuery(
+    "(min-width: 951px) and (max-width:1200px)"
+  );
+  const isXXXlargeScreen = useMediaQuery("(min-width: 1250px) ");
+  const style = {
+    overflowY: "scroll !important",
+    display: "block",
+    width: isSmallScreen
+      ? "100%"
+      : isMediumScreen
+      ? "100%"
+      : islargeScreen
+      ? "100%"
+      : isXlargeScreen
+      ? "100%"
+      : isXXlargeScreen
+      ? "100%"
+      : isXXXlargeScreen
+      ? "90%"
+      : "100%",
+    margin: "24px auto",
+    minHeight: "410px",
+    height: "100%",
+    zIndex: "0",
+    position: "absolute",
+    top: "40%",
+    right: "1px",
+    transform: "scale(0.92)",
+  };
+  return style;
 };
 
 export const SiteContent = {

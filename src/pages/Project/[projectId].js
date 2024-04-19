@@ -3,6 +3,7 @@ import PrjTopSectionMain from "@/components/ProjectTopSection/Main";
 import PreviewMain from "@/components/WebsitePreview/Main";
 import { Grid } from "@mui/material";
 import axios from "axios";
+import Loader from "@/components/Loader/Loader";
 
 const projects = ({ resumeList }) => {
   return (

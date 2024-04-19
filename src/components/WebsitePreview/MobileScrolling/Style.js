@@ -1,5 +1,11 @@
 import { useMediaQuery } from "@mui/material";
 
+export const parentMainGrid = {
+  width: "25%",
+  display: "flex",
+  justifyContent: "center",
+  ml: 16,
+};
 export const CpMainGrid = {
   position: "relative",
   width: "100%",
@@ -27,9 +33,22 @@ export const CpImage = () => {
     position: "absolute",
     color: "transparent",
     display: "block",
-    width: "100%",
+
+    width: isSmallScreen
+      ? "230%"
+      : isMediumScreen
+      ? "100%"
+      : islargeScreen
+      ? "100%"
+      : isXlargeScreen
+      ? "100%"
+      : isXXlargeScreen
+      ? "100%"
+      : isXXXlargeScreen
+      ? "85%"
+      : "100%",
     height: isSmallScreen
-      ? "188px"
+      ? "400px"
       : isMediumScreen
       ? "200px"
       : islargeScreen
@@ -48,22 +67,54 @@ export const CpImage = () => {
   };
   return style;
 };
-export const CpInnerGrid = {
-  overflowY: "scroll ",
-  display: "block",
-  width: "100%",
-  margin: "5px auto",
-  minHeight: { xs: "200px", sm: "320px", md: "580px", lg: "620px" },
-  height: "100%",
-  zIndex: "0",
-  position: "absolute",
-  top: "0%",
-  right: "0.5px",
-  transform: "scale(0.95)",
-  borderWidth: "50px  0 0 0",
-  borderColor: "#000000",
-  borderStyle: "solid",
-  borderRadius: { xs: "20px", sm: "20px", md: "30px" },
+
+export const CpInnerGrid = () => {
+  const isSmallScreen = useMediaQuery(
+    "(min-width: 200px) and (max-width: 500px)"
+  );
+  const isMediumScreen = useMediaQuery(
+    "(min-width: 501px) and (max-width: 600px)"
+  );
+  const islargeScreen = useMediaQuery(
+    "(min-width: 601px) and (max-width:900px)"
+  );
+  const isXlargeScreen = useMediaQuery(
+    "(min-width: 900px) and (max-width:951px)"
+  );
+  const isXXlargeScreen = useMediaQuery(
+    "(min-width: 951px) and (max-width:1200px)"
+  );
+  const isXXXlargeScreen = useMediaQuery("(min-width: 1250px) ");
+  const style = {
+    overflowY: "scroll ",
+    display: "block",
+    width: isSmallScreen
+      ? "230%"
+      : isMediumScreen
+      ? "100%"
+      : islargeScreen
+      ? "100%"
+      : isXlargeScreen
+      ? "100%"
+      : isXXlargeScreen
+      ? "100%"
+      : isXXXlargeScreen
+      ? "85%"
+      : "100%",
+    margin: "5px auto",
+    minHeight: { xs: "415px", sm: "320px", md: "580px", lg: "620px" },
+    height: "100%",
+    zIndex: "0",
+    position: "absolute",
+    top: "0%",
+    right: "0.5px",
+    transform: "scale(0.95)",
+    borderWidth: "50px  0 0 0",
+    borderColor: "#000000",
+    borderStyle: "solid",
+    borderRadius: { xs: "20px", sm: "20px", md: "30px" },
+  };
+  return style;
 };
 
 export const SiteContent = {
