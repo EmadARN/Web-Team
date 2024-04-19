@@ -16,10 +16,10 @@ const About_us = () => {
       scrollTrigger: {
         trigger: Right.current,
         trigger: Left.current,
-        start: window.innerWidth < 768 ? "500 center" : "200 center",
+        start: window.innerWidth < 768 ? "500 center" : "-30% center",
         end: "bottom center",
         scrub: false,
-        //markers: true, // برای نمایش نشانگرهای بصری
+        markers: true, // برای نمایش نشانگرهای بصری
         onEnter: () => {
           tl.play(); // شروع انیمیشن
         },
