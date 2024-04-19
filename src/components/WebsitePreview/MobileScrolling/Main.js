@@ -7,17 +7,34 @@ import {
   SiteContent,
   parentMainGrid,
 } from "./Style";
+import Image from "next/image";
 const Mobile_Scroll_Main = ({ resumeList }) => {
   return (
     <Grid sx={parentMainGrid}>
       <Grid sx={CpMainGrid}>
-        <img style={CpImage()} src={`/images/${"screen_mobile"}.png`} alt="" />
+        <Image
+          style={CpImage()}
+          src={`/images/${"screen_mobile"}.png`}
+          alt="Picture of the author"
+          width={300}
+          height={300}
+          priority
+        />
+        {/* <img style={CpImage()} src={`/images/${"screen_mobile"}.png`} alt="" /> */}
 
         <Grid sx={CpInnerGrid()}>
-          <img
+          <Image
+            style={SiteContent}
+            src={`https://backend-adlikara.ir${resumeList.mobile_image}`}
+            alt="Picture of the author"
+            width={700}
+            height={700}
+            priority
+          />
+          {/* <img
             src={`https://backend-adlikara.ir${resumeList.mobile_image}`}
             style={SiteContent}
-          />
+          /> */}
         </Grid>
       </Grid>
     </Grid>

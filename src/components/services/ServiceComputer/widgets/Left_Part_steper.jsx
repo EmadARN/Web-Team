@@ -50,7 +50,6 @@ const Left_Part_steper = ({ activeStep, theme }) => {
               </Box>
 
               <Box width="70%">
-                {" "}
                 <Lottie
                   style={{ width: item.width }}
                   animationData={item.img}

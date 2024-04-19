@@ -2,8 +2,6 @@ import { useMediaQuery } from "@mui/material";
 
 export const parentMainGrid = {
   width: "25%",
-  display: "flex",
-  justifyContent: "center",
   ml: 16,
 };
 export const CpMainGrid = {

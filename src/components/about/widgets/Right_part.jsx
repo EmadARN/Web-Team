@@ -2,6 +2,7 @@ import React from "react";
 import Atropos from "atropos/react";
 import { Grid } from "@mui/material";
 import "atropos/css";
+import Image from "next/image";
 const Right_part = () => {
   return (
     <Grid display="flex" justifyContent="center">
@@ -10,7 +11,20 @@ const Right_part = () => {
         shadow={false}
         scaleClassName="large"
       >
-        <img
+        <Image
+          className="large"
+          style={{
+            width: "100%",
+            aspectRatio: "2.4",
+          }}
+          src={"/images/aboutPic.jpg"}
+          data-atropos-offset="5%"
+          alt=""
+          width={700}
+          height={200}
+        ></Image>
+
+        {/* <img
           className="large"
           style={{
             width: "100%",
@@ -19,7 +33,7 @@ const Right_part = () => {
           src="/images/aboutPic.jpg"
           data-atropos-offset="5%"
           alt=""
-        />
+        /> */}
       </Atropos>
     </Grid>
   );
