@@ -15,12 +15,12 @@ export const imgData = (
   abovemoon,
   undermoon,
   boat,
-  isSmallScreen,
-  isMediumScreen,
-  islargeScreen,
-  isXlargeScreen,
-  isXXlargeScreen,
-  isXXXlargeScreen
+  ExtraSmall,
+  Small,
+  Medium,
+  Large,
+  ExtraLarge,
+  XXLarge
 ) => {
   const imgData1 = [
     {
@@ -36,14 +36,7 @@ export const imgData = (
       img: "balloon.png",
       imgLight: "ballonLight.png",
       ref: balloon,
-      style: ballonStyle(
-        isSmallScreen,
-        isMediumScreen,
-        islargeScreen,
-        isXlargeScreen,
-        isXXlargeScreen,
-        isXXXlargeScreen
-      ),
+      style: ballonStyle(ExtraSmall, Small, Medium, Large, ExtraLarge, XXLarge),
       class: "",
     },
     {
@@ -51,14 +44,7 @@ export const imgData = (
       img: "moon.png",
       imgLight: "sun.png",
       ref: moon,
-      style: moonStyle(
-        isSmallScreen,
-        isMediumScreen,
-        islargeScreen,
-        isXlargeScreen,
-        isXXlargeScreen,
-        isXXXlargeScreen
-      ),
+      style: moonStyle(ExtraSmall, Small, Medium, Large, ExtraLarge, XXLarge),
       class: "",
     },
     {
@@ -82,14 +68,7 @@ export const imgData = (
       img: "boat.png",
       imgLight: "boatLight.png",
       ref: boat,
-      style: boatStyle(
-        isSmallScreen,
-        isMediumScreen,
-        islargeScreen,
-        isXlargeScreen,
-        isXXlargeScreen,
-        isXXXlargeScreen
-      ),
+      style: boatStyle(ExtraSmall, Small, Medium, Large, ExtraLarge, XXLarge),
       class: "",
     },
   ];

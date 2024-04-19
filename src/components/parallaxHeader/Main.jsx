@@ -22,22 +22,14 @@ const ParallaxHeader = () => {
   const textRef = useRef(null);
   const { theme } = useContext(ThemeContext);
   const [show, setShow] = useState(false);
-  const isSmallScreen = useMediaQuery(
-    "(min-width: 200px) and (max-width: 500px)"
-  );
-  const isMediumScreen = useMediaQuery(
-    "(min-width: 501px) and (max-width: 600px)"
-  );
-  const islargeScreen = useMediaQuery(
-    "(min-width: 601px) and (max-width:700px)"
-  );
-  const isXlargeScreen = useMediaQuery(
-    "(min-width: 701px) and (max-width:950px)"
-  );
-  const isXXlargeScreen = useMediaQuery(
-    "(min-width: 951px) and (max-width:1200px)"
-  );
-  const isXXXlargeScreen = useMediaQuery("(min-width: 1250px) ");
+
+  const ExtraSmall = useMediaQuery("(min-width: 200px) and (max-width: 500px)");
+  const Small = useMediaQuery("(min-width: 501px) and (max-width: 767px)");
+  const Medium = useMediaQuery("(min-width: 768px) and (max-width: 991px)");
+  const Large = useMediaQuery("(min-width: 992px) and (max-width: 1021px)");
+  const ExtraLarge = useMediaQuery("(min-width: 1250px) ");
+  const XXLarge = useMediaQuery("(min-width: 1250px) ");
+
   useEffect(() => {
     let ctx = gsap.context(() => {
       createParallaxTimeline(
@@ -68,12 +60,12 @@ const ParallaxHeader = () => {
           abovemoon,
           undermoon,
           boat,
-          isSmallScreen,
-          isMediumScreen,
-          islargeScreen,
-          isXlargeScreen,
-          isXXlargeScreen,
-          isXXXlargeScreen
+          ExtraSmall,
+          Small,
+          Medium,
+          Large,
+          ExtraLarge,
+          XXLarge
         ).map((item) => {
           return (
             <ImgStyle

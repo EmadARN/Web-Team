@@ -57,53 +57,53 @@ export const ImgStyle = styled("img")(({ theme }) => ({
 }));
 
 export const ballonStyle = (
-  isSmallScreen,
-  isMediumScreen,
-  islargeScreen,
-  isXlargeScreen,
-  isXXlargeScreen,
-  isXXXlargeScreen
+  ExtraSmall,
+  Small,
+  Medium,
+  Large,
+  ExtraLarge,
+  XXLarge
 ) => {
   const style = {
-    top: isSmallScreen
+    top: ExtraSmall
       ? "40%"
-      : isMediumScreen
+      : Small
       ? "40%"
-      : islargeScreen
+      : Medium
       ? "40%"
-      : isXlargeScreen
+      : Large
       ? "40%"
-      : isXXlargeScreen
+      : ExtraLarge
       ? "30%"
-      : isXXXlargeScreen
+      : XXLarge
       ? "30%"
       : "35%",
     left: "0%",
     zIndex: 4,
-    width: isSmallScreen
-      ? "25%"
-      : isMediumScreen
-      ? "17%"
-      : islargeScreen
-      ? "16%"
-      : isXlargeScreen
-      ? "16%"
-      : isXXlargeScreen
+    width: ExtraSmall
       ? "14%"
-      : isXXXlargeScreen
+      : Small
+      ? "15%"
+      : Medium
+      ? "16%"
+      : Large
+      ? "16%"
+      : ExtraLarge
+      ? "14%"
+      : XXLarge
       ? "18%"
       : "16%",
-    maxHeight: isSmallScreen
-      ? "15%"
-      : isMediumScreen
+    maxHeight: ExtraSmall
+      ? "14%"
+      : Small
       ? "22%"
-      : islargeScreen
+      : Medium
       ? "20%"
-      : isXlargeScreen
+      : Large
       ? "20%"
-      : isXXlargeScreen
+      : ExtraLarge
       ? "30%"
-      : isXXXlargeScreen
+      : XXLarge
       ? "40%"
       : "30%",
   };
@@ -112,94 +112,94 @@ export const ballonStyle = (
 };
 
 export const moonStyle = (
-  isSmallScreen,
-  isMediumScreen,
-  islargeScreen,
-  isXlargeScreen,
-  isXXlargeScreen,
-  isXXXlargeScreen
+  ExtraSmall,
+  Small,
+  Medium,
+  Large,
+  ExtraLarge,
+  XXLarge
 ) => {
   const style = {
-    width: isSmallScreen
-      ? "50%"
-      : isMediumScreen
-      ? "28%"
-      : islargeScreen
-      ? "26%"
-      : isXlargeScreen
+    width: ExtraSmall
+      ? "40%"
+      : Small
       ? "25%"
-      : isXXlargeScreen
-      ? "23.5%"
-      : isXXXlargeScreen
+      : Medium
+      ? "26%"
+      : Large
+      ? "25%"
+      : ExtraLarge
       ? "22%"
+      : XXLarge
+      ? "20%"
       : "21%",
-    maxHeight: isSmallScreen
+    maxHeight: ExtraSmall
       ? "180px"
-      : isMediumScreen
+      : Small
+      ? "180px"
+      : Medium
       ? "150px"
-      : islargeScreen
-      ? "150px"
-      : isXlargeScreen
+      : Large
       ? "190px"
-      : isXXlargeScreen
+      : ExtraLarge
       ? "250px"
-      : isXXXlargeScreen
+      : XXLarge
       ? "250px"
       : "190px",
 
-    top: isSmallScreen
-      ? "200px"
-      : isMediumScreen
-      ? "160px"
-      : islargeScreen
-      ? "160px"
-      : isXlargeScreen
+    top: ExtraSmall
       ? "150px"
-      : isXXlargeScreen
-      ? "120px"
-      : isXXXlargeScreen
-      ? "120px"
-      : "130px",
+      : Small
+      ? "160px"
+      : Medium
+      ? "180px"
+      : Large
+      ? "180px"
+      : ExtraLarge
+      ? "150px"
+      : XXLarge
+      ? "170px"
+      : "160px",
     right: "15%",
     zIndex: 2,
   };
   return style;
 };
 export const boatStyle = (
-  isSmallScreen,
-  isMediumScreen,
-  islargeScreen,
-  isXlargeScreen,
-  isXXlargeScreen,
-  isXXXlargeScreen
+  ExtraSmall,
+  Small,
+  Medium,
+  Large,
+  ExtraLarge,
+  XXLarge
 ) => {
   const style = {
-    width: isSmallScreen
-      ? "50%"
-      : isMediumScreen
-      ? "70%"
-      : islargeScreen
-      ? "60%"
-      : isXlargeScreen
-      ? "50%"
-      : isXXlargeScreen
+    width: ExtraSmall
       ? "40%"
-      : isXXXlargeScreen
+      : Small
+      ? "40%"
+      : Medium
+      ? "50%"
+      : Large
+      ? "50%"
+      : ExtraLarge
+      ? "36%"
+      : XXLarge
       ? "35%"
       : "30%",
-    maxHeight: isSmallScreen ? "130px" : isXXXlargeScreen ? "250px" : "200px",
+    maxHeight: ExtraSmall ? "130px" : XXLarge ? "250px" : "200px",
     right: "0%",
-    top: isSmallScreen
+    top: ExtraSmall
       ? "65%"
-      : isMediumScreen
+      : Small
       ? "55%"
-      : islargeScreen
+      : Medium
       ? "55%"
-      : isXlargeScreen
+      : Large
       ? "66%"
-      : isXXlargeScreen
+      : ExtraLarge
       ? "55%"
-      : isXXXlargeScreen
+      : XXLarge
       ? "55%"
       : "50%",
     zIndex: 1,
