@@ -13,7 +13,7 @@ const projects = ({ resumeList, isLoading }) => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         height: {
-          xs: "1360px",
+          xs: "1366px",
           sm: "1110px",
           md: "1050px",
           lg: "1150px",
