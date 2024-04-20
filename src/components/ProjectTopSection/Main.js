@@ -12,9 +12,10 @@ const PrjTopSectionMain = ({ resumeList }) => {
           WebkitUserSelect: "none" /* Safari */,
           MsUserSelect: "none" /* IE 10 and IE 11 */,
           userSelect: "none" /* Standard syntax */,
+          pt:4
         }}
       >
-        <Grid container justifyContent="space-around" width="100%" mt={5}>
+        <Grid container justifyContent="space-around" width="100%" >
           <Grid xs={12} md={6} width="45%">
             <PrjInfoMain resumeList={resumeList} />
           </Grid>

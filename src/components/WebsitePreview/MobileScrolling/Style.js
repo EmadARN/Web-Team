@@ -100,7 +100,7 @@ export const CpInnerGrid = () => {
       ? "85%"
       : "100%",
     margin: "5px auto",
-    minHeight: { xs: "415px", sm: "320px", md: "580px", lg: "620px" },
+    minHeight: { xs: "415px", sm: "320px", md: "580px", lg: "610px" },
     height: "100%",
     zIndex: "0",
     position: "absolute",

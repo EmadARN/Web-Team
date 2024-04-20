@@ -20,14 +20,20 @@ const PrjDescMain = ({ resumeList }) => {
       >
         <Box mb={2}>
           <Typography
-            sx={{ fontWeight: "bold", fontSize: { xs: "17px", md: "22px" } }}
+            sx={{
+              fontWeight: "bold",
+              fontSize: { xs: "17px", md: "22px" },
+              color: "#f0fffd",
+            }}
           >
             درباره پروژه
           </Typography>
         </Box>
 
         <Box mb={2}>
-          <Typography sx={{ fontSize: { xs: "23px", md: "35px" } }}>
+          <Typography
+            sx={{ fontSize: { xs: "23px", md: "35px" }, color: "#f0fffd" }}
+          >
             {resumeList.title}
           </Typography>
         </Box>
@@ -44,7 +50,7 @@ const PrjDescMain = ({ resumeList }) => {
               endIcon={<ArrowOutwardIcon sx={{ mr: 2 }} />}
               sx={{
                 border: "1px solid #111",
-                color: "#111",
+                color: "#f0fffd",
                 fontSize: "17px",
                 backgroundColor: "transparent",
                 px: 1,
