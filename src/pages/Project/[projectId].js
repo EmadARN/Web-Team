@@ -17,7 +17,7 @@ const projects = ({ resumeList, isLoading }) => {
           sm: "1000px",
           md: "1050px",
           lg: "1000px",
-          xl: "1200px",
+          xl: "1201px",
         },
       }}
     >
