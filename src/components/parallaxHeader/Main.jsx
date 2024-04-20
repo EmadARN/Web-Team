@@ -47,7 +47,7 @@ const ParallaxHeader = () => {
   useEffect(() => {
     setTimeout(() => {
       setShow(true);
-    }, 1000);
+    }, 300);
   }, []);
 
   return (
