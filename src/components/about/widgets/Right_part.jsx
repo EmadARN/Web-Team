@@ -5,7 +5,7 @@ import "atropos/css";
 import Image from "next/image";
 const Right_part = () => {
   return (
-    <Grid display="flex" justifyContent="center">
+    <Grid display="flex" justifyContent="center" pt={2}>
       <Atropos
         style={{ width: "390px", height: "180px" }}
         shadow={false}
@@ -21,7 +21,7 @@ const Right_part = () => {
           data-atropos-offset="5%"
           alt=""
           width={700}
-          height={200}
+          height={150}
         ></Image>
 
         {/* <img
