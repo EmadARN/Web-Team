@@ -51,12 +51,12 @@ const PrjDescMain = ({ resumeList }) => {
               sx={{
                 border: "1px solid #111",
                 color: "#f0fffd",
-                fontSize: "17px",
-                backgroundColor: "transparent",
+                fontSize: { xs: "14px", md: "17px" },
+                backgroundColor: "#fff1",
                 px: 1,
                 borderRadius: "10px",
                 transition: "all ease 0.5s",
-                "&:hover": { color: "#fff", backgroundColor: "#111" },
+                "&:hover": { color: "#111", backgroundColor: "#f0fffd" },
               }}
             >
               مشاهده وبسایت
@@ -73,10 +73,9 @@ const PrjDescMain = ({ resumeList }) => {
             width: "15%",
             top: 0,
             left: 0,
-            bgcolor: "#1b1b1b",
-            "&:hover": {
-              bgcolor: "#1b1b1b",
-            },
+            color: "#f0fffd",
+            backgroundColor: "#fff3",
+            "&:hover": { color: "#111", backgroundColor: "#f0fffd" },
           }}
         >
           بازگشت <KeyboardArrowLeftIcon />
