@@ -9,6 +9,7 @@ const projects = ({ resumeList, isLoading }) => {
   return (
     <Box
       sx={{
+        width: "100%",
         backgroundImage: "url(/images/herobg.png)",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
