@@ -35,11 +35,6 @@ a {
     background-color: #9999;
     border-radius: 1px;
   }
-  /* @supports (scrollbar-color: red blue) {
-    * {
-      scrollbar-color: rgba(0, 0, 0, 1) #001a40;
-    }
-  } */
 }
 
 body {

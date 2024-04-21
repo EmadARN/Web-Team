@@ -1,4 +1,4 @@
-import { styled, useMediaQuery } from "@mui/material";
+import { styled } from "@mui/material";
 
 export const allStyle = {
   overflow: " hidden !important",
@@ -198,7 +198,7 @@ export const boatStyle = (
       : Large
       ? "66%"
       : ExtraLarge
-      ? "55%"
+      ? "58%"
       : XXLarge
       ? "58%"
       : "55%",
