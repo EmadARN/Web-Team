@@ -22,10 +22,10 @@ const Avatars = () => {
     gsap.registerPlugin(ScrollTrigger);
     var tl = gsap.timeline({
       repeat: false,
-      defaults: { duration: 1, ease: "power3.inOut" },
+      defaults: { duration: 1, ease: "power1.inOut" },
       scrollTrigger: {
         trigger: Inner.current,
-        start: window.innerWidth < 768 ? "-42% center" : "-48% center",
+        start: window.innerWidth < 768 ? "-50% center" : "-55% center",
         end: "bottom center",
         scrub: false,
         //markers: true, // برای نمایش نشانگرهای بصری

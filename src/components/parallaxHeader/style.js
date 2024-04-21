@@ -81,7 +81,7 @@ export const ballonStyle = (
     left: "0%",
     zIndex: 4,
     width: ExtraSmall
-      ? "14%"
+      ? "16%"
       : Small
       ? "15%"
       : Medium
@@ -92,9 +92,9 @@ export const ballonStyle = (
       ? "14%"
       : XXLarge
       ? "18%"
-      : "16%",
+      : "14%",
     maxHeight: ExtraSmall
-      ? "14%"
+      ? "10%"
       : Small
       ? "22%"
       : Medium
@@ -132,7 +132,7 @@ export const moonStyle = (
       ? "22%"
       : XXLarge
       ? "20%"
-      : "21%",
+      : "17%",
     maxHeight: ExtraSmall
       ? "180px"
       : Small
@@ -148,7 +148,7 @@ export const moonStyle = (
       : "190px",
 
     top: ExtraSmall
-      ? "200px"
+      ? "220px"
       : Small
       ? "160px"
       : Medium
@@ -156,10 +156,10 @@ export const moonStyle = (
       : Large
       ? "180px"
       : ExtraLarge
-      ? "150px"
+      ? "130px"
       : XXLarge
-      ? "170px"
-      : "160px",
+      ? "240px"
+      : "140px",
     right: "15%",
     zIndex: 2,
   };
@@ -185,12 +185,12 @@ export const boatStyle = (
       : ExtraLarge
       ? "36%"
       : XXLarge
-      ? "35%"
-      : "30%",
+      ? "30%"
+      : "33%",
     maxHeight: ExtraSmall ? "130px" : XXLarge ? "250px" : "200px",
     right: "0%",
     top: ExtraSmall
-      ? "65%"
+      ? "72%"
       : Small
       ? "55%"
       : Medium
@@ -200,8 +200,8 @@ export const boatStyle = (
       : ExtraLarge
       ? "55%"
       : XXLarge
-      ? "55%"
-      : "50%",
+      ? "58%"
+      : "55%",
     zIndex: 1,
   };
   return style;

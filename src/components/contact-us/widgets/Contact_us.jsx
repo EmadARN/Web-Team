@@ -15,10 +15,10 @@ const Contact_us = ({ setOpenSnackbar }) => {
     gsap.registerPlugin(ScrollTrigger);
     var tl = gsap.timeline({
       repeat: false,
-      defaults: { duration: 1, ease: "power3.inOut" },
+      defaults: { duration: 1, ease: "power1.inOut" },
       scrollTrigger: {
         trigger: Inner.current,
-        start: window.innerWidth < 768 ? "-50% center" : "-56% center",
+        start: window.innerWidth < 768 ? "-56% center" : "-60% center",
         end: "bottom center",
         scrub: false,
         //markers: true, // برای نمایش نشانگرهای بصری

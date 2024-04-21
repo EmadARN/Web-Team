@@ -8,7 +8,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: "fa",
+    fallbackLng: "en",
     locales: ["fa", "en"],
     i18nextServer: {
       debug: true,
