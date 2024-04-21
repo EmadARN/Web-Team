@@ -14,7 +14,7 @@ i18n
       debug: true,
       backend: {
         ns: ["translation"],
-        loadPath: "/locales/{{lng}}/{{ns}}.json",
+        loadPath: "/locales/{{fa}}/{{ns}}.json",
       },
     },
   });
