@@ -12,7 +12,7 @@ const About_us = () => {
     gsap.registerPlugin(ScrollTrigger);
     var tl = gsap.timeline({
       repeat: false,
-      defaults: { duration: 0.6, ease: "power1.inOut" },
+      defaults: { duration: 0.4, ease: "power1.inOut" },
       scrollTrigger: {
         trigger: Right.current,
         trigger: Left.current,
