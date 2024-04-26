@@ -34,7 +34,7 @@ const MainCv = ({ data, avatar, theme }) => {
               <Grid xs={5} sm={3} md={3} mt={6}>
                 <InitialCv1 item={data} theme={theme} />
               </Grid>
-              <Grid xs={7} sm={7} mt={{ xs: 12, md: 6 }} pr={1}>
+              <Grid xs={7} sm={7} mt={{ xs: 6, md: 6 }} pr={1}>
                 <InitialCv2 item={data} theme={theme} />
               </Grid>
             </Grid>

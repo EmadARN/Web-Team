@@ -248,7 +248,7 @@ export const TypographyStyle3_initialCv2 = (theme) => {
 };
 export const BoxStyle1_initialCv2 = (theme) => {
   const style = {
-    height: { xs: "60vh", md: "88vh" },
+    height: { xs: "70vh", md: "88vh" },
     borderRadius: "15px",
     backgroundColor:
       theme == "dark" ? "rgba(255,255,255,0.1)" : "rgba(255,255,255,0.5)",
