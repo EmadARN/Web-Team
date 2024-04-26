@@ -27,8 +27,8 @@ const Mobile_Scroll_Main = ({ resumeList }) => {
             style={SiteContent}
             src={`https://backend-adlikara.ir${resumeList.mobile_image}`}
             alt="Picture of the author"
-            width={800}
-            height={700}
+            width={500}
+            height={500}
             priority
           />
           {/* <img

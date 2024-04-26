@@ -19,8 +19,8 @@ const Computer_Scroll_Main = ({ resumeList }) => {
           style={SiteContent}
           src={`https://backend-adlikara.ir${resumeList.desktop_image}`}
           alt="Picture of the author"
-          width={800}
-          height={700}
+          width={500}
+          height={500}
           priority
         />
         {/* <img
