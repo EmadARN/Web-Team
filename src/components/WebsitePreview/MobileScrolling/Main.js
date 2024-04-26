@@ -12,15 +12,15 @@ const Mobile_Scroll_Main = ({ resumeList }) => {
   return (
     <Grid sx={parentMainGrid}>
       <Grid sx={CpMainGrid}>
-        {/* <Image
+        <Image
           style={CpImage()}
           src={`/images/${"screen_mobile"}.png`}
           alt="Picture of the author"
           width={400}
           height={300}
           priority
-        /> */}
-        <img style={CpImage()} src={`/images/${"screen_mobile"}.png`} alt="" />
+        />
+        {/* <img style={CpImage()} src={`/images/${"screen_mobile"}.png`} alt="" /> */}
 
         <Grid sx={CpInnerGrid()}>
           {/* <Image
