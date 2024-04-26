@@ -5,29 +5,29 @@ import Image from "next/image";
 const Computer_Scroll_Main = ({ resumeList }) => {
   return (
     <Grid sx={CpMainGrid}>
-      <Image
+      {/* <Image
         style={CpImage()}
         src={`/images/${"monitor"}.png`}
         alt="Picture of the author"
         width={400}
         height={300}
         priority
-      />
-      {/* <img src={`/images/${"monitor"}.png`} style={CpImage()} /> */}
+      /> */}
+      <img src={`/images/${"monitor"}.png`} style={CpImage()} />
       <Grid sx={CpInnerGrid()}>
-        <Image
+        {/* <Image
           style={SiteContent}
           src={`https://backend-adlikara.ir${resumeList.desktop_image}`}
           alt="Picture of the author"
           width={8000}
           height={800}
           priority
-        />
-        {/* <img
+        /> */}
+        <img
           style={SiteContent}
           src={`https://backend-adlikara.ir${resumeList.desktop_image}`}
           alt="تصویر از مانیتور"
-        ></img> */}
+        ></img>
       </Grid>
     </Grid>
   );
