@@ -20,14 +20,20 @@ const PrjDescMain = ({ resumeList }) => {
       >
         <Box mb={2}>
           <Typography
-            sx={{ fontWeight: "bold", fontSize: { xs: "17px", md: "22px" } }}
+            sx={{
+              fontWeight: "bold",
+              fontSize: { xs: "17px", md: "22px" },
+              color: "#f0fffd",
+            }}
           >
             درباره پروژه
           </Typography>
         </Box>
 
         <Box mb={2}>
-          <Typography sx={{ fontSize: { xs: "23px", md: "35px" } }}>
+          <Typography
+            sx={{ fontSize: { xs: "23px", md: "35px" }, color: "#f0fffd" }}
+          >
             {resumeList.title}
           </Typography>
         </Box>
@@ -44,13 +50,13 @@ const PrjDescMain = ({ resumeList }) => {
               endIcon={<ArrowOutwardIcon sx={{ mr: 2 }} />}
               sx={{
                 border: "1px solid #111",
-                color: "#111",
-                fontSize: "17px",
-                backgroundColor: "transparent",
+                color: "#f0fffd",
+                fontSize: { xs: "14px", md: "17px" },
+                backgroundColor: "#fff1",
                 px: 1,
                 borderRadius: "10px",
                 transition: "all ease 0.5s",
-                "&:hover": { color: "#fff", backgroundColor: "#111" },
+                "&:hover": { color: "#111", backgroundColor: "#f0fffd" },
               }}
             >
               مشاهده وبسایت
@@ -67,10 +73,9 @@ const PrjDescMain = ({ resumeList }) => {
             width: "15%",
             top: 0,
             left: 0,
-            bgcolor: "#1b1b1b",
-            "&:hover": {
-              bgcolor: "#1b1b1b",
-            },
+            color: "#f0fffd",
+            backgroundColor: "#fff3",
+            "&:hover": { color: "#111", backgroundColor: "#f0fffd" },
           }}
         >
           بازگشت <KeyboardArrowLeftIcon />

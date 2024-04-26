@@ -1,13 +1,27 @@
 import React from "react";
 import PrjTopSectionMain from "@/components/ProjectTopSection/Main";
 import PreviewMain from "@/components/WebsitePreview/Main";
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import axios from "axios";
 import Loader from "@/components/Loader/Loader";
 
 const projects = ({ resumeList, isLoading }) => {
   return (
-    <>
+    <Box
+      sx={{
+        width: "100%",
+        backgroundImage: "url(/images/herobg.png)",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        height: {
+          xs: "1366px",
+          sm: "1110px",
+          md: "1050px",
+          lg: "1150px",
+          xl: "1401px",
+        },
+      }}
+    >
       {isLoading ? (
         <Loader /> // Display your loading component while data is fetching
       ) : (
@@ -21,7 +35,7 @@ const projects = ({ resumeList, isLoading }) => {
           </Grid>
         </Grid>
       )}
-    </>
+    </Box>
   );
 };
 

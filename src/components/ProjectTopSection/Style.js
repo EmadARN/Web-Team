@@ -6,4 +6,5 @@ export const TypoStyle = {
 export const TitleTypo = {
   fontWeight: "bold",
   fontSize: { xs: "17px", md: "22px" },
+  color: "#f0fffd"
 };

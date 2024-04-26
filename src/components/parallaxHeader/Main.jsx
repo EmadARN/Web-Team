@@ -27,8 +27,10 @@ const ParallaxHeader = () => {
   const Small = useMediaQuery("(min-width: 501px) and (max-width: 767px)");
   const Medium = useMediaQuery("(min-width: 768px) and (max-width: 991px)");
   const Large = useMediaQuery("(min-width: 992px) and (max-width: 1021px)");
-  const ExtraLarge = useMediaQuery("(min-width: 1250px) ");
-  const XXLarge = useMediaQuery("(min-width: 1250px) ");
+  const ExtraLarge = useMediaQuery(
+    "(min-width: 1366px) and (max-width: 1600px) "
+  );
+  const XXLarge = useMediaQuery("(min-width: 1600px) and (max-width: 2000px) ");
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -47,7 +49,7 @@ const ParallaxHeader = () => {
   useEffect(() => {
     setTimeout(() => {
       setShow(true);
-    }, 100);
+    }, 300);
   }, []);
 
   return (

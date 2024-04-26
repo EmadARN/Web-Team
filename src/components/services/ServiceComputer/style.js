@@ -1,10 +1,8 @@
 import { styled } from "@mui/material";
-import { color } from "framer-motion";
 export const FirstBox = {
   width: "100%",
   display: { xs: "none", md: "flex" },
   justifyContent: "space-evenly",
-
   height: "70vh",
   m: 2,
 };
@@ -15,15 +13,11 @@ export const steper_box = (theme, index, activeStep) => {
     justifyContent: "space-evenly",
     width: "70%",
     cursor: "pointer",
-
     alignItems: "center",
     "&:hover": {
       backgroundColor:
         (activeStep !== index && theme === "dark" && "#888") ||
         (activeStep !== index && theme !== "dark" && "#1116"),
-      // opacity:
-      //   (activeStep !== index && theme === "dark" && "0.1") ||
-      //   (activeStep !== index && theme !== "dark" && "none"),
 
       "& .texthover": {
         color:
@@ -55,9 +49,7 @@ export const SteperStyle = {
   display: "flex",
   alignItems: "start",
   justifyContent: "center",
-
   height: "80%",
-
   width: "50%",
 };
 
@@ -73,7 +65,6 @@ export const Btn6 = styled("button")(({ theme }) => ({
   textAlign: "center",
   position: "relative",
   textDecoration: "none",
-
   p: 2,
   display: "flex",
   justifyContent: "space-evenly",
@@ -121,27 +112,3 @@ export const Btn6 = styled("button")(({ theme }) => ({
     borderRight: "1px solid #6098FF",
   },
 }));
-
-//   .btn6:hover::before {
-//     width:100%;
-//   }
-
-//   .btn6::after {
-//     content: '';
-//     position: absolute;
-//     right: 0px;
-//     top:0px;
-//     z-index:-1;
-//     width: 0%;
-//     height:1px;
-//     background: #6098FF;
-//     -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
-//     transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
-//   }
-//   .btn6:hover::after {
-//     width:100%;
-//   }
-//   .btn6:hover{
-//     border-left:1px solid #6098FF;
-//     border-right:1px solid #6098FF;
-//   }

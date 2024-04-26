@@ -9,7 +9,7 @@ const Computer_Scroll_Main = ({ resumeList }) => {
         style={CpImage()}
         src={`/images/${"monitor"}.png`}
         alt="Picture of the author"
-        width={300}
+        width={400}
         height={300}
         priority
       />
@@ -19,7 +19,7 @@ const Computer_Scroll_Main = ({ resumeList }) => {
           style={SiteContent}
           src={`https://backend-adlikara.ir${resumeList.desktop_image}`}
           alt="Picture of the author"
-          width={700}
+          width={800}
           height={700}
           priority
         />

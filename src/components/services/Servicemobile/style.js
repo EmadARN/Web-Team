@@ -1,17 +1,16 @@
 export const Mobile_Box = {
   width: "100%",
-
   flexDirection: "column",
   alignItems: "space-evanly",
-
   display: { xs: "flex", md: "none" },
+  height: "70vh",
+  mb: 35,
 };
 
 export const SteperMobileStyle = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-
   width: "100%",
 };
 

@@ -20,7 +20,7 @@ const Home = ({ resumeList }) => {
     const fakeDataFetch = () => {
       setTimeout(() => {
         setIsLoading(false);
-      }, 3010);
+      }, 3000);
     };
     fakeDataFetch();
   }, []);

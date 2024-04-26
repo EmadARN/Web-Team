@@ -8,13 +8,13 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: "fa",
+    fallbackLng: "en",
     locales: ["fa", "en"],
     i18nextServer: {
       debug: true,
       backend: {
         ns: ["translation"],
-        loadPath: "/locales/{{lng}}/{{ns}}.json",
+        loadPath: "/locales/{{fa}}/{{ns}}.json",
       },
     },
   });
