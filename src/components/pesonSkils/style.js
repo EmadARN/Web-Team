@@ -262,7 +262,7 @@ export const BoxStyle1_initialCv2 = (theme) => {
 };
 
 export const BoxStyle2_initialCv2 = {
-  height: { xs: "45%", sm: "48%", md: "35%" },
+  height: { xs: "55%", sm: "48%", md: "35%" },
   backgroundColor: "rgba(255,255,255,0.1)",
   WebkitBackdropFilter: "blur(8px) !important",
   backdropFilter: {
@@ -274,7 +274,7 @@ export const BoxStyle2_initialCv2 = {
 
 export const BoxStyle3_initialCv2 = {
   width: "100%",
-  height: { xs: "30%", sm: "33%", md: "30%" },
+  height: { xs: "15%", sm: "33%", md: "30%" },
   color: "#2228",
   backgroundColor: "rgba(255,255,255,0.1)",
   WebkitBackdropFilter: "blur(7px) !important",
