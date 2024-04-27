@@ -175,9 +175,9 @@ export const boatStyle = (
 ) => {
   const style = {
     width: ExtraSmall
-      ? "46%"
+      ? "50%"
       : Small
-      ? "44%"
+      ? "45%"
       : Medium
       ? "50%"
       : Large

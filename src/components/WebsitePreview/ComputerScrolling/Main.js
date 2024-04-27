@@ -15,19 +15,19 @@ const Computer_Scroll_Main = ({ resumeList }) => {
       />
       {/* <img src={`/images/${"monitor"}.png`} style={CpImage()} /> */}
       <Grid sx={CpInnerGrid()}>
-        <Image
+        {/* <Image
           style={SiteContent}
           src={`https://backend-adlikara.ir${resumeList.desktop_image}`}
           alt="Picture of the author"
-          width={800}
-          height={700}
+          width={8000}
+          height={800}
           priority
-        />
-        {/* <img
+        /> */}
+        <img
           style={SiteContent}
           src={`https://backend-adlikara.ir${resumeList.desktop_image}`}
           alt="تصویر از مانیتور"
-        ></img> */}
+        ></img>
       </Grid>
     </Grid>
   );

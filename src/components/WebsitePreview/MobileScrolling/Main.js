@@ -23,18 +23,18 @@ const Mobile_Scroll_Main = ({ resumeList }) => {
         {/* <img style={CpImage()} src={`/images/${"screen_mobile"}.png`} alt="" /> */}
 
         <Grid sx={CpInnerGrid()}>
-          <Image
+          {/* <Image
             style={SiteContent}
             src={`https://backend-adlikara.ir${resumeList.mobile_image}`}
             alt="Picture of the author"
             width={800}
-            height={700}
+            height={800}
             priority
-          />
-          {/* <img
+          /> */}
+          <img
             src={`https://backend-adlikara.ir${resumeList.mobile_image}`}
             style={SiteContent}
-          /> */}
+          />
         </Grid>
       </Grid>
     </Grid>
