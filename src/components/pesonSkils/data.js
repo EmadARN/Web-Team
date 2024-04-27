@@ -74,11 +74,11 @@ export const avatars = [
 
       {
         name: "CSS 3",
-        icon: "/images/tech/CSS.png",
+        icon: "/images/tech/css.png",
       },
       {
         name: "JavaScript",
-        icon: "/images/tech/javaScript.png",
+        icon: "/images/tech/javascript.png",
       },
 
       {
@@ -149,11 +149,11 @@ export const avatars = [
 
       {
         name: "CSS 3",
-        icon: "/images/tech/CSS.png",
+        icon: "/images/tech/css.png",
       },
       {
         name: "JavaScript",
-        icon: "/images/tech/javaScript.png",
+        icon: "/images/tech/javascript.png",
       },
 
       {
@@ -258,11 +258,11 @@ export const avatars = [
 
       {
         name: "CSS 3",
-        icon: "/images/tech/CSS.png",
+        icon: "/images/tech/css.png",
       },
       {
         name: "JavaScript",
-        icon: "/images/tech/javaScript.png",
+        icon: "/images/tech/javascript.png",
       },
 
       {
