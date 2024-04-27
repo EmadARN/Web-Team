@@ -46,7 +46,7 @@ export const CpImage = () => {
       ? "85%"
       : "100%",
     height: isSmallScreen
-      ? "400px"
+      ? "480px"
       : isMediumScreen
       ? "200px"
       : islargeScreen
@@ -100,7 +100,7 @@ export const CpInnerGrid = () => {
       ? "85%"
       : "100%",
     margin: "5px auto",
-    minHeight: { xs: "415px", sm: "320px", md: "580px", lg: "610px" },
+    minHeight: { xs: "486px", sm: "320px", md: "580px", lg: "610px" },
     height: "100%",
     zIndex: "0",
     position: "absolute",

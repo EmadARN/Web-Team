@@ -27,7 +27,7 @@ const Slider_project = ({ resumeList }) => {
           {resumeList.map((item) => {
             return (
               <SwiperSlide style={sliderslide} key={item.id}>
-                <Link href={`/Project/${item.id}`}>
+                <Link target="_blank" href={`/Project/${item.id}`}>
                   <Image
                     style={imgStyle}
                     src={`https://backend-adlikara.ir${item.main_image}`}
