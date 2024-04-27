@@ -26,8 +26,8 @@ export const BoxStyle2 = (loadCount, theme) => {
 export const TypographyStyle1 = (theme) => {
   const style = {
     px: { xs: 1, sm: 2, md: 3 },
-    fontSize: { xs: "12px", md: "16px" },
-
+    fontSize: { xs: "12px", md: "16px", lg: "18px" },
+    letterSpacing: "-0.025em",
     WebkitUserSelect: "none" /* Safari */,
     MsUserSelect: "none" /* IE 10 and IE 11 */,
     userSelect: "none" /* Standard syntax */,
